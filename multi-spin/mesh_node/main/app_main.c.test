@@ -1,0 +1,344 @@
+#include <stdio.h>
+#include <string.h>
+#include "nvs_flash.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_log.h"
+#include "esp_netif.h"
+#include "esp_now.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
+#include "freertos/event_groups.h"
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "system_params.h"
+
+#define AP_SSID "your_ssid"         // Replace with your Wi-Fi SSID
+#define AP_PASSWORD "your_password" // Replace with your Wi-Fi password
+#define MONITOR_IP "192.168.4.1"
+#define MONITOR_PORT 5000
+#define BROADCAST_INTERVAL 2000 // 1 second
+
+static const char *TAG = "node";
+static int sock = -1;
+static QueueHandle_t csi_data_queue;
+static int node_index = -1;
+static EventGroupHandle_t wifi_event_group;
+const int IP_BIT = BIT0;
+
+uint8_t current_broadcaster = 0;
+const uint8_t node_mac_addresses[MAX_NUM_NODES][6] = {
+    {0x1a, 0x00, 0x00, 0x00, 0x00, 0x00},
+    {0x1a, 0x00, 0x00, 0x00, 0x00, 0x01},
+    {0x1a, 0x00, 0x00, 0x00, 0x00, 0x02},
+    {0x1a, 0x00, 0x00, 0x00, 0x00, 0x03}};
+const uint8_t channel_sequence[CHANNELS_NUMBER] = {1};
+
+static const int tag_number = 0;
+static bool csi_enabled = false; // Global or static variable to track CSI state
+
+typedef struct
+{
+    signed char data[128];
+    uint8_t source_mac[6];
+} csi_data_t;
+void enable_csi_collection()
+{
+    ESP_LOGI(TAG, "Enabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(true); // Enable CSI collection
+}
+
+void disable_csi_collection()
+{
+    ESP_LOGI(TAG, "Disabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(false); // Disable CSI collection
+}
+
+bool csi_collection_enabled()
+{
+    return csi_enabled; // Return the current state of CSI collection
+}
+
+// Make sure to update this variable in your enable/disable functions
+void enable_csi_collection()
+{
+    ESP_LOGI(TAG, "Enabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(true);
+    csi_enabled = true; // Update state
+}
+
+void disable_csi_collection()
+{
+    ESP_LOGI(TAG, "Disabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(false);
+    csi_enabled = false; // Update state
+}
+static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
+    {
+        esp_wifi_connect();
+    }
+    else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
+    {
+        ESP_LOGI(TAG, "Disconnected from Wi-Fi, retrying...");
+        esp_wifi_connect();
+    }
+    else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
+    {
+        ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+        ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+        xEventGroupSetBits(wifi_event_group, IP_BIT);
+    }
+}
+
+static void wifi_init(void)
+{
+    wifi_event_group = xEventGroupCreate();
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
+    assert(sta_netif);
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL, NULL));
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, node_mac_addresses[tag_number]));
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = AP_SSID,
+            .password = AP_PASSWORD,
+        },
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_LOGI(TAG, "Connecting to Wi-Fi...");
+}
+
+static void udp_socket_init()
+{
+    if (sock != -1)
+    {
+        close(sock);
+    }
+    sock = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sock < 0)
+    {
+        ESP_LOGE(TAG, "Failed to create socket: errno %d", errno);
+        sock = -1;
+    }
+    else
+    {
+        ESP_LOGI(TAG, "UDP socket created successfully");
+    }
+}
+
+static void send_csi_data(const csi_data_t *csi_data)
+{
+    if (sock == -1)
+    {
+        ESP_LOGE(TAG, "Socket not initialized");
+        return;
+    }
+
+    struct sockaddr_in dest_addr;
+    dest_addr.sin_family = AF_INET;
+    dest_addr.sin_port = htons(MONITOR_PORT);
+    dest_addr.sin_addr.s_addr = inet_addr(MONITOR_IP);
+
+    ESP_LOGI(TAG, "Attempting to send CSI data...");
+    ESP_LOGI(TAG, "Collecting CSI data...");
+    for (int i = 0; i < sizeof(csi_data->data); ++i)
+    {
+        printf("%d ", csi_data->data[i]);
+    }
+    printf("\n");
+    int err = sendto(sock, (const char *)csi_data, sizeof(csi_data_t), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+    if (err < 0)
+    {
+        ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+    }
+    else
+    {
+        ESP_LOGI(TAG, "CSI data sent successfully");
+    }
+}
+
+void handle_broadcasting()
+{
+    if (current_broadcaster == node_index)
+    {
+        ESP_LOGI(TAG, "Node %d is broadcasting...", node_index);
+        enable_csi_collection(); // Ensure CSI collection is enabled
+
+        // Collect and send CSI data periodically
+        const TickType_t xDelay = pdMS_TO_TICKS(BROADCAST_INTERVAL);
+        while (current_broadcaster == node_index)
+        {
+            collect_and_send_csi_data();
+            vTaskDelay(xDelay);
+        }
+        disable_csi_collection(); // Disable CSI collection when done broadcasting
+    }
+}
+
+void espnow_recv_cb(const esp_now_recv_info_t *info, const uint8_t *data, int len)
+{
+    if (len != sizeof(uint8_t))
+    {
+        ESP_LOGE(TAG, "Unexpected ESP-NOW data length");
+        return;
+    }
+
+    uint8_t received_broadcaster = *data;
+    if (received_broadcaster != current_broadcaster)
+    {
+        current_broadcaster = received_broadcaster;
+        if (current_broadcaster == node_index)
+        {
+            enable_csi_collection();
+        }
+        else
+        {
+            disable_csi_collection();
+        }
+    }
+}
+
+void collect_and_send_csi_data()
+{
+    if (csi_collection_enabled())
+    {
+        csi_data_t csi_data;
+        if (collect_csi_data(&csi_data))
+        {
+            send_csi_data(&csi_data);
+        }
+    }
+}
+
+void enable_csi_collection()
+{
+    ESP_LOGI(TAG, "Enabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(true);
+}
+
+void disable_csi_collection()
+{
+    ESP_LOGI(TAG, "Disabling CSI collection for Node %d", node_index);
+    esp_wifi_set_csi(false);
+}
+
+static void espnow_init()
+{
+    ESP_ERROR_CHECK(esp_now_init());
+    ESP_ERROR_CHECK(esp_now_set_pmk((uint8_t *)"pmk1234567890123"));
+
+    esp_now_peer_info_t peer;
+    memset(&peer, 0, sizeof(peer));
+    for (int i = 0; i < MAX_NUM_NODES; ++i)
+    {
+        memcpy(peer.peer_addr, node_mac_addresses[i], 6);
+        peer.channel = channel_sequence[current_broadcaster];
+        peer.ifidx = WIFI_IF_STA;
+        peer.encrypt = false;
+        esp_err_t add_peer_status = esp_now_add_peer(&peer);
+        if (add_peer_status != ESP_OK)
+        {
+            ESP_LOGE(TAG, "Failed to add peer: %s", esp_err_to_name(add_peer_status));
+        }
+    }
+
+    ESP_ERROR_CHECK(esp_now_register_recv_cb(espnow_recv_cb));
+}
+
+void app_main()
+{
+    ESP_ERROR_CHECK(nvs_flash_init());
+    wifi_init();
+
+    // Set MAC address based on tag number
+    if (tag_number >= 0 && tag_number < MAX_NUM_NODES)
+    {
+        ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, node_mac_addresses[tag_number]));
+        node_index = tag_number;
+    }
+    else
+    {
+        ESP_LOGE(TAG, "Invalid tag number!");
+        return;
+    }
+
+    ESP_LOGI(TAG, "Assigned MAC address: %02x:%02x:%02x:%02x:%02x:%02x",
+             node_mac_addresses[tag_number][0], node_mac_addresses[tag_number][1],
+             node_mac_addresses[tag_number][2], node_mac_addresses[tag_number][3],
+             node_mac_addresses[tag_number][4], node_mac_addresses[tag_number][5]);
+
+    espnow_init();
+
+    // Wait for IP address
+    xEventGroupWaitBits(wifi_event_group, IP_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
+
+    udp_socket_init();
+
+    // Create queue for CSI data
+    csi_data_queue = xQueueCreate(10, sizeof(csi_data_t));
+    if (csi_data_queue == NULL)
+    {
+        ESP_LOGE(TAG, "Failed to create queue");
+        return;
+    }
+
+    while (true)
+    {
+        if (current_broadcaster == node_index)
+        {
+            // Node is the broadcaster
+            ESP_LOGI(TAG, "Node %d is broadcasting...", node_index);
+
+            for (int i = 0; i < MAX_NUM_NODES; ++i)
+            {
+                if (i == node_index)
+                    continue;
+                esp_err_t result = esp_now_send(node_mac_addresses[i], &current_broadcaster, sizeof(current_broadcaster));
+                if (result == ESP_OK)
+                {
+                    ESP_LOGI(TAG, "Broadcast from Node %d to Node %d", node_index, i);
+                }
+                else
+                {
+                    ESP_LOGE(TAG, "Error sending data to Node %d: %s", i, esp_err_to_name(result));
+                }
+            }
+
+            // Collect and send CSI data
+            csi_data_t csi_data;
+            while (xQueueReceive(csi_data_queue, &csi_data, pdMS_TO_TICKS(BROADCAST_INTERVAL)) == pdTRUE)
+            {
+                send_csi_data(&csi_data);
+            }
+
+            // Update broadcaster
+            current_broadcaster = (current_broadcaster + 1) % MAX_NUM_NODES;
+        }
+        else
+        {
+            ESP_LOGI(TAG, "Node %d waiting, current broadcaster is Node %d", node_index, current_broadcaster);
+        }
+
+        current_broadcaster = (current_broadcaster + 1) % MAX_NUM_NODES;
+
+        vTaskDelay(pdMS_TO_TICKS(BROADCAST_INTERVAL));
+    }
+
+    if (sock != -1)
+    {
+        close(sock);
+    }
+}

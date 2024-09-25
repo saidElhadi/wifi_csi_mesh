@@ -1,0 +1,15 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403848b2: rv_utils_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/riscv/include/riscv/rv_utils.h:52
+ (inlined by) esp_cpu_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:143
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42006c92: uart_ll_get_txfifo_len at C:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32c3/include/hal/uart_ll.h:403
+ (inlined by) uart_tx_char at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:165
+0x42007d84: uart_write at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:210 (discriminator 2)
+[0m
+[0;33m0x420064d6: console_write at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:71
+[0m
+[0m

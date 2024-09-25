@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/Sayid/workspace/Research/csi_node/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/Sayid/workspace/Thesis/mesh_code/wifi_mesh/csi_node/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

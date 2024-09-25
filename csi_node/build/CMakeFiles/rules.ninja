@@ -1370,7 +1370,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\Sayid\workspace\Research\csi_node -BC:\Users\Sayid\workspace\Research\csi_node\build
+  command = C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\Sayid\workspace\Thesis\mesh_code\wifi_mesh\csi_node -BC:\Users\Sayid\workspace\Thesis\mesh_code\wifi_mesh\csi_node\build
   description = Re-running CMake...
   generator = 1
 

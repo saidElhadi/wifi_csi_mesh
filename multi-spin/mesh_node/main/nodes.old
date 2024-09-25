@@ -1,0 +1,204 @@
+// node_x.c (example for Node 1, similar for Nodes 2 and 3)
+
+#include <stdio.h>
+#include <string.h>
+#include "nvs_flash.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_log.h"
+#include "esp_netif.h"
+#include "esp_now.h"
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "freertos/queue.h"
+#include "freertos/task.h"
+#include "system_params.h"
+
+#define MONITOR_IP         "192.168.4.1" // Monitor node's IP address
+#define MONITOR_PORT       5000            
+#define AP_SSID            "your_ssid"      // Replace with your Wi-Fi SSID
+#define AP_PASSWORD        "your_password"   // Replace with your Wi-Fi password
+
+static const char *TAG = "node_x";
+static int sock = -1; 
+
+typedef struct {
+    signed char data[128]; 
+    uint8_t source_mac[6]; 
+} csi_data_t;
+
+static QueueHandle_t csi_data_queue = NULL;
+static uint8_t my_node_id;
+
+static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        ESP_LOGI(TAG, "Disconnected from Wi-Fi, retrying...");
+        esp_wifi_connect();
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+    }
+}
+
+static void wifi_init() {
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
+    assert(sta_netif);
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL, NULL));
+
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+
+    // Set Node's MAC address
+    esp_err_t ret = esp_wifi_set_mac(WIFI_IF_STA, node_mac_addresses[my_node_id]);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to set MAC address: %s", esp_err_to_name(ret));
+    }
+
+    // Wi-Fi connection logic
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = AP_SSID,
+            .password = AP_PASSWORD,
+        },
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_LOGI(TAG, "Connecting to Wi-Fi...");
+}
+
+static void espnow_recv_cb(const esp_now_recv_info_t *info, const uint8_t *data, int len) {
+    if (len != sizeof(uint8_t)) {
+        ESP_LOGE(TAG, "Unexpected ESP-NOW data length");
+        return;
+    }
+
+    uint8_t received_data = *data;
+
+    if (received_data == my_node_id) {
+        ESP_LOGI(TAG, "Received broadcast trigger for Node %d. Enabling CSI...", my_node_id);
+        ESP_ERROR_CHECK(esp_wifi_set_csi(true));
+
+        // Collect CSI data
+        csi_data_t csi_data;
+        memset(&csi_data, 0, sizeof(csi_data_t));
+        // Simulate filling CSI data
+        esp_wifi_get_mac(WIFI_IF_STA, csi_data.source_mac);
+        // Add to queue
+        if (xQueueSend(csi_data_queue, &csi_data, 0) != pdTRUE) {
+            ESP_LOGE(TAG, "Failed to send CSI data to queue");
+        }
+    } else {
+        ESP_LOGI(TAG, "Disabling CSI for Node %d...", my_node_id);
+        ESP_ERROR_CHECK(esp_wifi_set_csi(false));
+    }
+}
+
+static void espnow_init() {
+    ESP_ERROR_CHECK(esp_now_init());
+    ESP_ERROR_CHECK(esp_now_set_pmk((uint8_t *)"pmk1234567890123"));
+
+    esp_now_peer_info_t peer;
+    memset(&peer, 0, sizeof(peer));
+    peer.channel = channel_sequence[0];
+    peer.ifidx = WIFI_IF_STA;
+    peer.encrypt = false;
+    memcpy(peer.peer_addr, node_mac_addresses[0], 6);
+    ESP_ERROR_CHECK(esp_now_add_peer(&peer));
+
+    // Register ESP-NOW receive callback
+    ESP_ERROR_CHECK(esp_now_register_recv_cb(espnow_recv_cb));
+}
+
+void format_mac_address(const uint8_t *mac_addr, char *buf) {
+    sprintf(buf, "%02x:%02x:%02x:%02x:%02x:%02x", 
+            mac_addr[0], mac_addr[1], mac_addr[2],
+            mac_addr[3], mac_addr[4], mac_addr[5]);
+}
+
+static void send_csi_data(const csi_data_t *csi_data) {
+    if (sock == -1) {
+        ESP_LOGE(TAG, "Socket not initialized");
+        return;
+    }
+
+    struct sockaddr_in dest_addr;
+    dest_addr.sin_family = AF_INET;
+    dest_addr.sin_port = htons(MONITOR_PORT);
+    dest_addr.sin_addr.s_addr = inet_addr(MONITOR_IP);
+
+    int err = sendto(sock, (const char *)csi_data, sizeof(csi_data_t), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+    if (err < 0) {
+        ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+    } else {
+        char mac_str[18];
+        format_mac_address(csi_data->source_mac, mac_str);
+        ESP_LOGI(TAG, "Sent CSI data to monitor from MAC: %s", mac_str);
+    }
+}
+
+static void udp_socket_init() {
+    if (sock != -1) {
+        close(sock);
+    }
+
+    sock = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sock < 0) {
+        ESP_LOGE(TAG, "Failed to create socket: errno %d", errno);
+        sock = -1;
+    } else {
+        ESP_LOGI(TAG, "UDP socket created successfully");
+    }
+}
+
+void app_main() {
+    my_node_id = 1;  // Set the node ID accordingly for Node 1, 2, or 3
+    ESP_ERROR_CHECK(nvs_flash_init());
+    wifi_init();
+    espnow_init();
+    udp_socket_init();
+
+    // Delay to ensure Wi-Fi is fully initialized
+    vTaskDelay(pdMS_TO_TICKS(2000));
+
+    // Create the queue
+    csi_data_queue = xQueueCreate(10, sizeof(csi_data_t));
+    if (csi_data_queue == NULL) {
+        ESP_LOGE(TAG, "Failed to create queue");
+        return;
+    }
+
+    char node_mac_str[18];
+    format_mac_address(node_mac_addresses[my_node_id], node_mac_str);
+    ESP_LOGI(TAG, "Node %d started with MAC: %s", my_node_id, node_mac_str);
+
+    while (1) { 
+        csi_data_t csi_data; 
+        // Receive CSI data from the queue
+        if (xQueueReceive(csi_data_queue, &csi_data, portMAX_DELAY) == pdTRUE) {
+            // Reinitialize UDP socket if necessary
+            if (sock == -1) {
+                udp_socket_init();
+            }
+
+            // CSI data is available, send it over UDP
+            send_csi_data(&csi_data);
+        } else {
+            ESP_LOGE(TAG, "Failed to receive CSI data from queue");
+        }
+
+        vTaskDelay(10 / portTICK_PERIOD_MS); 
+    }
+
+    if (sock != -1) {
+        close(sock); 
+    }
+}

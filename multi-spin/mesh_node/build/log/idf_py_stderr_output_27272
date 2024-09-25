@@ -1,0 +1,9 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM7 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403848b2: rv_utils_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/riscv/include/riscv/rv_utils.h:52
+ (inlined by) esp_cpu_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:143
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is b10ab69479658388d8b202fdc0c05488700e68c0f228abe12b7c65d12292acef[0m
+[0m

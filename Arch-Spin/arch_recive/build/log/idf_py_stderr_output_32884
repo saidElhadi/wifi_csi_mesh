@@ -1,0 +1,452 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42006c86: uart_ll_get_txfifo_len at C:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32c3/include/hal/uart_ll.h:403
+ (inlined by) uart_tx_char at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:165
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038334c: mutex_unlock_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32c3/esp_adapter.c:197
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_azb7toe"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_azb7toe': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp3wpuawgt"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp3wpuawgt': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038334c: mutex_unlock_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32c3/esp_adapter.c:197
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp0hcorkek"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp0hcorkek': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpr880x8t_"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpr880x8t_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4205a81e: lmacProcessAckTimeout at ??:?
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpy9o9i1mp"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpy9o9i1mp': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4205a81e: lmacProcessAckTimeout at ??:?
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmprjjlek5c"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmprjjlek5c': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4038e782: esf_buf_recycle at ??:?
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpxqx_v69c"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpxqx_v69c': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038334c: mutex_unlock_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32c3/esp_adapter.c:197
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpy3kddm4g"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpy3kddm4g': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp4exkuspt"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp4exkuspt': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x403837ec: esp_coex_common_int_restore_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_coex/esp32c3/esp_coex_adapter.c:64
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpizzdbsir"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpizzdbsir': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpc_d8hjb6"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpc_d8hjb6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_49ss78d"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_49ss78d': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x403837ec: esp_coex_common_int_restore_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_coex/esp32c3/esp_coex_adapter.c:64
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpqd40fj3d"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpqd40fj3d': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpiftn67ia"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpiftn67ia': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42006c88: uart_ll_get_txfifo_len at C:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32c3/include/hal/uart_ll.h:403
+ (inlined by) uart_tx_char at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:165
+0x42007d84: uart_write at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_uart.c:210 (discriminator 2)
+[0m
+[0;33m0x4005890e: memset in ROM
+[0m
+[0;33m0x420064d6: console_write at C:/Espressif/frameworks/esp-idf-v5.2.2/components/vfs/vfs_console.c:71
+[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038334c: mutex_unlock_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32c3/esp_adapter.c:197
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpw9ftvt1g"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpw9ftvt1g': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmptdxrzm0e"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmptdxrzm0e': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpcxhaxzpv"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpcxhaxzpv': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpiz8xcgo6"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpiz8xcgo6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038334c: mutex_unlock_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32c3/esp_adapter.c:197
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_88o_jsm"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp_88o_jsm': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp2wvnw0ha"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp2wvnw0ha': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmps42mtc66"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmps42mtc66': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x403837ec: esp_coex_common_int_restore_wrapper at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_coex/esp32c3/esp_coex_adapter.c:64
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp3ygtwve1"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp3ygtwve1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp4mfk2fa4"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp4mfk2fa4': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpqzrf86rs"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpqzrf86rs': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4038e782: esf_buf_recycle at ??:?
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpnbesd1sx"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpnbesd1sx': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008536: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:134 (discriminator 1)
+0x40040eaa: ppProcessRxPktHdr in ROM
+[0m
+[0;33m0x4005890e: memset in ROM
+0x4038d60c: free at C:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:38
+[0m
+[0;33m0x4200851e: wifi_csi_rx_cb at C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:133
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp490oyv8q"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmp490oyv8q': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0m

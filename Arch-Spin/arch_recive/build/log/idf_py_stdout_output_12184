@@ -1,0 +1,1062 @@
+[0;33mW (19450) receiving_node: Failed to allocate memory for dESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42006c86
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 16:48:34[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1f870h (129136) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002f898 vaddr=3fc91800 size=00780h (  1920) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8f90ch (588044) map[0m
+[0;32mI (211) esp_image: segment 3: paddr=000bf934 vaddr=3fc91f80 size=02328h (  9000) load[0m
+[0;32mI (213) esp_image: segment 4: paddr=000c1c64 vaddr=40380000 size=117c0h ( 71616) load[0m
+[0;32mI (236) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (236) boot: Disabling RNG early entropy source...[0m
+[0;32mI (247) cpu_start: Unicore app[0m
+[0;32mI (256) cpu_start: Pro cpu start user code[0m
+[0;32mI (256) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (256) cpu_start: Application information:[0m
+[0;32mI (259) cpu_start: Project name:     arch_recive[0m
+[0;32mI (264) cpu_start: App version:      1[0m
+[0;32mI (269) cpu_start: Compile time:     Sep 23 2024 16:48:14[0m
+[0;32mI (275) cpu_start: ELF file SHA256:  d660c37a1...[0m
+[0;32mI (280) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (286) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (290) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (295) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (300) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (307) heap_init: At 3FC983B0 len 00027C50 (159 KiB): RAM[0m
+[0;32mI (313) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (320) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (327) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (334) spi_flash: detected chip: generic[0m
+[0;32mI (338) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (356) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (362) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (373) main_task: Calling app_main()[0m
+[0;32mI (386) pp: pp rom version: 9387209[0m
+[0;32mI (386) net80211: net80211 rom version: 9387209[0m
+I (388) wifi:wifi driver task: 3fca0e74, prio:23, stack:6656, core=0
+I (397) wifi:wifi firmware version: 3e0076f
+I (398) wifi:wifi certification version: v7.0
+I (400) wifi:config NVS flash: enabled
+I (404) wifi:config nano formating: disabled
+I (408) wifi:Init data frame dynamic rx buffer num: 32
+I (413) wifi:Init static rx mgmt buffer num: 5
+I (417) wifi:Init management short buffer num: 32
+I (421) wifi:Init dynamic tx buffer num: 128
+I (425) wifi:Init static tx FG buffer num: 2
+I (429) wifi:Init static rx buffer size: 2212
+I (433) wifi:Init static rx buffer num: 10
+I (437) wifi:Init dynamic rx buffer num: 32
+[0;32mI (441) wifi_init: rx ba win: 6[0m
+[0;32mI (445) wifi_init: tcpip mbox: 32[0m
+[0;32mI (449) wifi_init: udp mbox: 6[0m
+[0;32mI (452) wifi_init: tcp mbox: 6[0m
+[0;32mI (456) wifi_init: tcp tx win: 5760[0m
+[0;32mI (460) wifi_init: tcp rx win: 5760[0m
+[0;32mI (464) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (473) wifi_init: WiFi RX IRAM OP enabled[0m
+I (478) wifi:Set ps type: 0, coexist: 0
+
+[0;32mI (483) phy_init: phy_version 1170,f4aea9b,Apr 30 2024,10:49:24[0m
+I (523) wifi:mode : sta (64:e8:33:89:b1:48)
+I (523) wifi:enable tsf
+[0;32mI (526) receiving_node: Wi-Fi initialization completed.[0m
+I (537) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (538) wifi:state: init -> auth (b0)
+I (542) wifi:state: auth -> assoc (0)
+I (546) wifi:Association refused temporarily, comeback time 1500 (TUs)
+I (2083) wifi:state: assoc -> assoc (0)
+I (2089) wifi:state: assoc -> run (10)
+I (2106) wifi:connected with your_ssid, aid = 1, channel 11, 40D, bssid = 64:e8:33:89:f9:11
+I (2107) wifi:security: WPA2-PSK, phy: bgn, rssi: -35
+I (2109) wifi:pm start, type: 0
+
+I (2111) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2119) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (2166) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (2167) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (3129) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (3130) receiving_node: Operating on channel: 11[0m
+I (3133) ESPNOW: espnow [version: 1.0] init
+[0;32mI (3137) receiving_node: Socket created[0m
+[0;32mI (3140) receiving_node: CSI data received: len=384[0m
+[0;32mI (3149) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3155) receiving_node: CSI data received: len=384[0m
+[0;32mI (3163) receiving_node: CSI data received: len=384[0m
+[0;32mI (3168) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3174) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3182) receiving_node: CSI data received: len=384[0m
+[0;32mI (3190) receiving_node: CSI data received: len=384[0m
+[0;32mI (3196) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3202) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3210) receiving_node: CSI data received: len=384[0m
+[0;32mI (3218) receiving_node: CSI data received: len=384[0m
+[0;32mI (3224) receiving_node: CSI data received: len=384[0m
+[0;32mI (3229) receiving_node: CSI data received: len=384[0m
+[0;32mI (3235) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3240) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3249) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3257) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3265) receiving_node: CSI data received: len=384[0m
+[0;32mI (3273) receiving_node: CSI data received: len=384[0m
+[0;32mI (3279) receiving_node: CSI data received: len=384[0m
+[0;32mI (3284) receiving_node: CSI data received: len=384[0m
+[0;32mI (3290) receiving_node: CSI data received: len=384[0m
+[0;32mI (3296) receiving_node: CSI data received: len=384[0m
+[0;32mI (3301) receiving_node: CSI data received: len=384[0m
+[0;32mI (3307) receiving_node: CSI data received: len=384[0m
+[0;32mI (3312) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3318) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3326) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3334) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3343) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3351) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3359) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3368) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3376) receiving_node: CSI data received: len=384[0m
+[0;32mI (3384) receiving_node: CSI data received: len=384[0m
+[0;32mI (3389) receiving_node: CSI data received: len=384[0m
+[0;32mI (3395) receiving_node: CSI data received: len=384[0m
+[0;32mI (3400) receiving_node: CSI data received: len=384[0m
+[0;32mI (3406) receiving_node: CSI data received: len=384[0m
+[0;32mI (3411) receiving_node: CSI data received: len=384[0m
+[0;32mI (3417) receiving_node: CSI data received: len=384[0m
+[0;32mI (3423) receiving_node: CSI data received: len=384[0m
+[0;32mI (3428) receiving_node: CSI data received: len=384[0m
+[0;32mI (3434) receiving_node: CSI data received: len=384[0m
+[0;32mI (3439) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3445) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3453) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3461) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3470) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3478) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3486) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3494) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3503) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3511) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3519) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3527) receiving_node: CSI data received: len=384[0m
+[0;32mI (3536) receiving_node: CSI data received: len=384[0m
+[0;32mI (3541) receiving_node: CSI data received: len=384[0m
+[0;32mI (3547) receiving_node: CSI data received: len=384[0m
+[0;32mI (3552) receiving_node: CSI data received: len=384[0m
+[0;32mI (3558) receiving_node: CSI data received: len=384[0m
+[0;32mI (3563) receiving_node: CSI data received: len=384[0m
+[0;32mI (3569) receiving_node: CSI data received: len=384[0m
+[0;32mI (3574) receiving_node: CSI data received: len=384[0m
+[0;32mI (3580) receiving_node: CSI data received: len=384[0m
+[0;32mI (3585) receiving_node: CSI data received: len=384[0m
+[0;32mI (3591) receiving_node: CSI data received: len=384[0m
+[0;32mI (3597) receiving_node: CSI data received: len=384[0m
+[0;32mI (3602) receiving_node: CSI data received: len=384[0m
+[0;32mI (3608) receiving_node: CSI data received: len=384[0m
+[0;32mI (3613) receiving_node: CSI data received: len=384[0m
+[0;32mI (3619) receiving_node: CSI data received: len=384[0m
+[0;32mI (3624) receiving_node: CSI data received: len=384[0m
+[0;32mI (3630) receiving_node: CSI data received: len=384[0m
+[0;32mI (3636) receiving_node: CSI data received: len=384[0m
+[0;32mI (3641) receiving_node: CSI data received: len=384[0m
+[0;32mI (3646) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3652) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3661) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3669) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3677) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3685) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3693) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3702) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3710) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3718) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3726) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3735) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3743) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3751) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3759) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3768) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3776) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3784) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3792) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3801) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3809) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3817) receiving_node: CSI data received: len=384[0m
+[0;32mI (3825) receiving_node: CSI data received: len=384[0m
+[0;32mI (3831) receiving_node: CSI data received: len=384[0m
+[0;32mI (3836) receiving_node: CSI data received: len=384[0m
+[0;32mI (3842) receiving_node: CSI data received: len=384[0m
+[0;32mI (3848) receiving_node: CSI data received: len=384[0m
+[0;32mI (3853) receiving_node: CSI data received: len=384[0m
+[0;32mI (3859) receiving_node: CSI data received: len=384[0m
+[0;32mI (3864) receiving_node: CSI data received: len=384[0m
+[0;32mI (3870) receiving_node: CSI data received: len=384[0m
+[0;32mI (3875) receiving_node: CSI data received: len=384[0m
+[0;32mI (3881) receiving_node: CSI data received: len=384[0m
+[0;32mI (3886) receiving_node: CSI data received: len=384[0m
+[0;32mI (3892) receiving_node: CSI data received: len=384[0m
+[0;32mI (3897) receiving_node: CSI data received: len=384[0m
+[0;32mI (3903) receiving_node: CSI data received: len=384[0m
+[0;32mI (3909) receiving_node: CSI data received: len=384[0m
+[0;32mI (3914) receiving_node: CSI data received: len=384[0m
+[0;32mI (3920) receiving_node: CSI data received: len=384[0m
+[0;32mI (3925) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3931) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3939) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3947) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3956) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3964) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3972) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3980) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3989) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3997) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4005) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4013) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4022) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4030) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4038) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4046) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4055) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4063) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4071) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4079) receiving_node: CSI data received: len=384[0m
+[0;32mI (4087) receiving_node: CSI data received: len=384[0m
+[0;32mI (4093) receiving_node: CSI data received: len=384[0m
+[0;32mI (4099) receiving_node: CSI data received: len=384[0m
+[0;32mI (4104) receiving_node: CSI data received: len=384[0m
+[0;32mI (4110) receiving_node: CSI data received: len=384[0m
+[0;32mI (4115) receiving_node: CSI data received: len=384[0m
+[0;32mI (4121) receiving_node: CSI data received: len=384[0m
+[0;32mI (4126) receiving_node: CSI data received: len=384[0m
+[0;32mI (4132) receiving_node: CSI data received: len=384[0m
+[0;32mI (4137) receiving_node: CSI data received: len=384[0m
+[0;32mI (4143) receiving_node: CSI data received: len=384[0m
+[0;32mI (4149) receiving_node: CSI data received: len=384[0m
+[0;32mI (4154) receiving_node: CSI data received: len=384[0m
+[0;32mI (4160) receiving_node: CSI data received: len=384[0m
+[0;32mI (4165) receiving_node: CSI data received: len=384[0m
+[0;32mI (4171) receiving_node: CSI data received: len=384[0m
+[0;32mI (4177) receiving_node: CSI data received: len=384[0m
+[0;32mI (4182) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4188) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4196) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4204) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4212) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4221) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4229) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4237) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4245) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4254) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4262) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4270) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4278) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4287) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4295) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4303) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4311) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4320) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4328) receiving_node: CSI data received: len=384[0m
+[0;32mI (4336) receiving_node: CSI data received: len=384[0m
+[0;32mI (4341) receiving_node: CSI data received: len=384[0m
+[0;32mI (4347) receiving_node: CSI data received: len=384[0m
+[0;32mI (4353) receiving_node: CSI data received: len=384[0m
+[0;32mI (4358) receiving_node: CSI data received: len=384[0m
+[0;32mI (4364) receiving_node: CSI data received: len=384[0m
+[0;32mI (4369) receiving_node: CSI data received: len=384[0m
+[0;32mI (4375) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4380) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4389) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4397) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4405) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4413) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4422) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4430) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4438) receiving_node: CSI data received: len=384[0m
+[0;32mI (4446) receiving_node: CSI data received: len=384[0m
+[0;32mI (4452) receiving_node: CSI data received: len=384[0m
+[0;32mI (4457) receiving_node: CSI data received: len=384[0m
+[0;32mI (4463) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4469) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4477) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4485) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4494) receiving_node: CSI data received: len=384[0m
+[0;32mI (4502) receiving_node: CSI data received: len=384[0m
+[0;33mW (4504) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4511) receiving_node: CSI data received: len=384[0m
+[0;33mW (4517) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4524) receiving_node: CSI data received: len=384[0m
+[0;33mW (4529) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4536) receiving_node: CSI data received: len=384[0m
+[0;33mW (4542) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4549) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4557) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4565) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4573) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4582) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4590) receiving_node: CSI data received: len=384[0m
+[0;33mW (4595) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4602) receiving_node: CSI data received: len=384[0m
+[0;33mW (4608) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4615) receiving_node: CSI data received: len=384[0m
+[0;33mW (4620) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4627) receiving_node: CSI data received: len=384[0m
+[0;33mW (4633) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4639) receiving_node: CSI data received: len=384[0m
+[0;33mW (4645) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4652) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4660) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4668) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4677) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4685) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4693) receiving_node: CSI data received: len=384[0m
+[0;33mW (4699) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4706) receiving_node: CSI data received: len=384[0m
+[0;33mW (4711) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4718) receiving_node: CSI data received: len=384[0m
+[0;33mW (4723) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4730) receiving_node: CSI data received: len=384[0m
+[0;33mW (4736) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4743) receiving_node: CSI data received: len=384[0m
+[0;33mW (4748) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4755) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4763) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4772) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4780) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4788) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4796) receiving_node: CSI data received: len=384[0m
+[0;33mW (4802) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4809) receiving_node: CSI data received: len=384[0m
+[0;33mW (4814) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4821) receiving_node: CSI data received: len=384[0m
+[0;33mW (4827) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4834) receiving_node: CSI data received: len=384[0m
+[0;33mW (4839) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4846) receiving_node: CSI data received: len=384[0m
+[0;33mW (4852) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4859) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4867) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4875) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4883) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4891) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4900) receiving_node: CSI data received: len=384[0m
+[0;33mW (4905) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4912) receiving_node: CSI data received: len=384[0m
+[0;33mW (4918) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4925) receiving_node: CSI data received: len=384[0m
+[0;33mW (4930) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4937) receiving_node: CSI data received: len=384[0m
+[0;33mW (4942) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4949) receiving_node: CSI data received: len=384[0m
+[0;33mW (4955) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (4962) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4970) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4978) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4986) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4995) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5003) receiving_node: CSI data received: len=384[0m
+[0;33mW (5008) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5015) receiving_node: CSI data received: len=384[0m
+[0;33mW (5021) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5028) receiving_node: CSI data received: len=384[0m
+[0;33mW (5033) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5040) receiving_node: CSI data received: len=384[0m
+[0;33mW (5046) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5053) receiving_node: CSI data received: len=384[0m
+[0;33mW (5058) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5065) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5073) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5082) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5090) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5098) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5106) receiving_node: CSI data received: len=384[0m
+[0;33mW (5112) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5119) receiving_node: CSI data received: len=384[0m
+[0;33mW (5124) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5131) receiving_node: CSI data received: len=384[0m
+[0;33mW (5137) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5143) receiving_node: CSI data received: len=384[0m
+[0;33mW (5149) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5156) receiving_node: CSI data received: len=384[0m
+[0;33mW (5161) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5168) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5177) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5185) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5193) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5201) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5210) receiving_node: CSI data received: len=384[0m
+[0;33mW (5215) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5222) receiving_node: CSI data received: len=384[0m
+[0;33mW (5227) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5234) receiving_node: CSI data received: len=384[0m
+[0;33mW (5240) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5247) receiving_node: CSI data received: len=384[0m
+[0;33mW (5252) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5259) receiving_node: CSI data received: len=384[0m
+[0;33mW (5265) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5272) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5280) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5288) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5296) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5305) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5313) receiving_node: CSI data received: len=384[0m
+[0;33mW (5318) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5325) receiving_node: CSI data received: len=384[0m
+[0;33mW (5331) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5338) receiving_node: CSI data received: len=384[0m
+[0;33mW (5343) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5350) receiving_node: CSI data received: len=384[0m
+[0;33mW (5356) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5362) receiving_node: CSI data received: len=384[0m
+[0;33mW (5368) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5375) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5383) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5391) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5400) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5408) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5416) receiving_node: CSI data received: len=384[0m
+[0;33mW (5422) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5429) receiving_node: CSI data received: len=384[0m
+[0;33mW (5434) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5441) receiving_node: CSI data received: len=384[0m
+[0;33mW (5446) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5453) receiving_node: CSI data received: len=384[0m
+[0;33mW (5459) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5466) receiving_node: CSI data received: len=384[0m
+[0;33mW (5471) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5478) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5486) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5495) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5503) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5511) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5520) receiving_node: CSI data received: len=384[0m
+[0;33mW (5525) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5532) receiving_node: CSI data received: len=384[0m
+[0;33mW (5537) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5544) receiving_node: CSI data received: len=384[0m
+[0;33mW (5550) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5557) receiving_node: CSI data received: len=384[0m
+[0;33mW (5562) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5569) receiving_node: CSI data received: len=384[0m
+[0;33mW (5575) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5582) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5590) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5598) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5606) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5614) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5623) receiving_node: CSI data received: len=384[0m
+[0;33mW (5628) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5635) receiving_node: CSI data received: len=384[0m
+[0;33mW (5641) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5648) receiving_node: CSI data received: len=384[0m
+[0;33mW (5653) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5660) receiving_node: CSI data received: len=384[0m
+[0;33mW (5665) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5672) receiving_node: CSI data received: len=384[0m
+[0;33mW (5678) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5685) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5693) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5701) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5710) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5718) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5726) receiving_node: CSI data received: len=384[0m
+[0;33mW (5731) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5738) receiving_node: CSI data received: len=384[0m
+[0;33mW (5744) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5751) receiving_node: CSI data received: len=384[0m
+[0;33mW (5756) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5763) receiving_node: CSI data received: len=384[0m
+[0;33mW (5769) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5776) receiving_node: CSI data received: len=384[0m
+[0;33mW (5781) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5788) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5796) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5805) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5813) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5821) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5829) receiving_node: CSI data received: len=384[0m
+[0;33mW (5835) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5842) receiving_node: CSI data received: len=384[0m
+[0;33mW (5847) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5854) receiving_node: CSI data received: len=384[0m
+[0;33mW (5860) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5867) receiving_node: CSI data received: len=384[0m
+[0;33mW (5872) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5879) receiving_node: CSI data received: len=384[0m
+[0;33mW (5884) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5892) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5900) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5908) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5916) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5924) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5933) receiving_node: CSI data received: len=384[0m
+[0;33mW (5938) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5945) receiving_node: CSI data received: len=384[0m
+[0;33mW (5950) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5957) receiving_node: CSI data received: len=384[0m
+[0;33mW (5963) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5970) receiving_node: CSI data received: len=384[0m
+[0;33mW (5975) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5982) receiving_node: CSI data received: len=384[0m
+[0;33mW (5988) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (5995) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6003) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6011) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6019) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6028) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6036) receiving_node: CSI data received: len=384[0m
+[0;33mW (6041) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6048) receiving_node: CSI data received: len=384[0m
+[0;33mW (6054) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6061) receiving_node: CSI data received: len=384[0m
+[0;33mW (6066) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6073) receiving_node: CSI data received: len=384[0m
+[0;33mW (6079) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6085) receiving_node: CSI data received: len=384[0m
+[0;33mW (6091) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6098) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6106) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6114) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6123) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6131) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6139) receiving_node: CSI data received: len=384[0m
+[0;33mW (6145) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6152) receiving_node: CSI data received: len=384[0m
+[0;33mW (6157) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6164) receiving_node: CSI data received: len=384[0m
+[0;33mW (6169) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6176) receiving_node: CSI data received: len=384[0m
+[0;33mW (6182) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6189) receiving_node: CSI data received: len=384[0m
+[0;33mW (6194) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6201) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6209) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6218) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6226) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6234) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6242) receiving_node: CSI data received: len=384[0m
+[0;33mW (6248) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6255) receiving_node: CSI data received: len=384[0m
+[0;33mW (6260) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6267) receiving_node: CSI data received: len=384[0m
+[0;33mW (6273) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6280) receiving_node: CSI data received: len=384[0m
+[0;33mW (6285) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6292) receiving_node: CSI data received: len=384[0m
+[0;33mW (6298) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6305) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6313) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6321) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6329) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6337) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6346) receiving_node: CSI data received: len=384[0m
+[0;33mW (6351) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6358) receiving_node: CSI data received: len=384[0m
+[0;33mW (6364) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6371) receiving_node: CSI data received: len=384[0m
+[0;33mW (6376) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6383) receiving_node: CSI data received: len=384[0m
+[0;33mW (6388) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6395) receiving_node: CSI data received: len=384[0m
+[0;33mW (6401) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6408) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6416) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6424) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6433) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6441) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6449) receiving_node: CSI data received: len=384[0m
+[0;33mW (6454) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6461) receiving_node: CSI data received: len=384[0m
+[0;33mW (6467) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6474) receiving_node: CSI data received: len=384[0m
+[0;33mW (6479) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6486) receiving_node: CSI data received: len=384[0m
+[0;33mW (6492) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6499) receiving_node: CSI data received: len=384[0m
+[0;33mW (6504) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6511) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6519) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6528) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6536) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6544) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6552) receiving_node: CSI data received: len=384[0m
+[0;33mW (6558) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6565) receiving_node: CSI data received: len=384[0m
+[0;33mW (6570) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6577) receiving_node: CSI data received: len=384[0m
+[0;33mW (6583) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6590) receiving_node: CSI data received: len=384[0m
+[0;33mW (6595) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6602) receiving_node: CSI data received: len=384[0m
+[0;33mW (6607) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6614) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6623) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6631) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6639) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6647) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6656) receiving_node: CSI data received: len=384[0m
+[0;33mW (6661) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6668) receiving_node: CSI data received: len=384[0m
+[0;33mW (6673) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6680) receiving_node: CSI data received: len=384[0m
+[0;33mW (6686) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6693) receiving_node: CSI data received: len=384[0m
+[0;33mW (6698) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6705) receiving_node: CSI data received: len=384[0m
+[0;33mW (6711) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6718) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6726) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6734) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6742) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6751) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6759) receiving_node: CSI data received: len=384[0m
+[0;33mW (6764) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6771) receiving_node: CSI data received: len=384[0m
+[0;33mW (6777) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6784) receiving_node: CSI data received: len=384[0m
+[0;33mW (6789) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6796) receiving_node: CSI data received: len=384[0m
+[0;33mW (6802) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6809) receiving_node: CSI data received: len=384[0m
+[0;33mW (6814) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6821) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6829) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6837) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6846) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6854) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6862) receiving_node: CSI data received: len=384[0m
+[0;33mW (6868) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6875) receiving_node: CSI data received: len=384[0m
+[0;33mW (6880) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6887) receiving_node: CSI data received: len=384[0m
+[0;33mW (6892) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6899) receiving_node: CSI data received: len=384[0m
+[0;33mW (6905) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6912) receiving_node: CSI data received: len=384[0m
+[0;33mW (6917) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6924) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6932) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6941) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6949) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6957) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6965) receiving_node: CSI data received: len=384[0m
+[0;33mW (6971) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6978) receiving_node: CSI data received: len=384[0m
+[0;33mW (6983) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (6990) receiving_node: CSI data received: len=384[0m
+[0;33mW (6996) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7003) receiving_node: CSI data received: len=384[0m
+[0;33mW (7008) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7015) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7023) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7032) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7040) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7049) receiving_node: CSI data received: len=384[0m
+[0;33mW (7054) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7061) receiving_node: CSI data received: len=384[0m
+[0;33mW (7066) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7073) receiving_node: CSI data received: len=384[0m
+[0;33mW (7078) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7085) receiving_node: CSI data received: len=384[0m
+[0;33mW (7091) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7098) receiving_node: CSI data received: len=384[0m
+[0;33mW (7103) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7110) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7118) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7127) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7135) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7143) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7152) receiving_node: CSI data received: len=384[0m
+[0;33mW (7157) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7164) receiving_node: CSI data received: len=384[0m
+[0;33mW (7169) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7176) receiving_node: CSI data received: len=384[0m
+[0;33mW (7182) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7189) receiving_node: CSI data received: len=384[0m
+[0;33mW (7194) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7201) receiving_node: CSI data received: len=384[0m
+[0;33mW (7206) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7214) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7222) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7230) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7238) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7246) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7255) receiving_node: CSI data received: len=384[0m
+[0;33mW (7260) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7267) receiving_node: CSI data received: len=384[0m
+[0;33mW (7273) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7279) receiving_node: CSI data received: len=384[0m
+[0;33mW (7285) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7292) receiving_node: CSI data received: len=384[0m
+[0;33mW (7297) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7304) receiving_node: CSI data received: len=384[0m
+[0;33mW (7310) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7317) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7325) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7333) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7341) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7350) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7358) receiving_node: CSI data received: len=384[0m
+[0;33mW (7363) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7370) receiving_node: CSI data received: len=384[0m
+[0;33mW (7376) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7383) receiving_node: CSI data received: len=384[0m
+[0;33mW (7388) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7395) receiving_node: CSI data received: len=384[0m
+[0;33mW (7401) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7408) receiving_node: CSI data received: len=384[0m
+[0;33mW (7413) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7420) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7428) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7437) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7445) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7453) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7461) receiving_node: CSI data received: len=384[0m
+[0;33mW (7467) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7474) receiving_node: CSI data received: len=384[0m
+[0;33mW (7479) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7486) receiving_node: CSI data received: len=384[0m
+[0;33mW (7492) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7498) receiving_node: CSI data received: len=384[0m
+[0;33mW (7504) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7511) receiving_node: CSI data received: len=384[0m
+[0;33mW (7516) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7523) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7532) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7540) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7548) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7556) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7565) receiving_node: CSI data received: len=384[0m
+[0;33mW (7570) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7577) receiving_node: CSI data received: len=384[0m
+[0;33mW (7582) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7589) receiving_node: CSI data received: len=384[0m
+[0;33mW (7595) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7602) receiving_node: CSI data received: len=384[0m
+[0;33mW (7607) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7614) receiving_node: CSI data received: len=384[0m
+[0;33mW (7620) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7627) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7635) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7643) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7651) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7660) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7668) receiving_node: CSI data received: len=384[0m
+[0;33mW (7673) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7680) receiving_node: CSI data received: len=384[0m
+[0;33mW (7686) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7693) receiving_node: CSI data received: len=384[0m
+[0;33mW (7698) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7705) receiving_node: CSI data received: len=384[0m
+[0;33mW (7711) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7717) receiving_node: CSI data received: len=384[0m
+[0;33mW (7723) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7730) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7738) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7746) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7755) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7763) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7771) receiving_node: CSI data received: len=384[0m
+[0;33mW (7777) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7783) receiving_node: CSI data received: len=384[0m
+[0;33mW (7789) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7796) receiving_node: CSI data received: len=384[0m
+[0;33mW (7801) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7808) receiving_node: CSI data received: len=384[0m
+[0;33mW (7814) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7821) receiving_node: CSI data received: len=384[0m
+[0;33mW (7826) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7833) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7841) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7850) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7858) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7866) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7874) receiving_node: CSI data received: len=384[0m
+[0;33mW (7880) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7887) receiving_node: CSI data received: len=384[0m
+[0;33mW (7892) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7899) receiving_node: CSI data received: len=384[0m
+[0;33mW (7905) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7912) receiving_node: CSI data received: len=384[0m
+[0;33mW (7917) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7924) receiving_node: CSI data received: len=384[0m
+[0;33mW (7929) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7937) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7945) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7953) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7961) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7969) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7978) receiving_node: CSI data received: len=384[0m
+[0;33mW (7983) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (7990) receiving_node: CSI data received: len=384[0m
+[0;33mW (7996) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8002) receiving_node: CSI data received: len=384[0m
+[0;33mW (8008) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8015) receiving_node: CSI data received: len=384[0m
+[0;33mW (8020) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8027) receiving_node: CSI data received: len=384[0m
+[0;33mW (8033) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8040) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8048) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8056) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8064) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8073) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8081) receiving_node: CSI data received: len=384[0m
+[0;33mW (8086) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8093) receiving_node: CSI data received: len=384[0m
+[0;33mW (8099) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8106) receiving_node: CSI data received: len=384[0m
+[0;33mW (8111) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8118) receiving_node: CSI data received: len=384[0m
+[0;31mE (8127) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (8127) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (8127) task_wdt: Tasks currently running:[0m
+[0;31mE (8127) task_wdt: CPU 0: wifi[0m
+[0;31mE (8127) task_wdt: Print CPU 0 (current core) backtrace[0m
+Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x42006c88  RA      : 0x42007d84  SP      : 0x3fca07a0  GP      : 0x3fc92000  
+TP      : 0x3fc816f0  T0      : 0x87002c80  T1      : 0x80000000  T2      : 0x101e4bdc  
+S0/FP   : 0x0000002a  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x00000061  
+A2      : 0x00000004  A3      : 0x60000000  A4      : 0x00000001  A5      : 0x607f8000  
+A6      : 0x420064d6  A7      : 0x0000000a  S2      : 0x00000061  S3      : 0x0000004e  
+S4      : 0x3fc98e48  S5      : 0x3fca0940  S6      : 0x3c094dcd  S7      : 0x00000000  
+S8      : 0x00000030  S9      : 0x00000004  S10     : 0x00000002  S11     : 0x00000002  
+T3      : 0x00000000  T4      : 0x941f43d0  T5      : 0x007b5073  T6      : 0xcf2b0000  
+MSTATUS : 0x00000000  MTVEC   : 0x982f3bcf  MCAUSE  : 0x00779ce0  MTVAL   : 0x61007d44  
+MHARTID : 0x00000004  
+[0;33mW (8124) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8238) receiving_node: CSI data received: len=384[0m
+[0;33mW (8243) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8250) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8258) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8266) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8275) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8283) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8291) receiving_node: CSI data received: len=384[0m
+[0;33mW (8297) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8304) receiving_node: CSI data received: len=384[0m
+[0;33mW (8309) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8316) receiving_node: CSI data received: len=384[0m
+[0;33mW (8321) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8328) receiving_node: CSI data received: len=384[0m
+[0;33mW (8334) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8341) receiving_node: CSI data received: len=384[0m
+[0;33mW (8346) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8353) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8362) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8370) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8378) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8386) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8395) receiving_node: CSI data received: len=384[0m
+[0;33mW (8400) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8407) receiving_node: CSI data received: len=384[0m
+[0;33mW (8412) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8419) receiving_node: CSI data received: len=384[0m
+[0;33mW (8425) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8432) receiving_node: CSI data received: len=384[0m
+[0;33mW (8437) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8444) receiving_node: CSI data received: len=384[0m
+[0;33mW (8450) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8457) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8465) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8473) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8481) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8490) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8498) receiving_node: CSI data received: len=384[0m
+[0;33mW (8503) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8510) receiving_node: CSI data received: len=384[0m
+[0;33mW (8516) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8523) receiving_node: CSI data received: len=384[0m
+[0;33mW (8528) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8535) receiving_node: CSI data received: len=384[0m
+[0;33mW (8540) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8547) receiving_node: CSI data received: len=384[0m
+[0;33mW (8553) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8560) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8568) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8576) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8585) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8593) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8601) receiving_node: CSI data received: len=384[0m
+[0;33mW (8607) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8613) receiving_node: CSI data received: len=384[0m
+[0;33mW (8619) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8626) receiving_node: CSI data received: len=384[0m
+[0;33mW (8631) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8638) receiving_node: CSI data received: len=384[0m
+[0;33mW (8644) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8651) receiving_node: CSI data received: len=384[0m
+[0;33mW (8656) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8663) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8671) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8680) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8688) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8696) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8704) receiving_node: CSI data received: len=384[0m
+[0;33mW (8710) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8717) receiving_node: CSI data received: len=384[0m
+[0;33mW (8722) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8729) receiving_node: CSI data received: len=384[0m
+[0;33mW (8735) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8742) receiving_node: CSI data received: len=384[0m
+[0;33mW (8747) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8754) receiving_node: CSI data received: len=384[0m
+[0;33mW (8759) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8767) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8775) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8783) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8791) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8799) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8808) receiving_node: CSI data received: len=384[0m
+[0;33mW (8813) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8820) receiving_node: CSI data received: len=384[0m
+[0;33mW (8826) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8832) receiving_node: CSI data received: len=384[0m
+[0;33mW (8838) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8845) receiving_node: CSI data received: len=384[0m
+[0;33mW (8850) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8857) receiving_node: CSI data received: len=384[0m
+[0;33mW (8863) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8870) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8878) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8886) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8894) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8903) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8911) receiving_node: CSI data received: len=384[0m
+[0;33mW (8916) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8923) receiving_node: CSI data received: len=384[0m
+[0;33mW (8929) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8936) receiving_node: CSI data received: len=384[0m
+[0;33mW (8941) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8948) receiving_node: CSI data received: len=384[0m
+[0;33mW (8954) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8961) receiving_node: CSI data received: len=384[0m
+[0;33mW (8966) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (8973) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8981) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8989) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8998) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9006) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9014) receiving_node: CSI data received: len=384[0m
+[0;33mW (9020) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9027) receiving_node: CSI data received: len=384[0m
+[0;33mW (9032) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9039) receiving_node: CSI data received: len=384[0m
+[0;33mW (9044) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9051) receiving_node: CSI data received: len=384[0m
+[0;33mW (9057) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9064) receiving_node: CSI data received: len=384[0m
+[0;33mW (9069) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9076) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9085) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9093) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9101) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9109) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9118) receiving_node: CSI data received: len=384[0m
+[0;33mW (9123) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9130) receiving_node: CSI data received: len=384[0m
+[0;33mW (9135) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9142) receiving_node: CSI data received: len=384[0m
+[0;33mW (9148) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9155) receiving_node: CSI data received: len=384[0m
+[0;33mW (9160) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9167) receiving_node: CSI data received: len=384[0m
+[0;33mW (9173) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9180) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9188) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9196) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9204) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9213) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9221) receiving_node: CSI data received: len=384[0m
+[0;33mW (9226) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9233) receiving_node: CSI data received: len=384[0m
+[0;33mW (9239) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9246) receiving_node: CSI data received: len=384[0m
+[0;33mW (9251) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9258) receiving_node: CSI data received: len=384[0m
+[0;33mW (9263) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9270) receiving_node: CSI data received: len=384[0m
+[0;33mW (9276) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9283) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9291) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9299) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9308) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9316) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9324) receiving_node: CSI data received: len=384[0m
+[0;33mW (9330) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9336) receiving_node: CSI data received: len=384[0m
+[0;33mW (9342) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9349) receiving_node: CSI data received: len=384[0m
+[0;33mW (9354) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9361) receiving_node: CSI data received: len=384[0m
+[0;33mW (9367) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9374) receiving_node: CSI data received: len=384[0m
+[0;33mW (9379) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9386) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9394) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9403) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9411) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9419) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9427) receiving_node: CSI data received: len=384[0m
+[0;33mW (9433) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9440) receiving_node: CSI data received: len=384[0m
+[0;33mW (9445) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9452) receiving_node: CSI data received: len=384[0m
+[0;33mW (9458) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9465) receiving_node: CSI data received: len=384[0m
+[0;33mW (9470) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9477) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9485) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9494) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9502) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9510) receiving_node: CSI data received: len=384[0m
+[0;33mW (9515) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9522) receiving_node: CSI data received: len=384[0m
+[0;33mW (9528) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9535) receiving_node: CSI data received: len=384[0m
+[0;33mW (9540) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9547) receiving_node: CSI data received: len=384[0m
+[0;33mW (9553) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9560) receiving_node: CSI data received: len=384[0m
+[0;33mW (9565) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9572) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9580) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9589) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9597) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9605) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9613) receiving_node: CSI data received: len=384[0m
+[0;33mW (9619) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9626) receiving_node: CSI data received: len=384[0m
+[0;33mW (9631) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9638) receiving_node: CSI data received: len=384[0m
+[0;33mW (9644) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9650) receiving_node: CSI data received: len=384[0m
+[0;33mW (9656) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9663) receiving_node: CSI data received: len=384[0m
+[0;33mW (9668) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9675) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9684) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9692) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9700) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9708) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9717) receiving_node: CSI data received: len=384[0m
+[0;33mW (9722) receiving_node: Failed to allocate memory for data_buffer[0m
+[0;32mI (9729) receiving_node: CSI data received: len=384[0m
+[0;33mW (9734) receiving_node: Failed to allocate memory for data_buffer[0m

@@ -1,0 +1,870 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403848b2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 16:48:34[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1f8a0h (129184) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002f8c8 vaddr=3fc91800 size=00750h (  1872) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8f944h (588100) map[0m
+[0;32mI (211) esp_image: segment 3: paddr=000bf96c vaddr=3fc91f50 size=02358h (  9048) load[0m
+[0;32mI (213) esp_image: segment 4: paddr=000c1ccc vaddr=40380000 size=117c0h ( 71616) load[0m
+[0;32mI (236) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (236) boot: Disabling RNG early entropy source...[0m
+[0;32mI (247) cpu_start: Unicore app[0m
+[0;32mI (256) cpu_start: Pro cpu start user code[0m
+[0;32mI (256) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (256) cpu_start: Application information:[0m
+[0;32mI (259) cpu_start: Project name:     arch_recive[0m
+[0;32mI (264) cpu_start: App version:      1[0m
+[0;32mI (269) cpu_start: Compile time:     Sep 23 2024 16:48:14[0m
+[0;32mI (275) cpu_start: ELF file SHA256:  b8ecc26e4...[0m
+[0;32mI (280) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (286) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (290) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (295) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (300) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (307) heap_init: At 3FC983B0 len 00027C50 (159 KiB): RAM[0m
+[0;32mI (313) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (320) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (327) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (334) spi_flash: detected chip: generic[0m
+[0;32mI (338) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (356) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (362) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (373) main_task: Calling app_main()[0m
+[0;32mI (386) pp: pp rom version: 9387209[0m
+[0;32mI (386) net80211: net80211 rom version: 9387209[0m
+I (388) wifi:wifi driver task: 3fca0e74, prio:23, stack:6656, core=0
+I (397) wifi:wifi firmware version: 3e0076f
+I (398) wifi:wifi certification version: v7.0
+I (400) wifi:config NVS flash: enabled
+I (404) wifi:config nano formating: disabled
+I (408) wifi:Init data frame dynamic rx buffer num: 32
+I (413) wifi:Init static rx mgmt buffer num: 5
+I (417) wifi:Init management short buffer num: 32
+I (421) wifi:Init dynamic tx buffer num: 128
+I (425) wifi:Init static tx FG buffer num: 2
+I (429) wifi:Init static rx buffer size: 2212
+I (433) wifi:Init static rx buffer num: 10
+I (437) wifi:Init dynamic rx buffer num: 32
+[0;32mI (441) wifi_init: rx ba win: 6[0m
+[0;32mI (445) wifi_init: tcpip mbox: 32[0m
+[0;32mI (449) wifi_init: udp mbox: 6[0m
+[0;32mI (452) wifi_init: tcp mbox: 6[0m
+[0;32mI (456) wifi_init: tcp tx win: 5760[0m
+[0;32mI (460) wifi_init: tcp rx win: 5760[0m
+[0;32mI (464) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (473) wifi_init: WiFi RX IRAM OP enabled[0m
+I (478) wifi:Set ps type: 0, coexist: 0
+
+[0;32mI (483) phy_init: phy_version 1170,f4aea9b,Apr 30 2024,10:49:24[0m
+I (522) wifi:mode : sta (64:e8:33:89:b1:48)
+I (523) wifi:enable tsf
+[0;32mI (526) receiving_node: Wi-Fi initialization completed.[0m
+[0;32mI (2934) receiving_node: Retrying connection to the AP[0m
+[0;32mI (5343) receiving_node: Retrying connection to the AP[0m
+[0;32mI (7751) receiving_node: Retrying connection to the AP[0m
+I (7766) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (7767) wifi:state: init -> auth (b0)
+I (7769) wifi:state: auth -> assoc (0)
+I (7782) wifi:state: assoc -> run (10)
+I (7801) wifi:connected with your_ssid, aid = 1, channel 11, 40D, bssid = 64:e8:33:89:f9:11
+I (7802) wifi:security: WPA2-PSK, phy: bgn, rssi: -30
+I (7804) wifi:pm start, type: 0
+
+I (7806) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7814) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (7823) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (7830) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (8838) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (8839) receiving_node: Operating on channel: 11[0m
+I (8842) ESPNOW: espnow [version: 1.0] init
+[0;32mI (8846) receiving_node: Socket created[0m
+[0;32mI (8848) receiving_node: CSI data received: len=384[0m
+[0;32mI (8857) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8864) receiving_node: CSI data received: len=384[0m
+[0;32mI (8870) receiving_node: CSI data received: len=384[0m
+[0;32mI (8876) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8883) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8891) receiving_node: CSI data received: len=384[0m
+[0;32mI (8898) receiving_node: CSI data received: len=384[0m
+[0;32mI (8904) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8911) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8919) receiving_node: CSI data received: len=384[0m
+[0;32mI (8926) receiving_node: CSI data received: len=384[0m
+[0;32mI (8931) receiving_node: CSI data received: len=384[0m
+[0;32mI (8937) receiving_node: CSI data received: len=384[0m
+[0;32mI (8942) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8950) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8958) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8966) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8974) receiving_node: CSI data received: len=384[0m
+[0;32mI (8981) receiving_node: CSI data received: len=384[0m
+[0;32mI (8987) receiving_node: CSI data received: len=384[0m
+[0;32mI (8992) receiving_node: CSI data received: len=384[0m
+[0;32mI (8998) receiving_node: CSI data received: len=384[0m
+[0;32mI (9003) receiving_node: CSI data received: len=384[0m
+[0;32mI (9008) receiving_node: CSI data received: len=384[0m
+[0;32mI (9014) receiving_node: CSI data received: len=384[0m
+[0;32mI (9020) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9027) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9035) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9043) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9052) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9060) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9068) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9076) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9085) receiving_node: CSI data received: len=384[0m
+[0;32mI (9091) receiving_node: CSI data received: len=384[0m
+[0;32mI (9097) receiving_node: CSI data received: len=384[0m
+[0;32mI (9102) receiving_node: CSI data received: len=384[0m
+[0;32mI (9108) receiving_node: CSI data received: len=384[0m
+[0;32mI (9113) receiving_node: CSI data received: len=384[0m
+[0;32mI (9119) receiving_node: CSI data received: len=384[0m
+[0;32mI (9124) receiving_node: CSI data received: len=384[0m
+[0;32mI (9130) receiving_node: CSI data received: len=384[0m
+[0;32mI (9136) receiving_node: CSI data received: len=384[0m
+[0;32mI (9141) receiving_node: CSI data received: len=384[0m
+[0;32mI (9147) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9154) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9163) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9171) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9179) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9187) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9195) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9203) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9212) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9228) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9237) receiving_node: CSI data received: len=384[0m
+[0;32mI (9243) receiving_node: CSI data received: len=384[0m
+[0;32mI (9248) receiving_node: CSI data received: len=384[0m
+[0;32mI (9254) receiving_node: CSI data received: len=384[0m
+[0;32mI (9260) receiving_node: CSI data received: len=384[0m
+[0;32mI (9265) receiving_node: CSI data received: len=384[0m
+[0;32mI (9271) receiving_node: CSI data received: len=384[0m
+[0;32mI (9276) receiving_node: CSI data received: len=384[0m
+[0;32mI (9282) receiving_node: CSI data received: len=384[0m
+[0;32mI (9287) receiving_node: CSI data received: len=384[0m
+[0;32mI (9293) receiving_node: CSI data received: len=384[0m
+[0;32mI (9299) receiving_node: CSI data received: len=384[0m
+[0;32mI (9304) receiving_node: CSI data received: len=384[0m
+[0;32mI (9310) receiving_node: CSI data received: len=384[0m
+[0;32mI (9315) receiving_node: CSI data received: len=384[0m
+[0;32mI (9321) receiving_node: CSI data received: len=384[0m
+[0;32mI (9326) receiving_node: CSI data received: len=384[0m
+[0;32mI (9332) receiving_node: CSI data received: len=384[0m
+[0;32mI (9338) receiving_node: CSI data received: len=384[0m
+[0;32mI (9343) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9350) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9358) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9367) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9375) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9383) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9391) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9400) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9408) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9416) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9424) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9433) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9441) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9449) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9457) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9466) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9482) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9490) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9499) receiving_node: CSI data received: len=384[0m
+[0;32mI (9505) receiving_node: CSI data received: len=384[0m
+[0;32mI (9511) receiving_node: CSI data received: len=384[0m
+[0;32mI (9516) receiving_node: CSI data received: len=384[0m
+[0;32mI (9522) receiving_node: CSI data received: len=384[0m
+[0;32mI (9528) receiving_node: CSI data received: len=384[0m
+[0;32mI (9533) receiving_node: CSI data received: len=384[0m
+[0;32mI (9539) receiving_node: CSI data received: len=384[0m
+[0;32mI (9544) receiving_node: CSI data received: len=384[0m
+[0;32mI (9550) receiving_node: CSI data received: len=384[0m
+[0;32mI (9555) receiving_node: CSI data received: len=384[0m
+[0;32mI (9561) receiving_node: CSI data received: len=384[0m
+[0;32mI (9566) receiving_node: CSI data received: len=384[0m
+[0;32mI (9572) receiving_node: CSI data received: len=384[0m
+[0;32mI (9578) receiving_node: CSI data received: len=384[0m
+[0;32mI (9583) receiving_node: CSI data received: len=384[0m
+[0;32mI (9588) receiving_node: CSI data received: len=384[0m
+[0;32mI (9594) receiving_node: CSI data received: len=384[0m
+[0;32mI (9600) receiving_node: CSI data received: len=384[0m
+[0;32mI (9605) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9612) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9621) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9629) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9637) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9645) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9654) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9662) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9670) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9678) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9687) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9695) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9703) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9711) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9720) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9728) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9736) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9744) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9753) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9761) receiving_node: CSI data received: len=384[0m
+[0;32mI (9768) receiving_node: CSI data received: len=384[0m
+[0;32mI (9773) receiving_node: CSI data received: len=384[0m
+[0;32mI (9778) receiving_node: CSI data received: len=384[0m
+[0;32mI (9784) receiving_node: CSI data received: len=384[0m
+[0;32mI (9790) receiving_node: CSI data received: len=384[0m
+[0;32mI (9795) receiving_node: CSI data received: len=384[0m
+[0;32mI (9801) receiving_node: CSI data received: len=384[0m
+[0;32mI (9807) receiving_node: CSI data received: len=384[0m
+[0;32mI (9812) receiving_node: CSI data received: len=384[0m
+[0;32mI (9818) receiving_node: CSI data received: len=384[0m
+[0;32mI (9823) receiving_node: CSI data received: len=384[0m
+[0;32mI (9829) receiving_node: CSI data received: len=384[0m
+[0;32mI (9834) receiving_node: CSI data received: len=384[0m
+[0;32mI (9840) receiving_node: CSI data received: len=384[0m
+[0;32mI (9845) receiving_node: CSI data received: len=384[0m
+[0;32mI (9851) receiving_node: CSI data received: len=384[0m
+[0;32mI (9856) receiving_node: CSI data received: len=384[0m
+[0;32mI (9862) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9869) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9877) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9886) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9894) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9902) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9910) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9919) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9927) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9935) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9943) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9952) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9960) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9968) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9976) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9985) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9993) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10001) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10009) receiving_node: CSI data received: len=384[0m
+[0;32mI (10016) receiving_node: CSI data received: len=384[0m
+[0;32mI (10022) receiving_node: CSI data received: len=384[0m
+[0;32mI (10027) receiving_node: CSI data received: len=384[0m
+[0;32mI (10033) receiving_node: CSI data received: len=384[0m
+[0;32mI (10039) receiving_node: CSI data received: len=384[0m
+[0;32mI (10044) receiving_node: CSI data received: len=384[0m
+[0;32mI (10050) receiving_node: CSI data received: len=384[0m
+[0;32mI (10056) receiving_node: CSI data received: len=384[0m
+[0;32mI (10061) receiving_node: CSI data received: len=384[0m
+[0;32mI (10067) receiving_node: CSI data received: len=384[0m
+[0;32mI (10073) receiving_node: CSI data received: len=384[0m
+[0;32mI (10078) receiving_node: CSI data received: len=384[0m
+[0;32mI (10084) receiving_node: CSI data received: len=384[0m
+[0;32mI (10089) receiving_node: CSI data received: len=384[0m
+[0;32mI (10095) receiving_node: CSI data received: len=384[0m
+[0;32mI (10101) receiving_node: CSI data received: len=384[0m
+[0;32mI (10107) receiving_node: CSI data received: len=384[0m
+[0;32mI (10113) receiving_node: Data sent: 1:8856791:0,0,0,0,0,0,0,0,0,0,0,0,-5,-11,-5,-12,-5,-11,-5,-12,-5,-11,-5,-11,-5,-11,-5,-11,-5,-11,-6,-10,-6,-10,-6,-10,-6,-10,-6,-9,-7,-9,-6,-9,-7,-9,-7,-8,-7,-9,-7,-9,-7,-8,-7,-9,-8,-8,-8,-8,-8,-8,-8,-8,0,0,-8,-8,-8,-8,-8,-9,-7,-8,-8,-8,-8,-8,-7,-9,-8,-8,-7,-9,-7,-8,-7,-8,-7,-8,-7,-8,-7,-9,-6,-8,-6,-9,-5,-8,-5,-8,-5,-8,-4,-8,-5,-9,-4,-9,-4,-8,-4,-8,-3,-9,-2,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,-58,19,-75,16,-61,20,-60,21,-71,13,-62,31,-69,17,-54,15,-57,17,-54,21,-64,12,-60,13,-58,14,-62,6,-55,9,-60,9,-60,7[0m
+[0;32mI (10159) receiving_node: CSI data received: len=384[0m
+[0;32mI (10166) receiving_node: Data sent: 1:8870589:0,0,0,0,0,0,0,0,0,0,0,0,-4,10,-4,11,-4,10,-4,11,-3,10,-4,11,-3,10,-3,10,-3,10,-2,10,-2,10,-2,10,-2,10,-2,10,-2,10,-2,9,-2,10,-1,9,-1,10,-1,10,0,10,-1,10,0,9,0,10,0,10,1,10,0,0,0,10,0,9,0,10,0,10,0,10,0,10,-1,10,0,10,-1,10,-1,9,-1,9,-1,9,-1,9,-1,10,-2,8,-2,9,-2,8,-2,8,-2,8,-2,8,-3,8,-3,8,-3,7,-4,7,-4,7,-5,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-57,39,-54,39,-52,41,-57,46,-54,46,-55,48,-51,42,-54,38,-51,41,-39,45,-54,44,-47,44,-49,38,-42,43,-40,43,-38,47,-38,43,-38,48,-38,49,-34,47,-36,47,-32,45,-28,48,-38[0m
+[0;32mI (10214) receiving_node: CSI data received: len=384[0m
+[0;32mI (10221) receiving_node: Data sent: 1:8876141:0,0,0,0,0,0,0,0,0,0,0,0,-6,10,-6,10,-6,10,-6,10,-5,10,-6,10,-5,10,-5,10,-5,9,-4,9,-4,10,-4,9,-3,10,-3,10,-3,10,-3,9,-3,10,-2,9,-3,10,-2,9,-2,10,-2,10,-1,10,-2,10,-1,10,-1,10,0,0,-1,10,-1,10,-1,11,-1,10,-1,10,-1,10,-2,10,-1,10,-2,10,-2,10,-2,10,-2,10,-2,9,-2,9,-3,8,-3,9,-3,8,-3,8,-3,8,-3,8,-4,8,-4,8,-4,7,-4,7,-5,7,-6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-60,43,-62,38,-52,31,-58,35,-55,44,-53,33,-57,38,-47,35,-52,40,-50,37,-56,38,-50,41,-48,33,-49,39,-43,43,-42,45,-47,45,-41,41,-32,41,-42,39,-35,41,-36[0m
+[0;32mI (10268) receiving_node: CSI data received: len=384[0m
+[0;31mE (10275) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10280) receiving_node: CSI data received: len=384[0m
+[0;31mE (10287) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10293) receiving_node: CSI data received: len=384[0m
+[0;31mE (10300) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10305) receiving_node: CSI data received: len=384[0m
+[0;31mE (10312) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10317) receiving_node: CSI data received: len=384[0m
+[0;31mE (10325) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10330) receiving_node: CSI data received: len=384[0m
+[0;31mE (10337) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10342) receiving_node: CSI data received: len=384[0m
+[0;31mE (10349) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10355) receiving_node: CSI data received: len=384[0m
+[0;31mE (10362) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10367) receiving_node: CSI data received: len=384[0m
+[0;31mE (10374) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10379) receiving_node: CSI data received: len=384[0m
+[0;31mE (10387) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10392) receiving_node: CSI data received: len=384[0m
+[0;31mE (10399) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10404) receiving_node: CSI data received: len=384[0m
+[0;31mE (10411) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10417) receiving_node: CSI data received: len=384[0m
+[0;31mE (10424) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10429) receiving_node: CSI data received: len=384[0m
+[0;31mE (10436) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10442) receiving_node: CSI data received: len=384[0m
+[0;31mE (10449) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10454) receiving_node: CSI data received: len=384[0m
+[0;31mE (10461) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10466) receiving_node: CSI data received: len=384[0m
+[0;31mE (10473) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10479) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10487) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10495) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10504) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10512) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10520) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10529) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10537) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10545) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10554) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10562) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10570) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10579) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10587) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10595) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10604) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10612) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10620) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10629) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10637) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10645) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10654) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10662) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10670) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10679) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10687) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10695) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10704) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10712) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10720) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10729) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10737) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10745) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10754) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10762) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10770) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10779) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10787) receiving_node: CSI data received: len=384[0m
+[0;31mE (10794) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10799) receiving_node: CSI data received: len=384[0m
+[0;31mE (10807) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10812) receiving_node: CSI data received: len=384[0m
+[0;31mE (10819) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10824) receiving_node: CSI data received: len=384[0m
+[0;31mE (10831) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10837) receiving_node: CSI data received: len=384[0m
+[0;31mE (10844) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10849) receiving_node: CSI data received: len=384[0m
+[0;31mE (10856) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10862) receiving_node: CSI data received: len=384[0m
+[0;31mE (10869) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10874) receiving_node: CSI data received: len=384[0m
+[0;31mE (10881) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10886) receiving_node: CSI data received: len=384[0m
+[0;31mE (10894) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10899) receiving_node: CSI data received: len=384[0m
+[0;31mE (10906) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10911) receiving_node: CSI data received: len=384[0m
+[0;31mE (10918) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10924) receiving_node: CSI data received: len=384[0m
+[0;31mE (10931) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10936) receiving_node: CSI data received: len=384[0m
+[0;31mE (10943) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10948) receiving_node: CSI data received: len=384[0m
+[0;31mE (10956) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10961) receiving_node: CSI data received: len=384[0m
+[0;31mE (10968) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10973) receiving_node: CSI data received: len=384[0m
+[0;31mE (10980) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10986) receiving_node: CSI data received: len=384[0m
+[0;31mE (10993) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (10998) receiving_node: CSI data received: len=384[0m
+[0;31mE (11005) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11010) receiving_node: CSI data received: len=384[0m
+[0;31mE (11018) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11023) receiving_node: CSI data received: len=384[0m
+[0;31mE (11030) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11035) receiving_node: CSI data received: len=384[0m
+[0;31mE (11042) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11048) receiving_node: CSI data received: len=384[0m
+[0;31mE (11055) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11060) receiving_node: CSI data received: len=384[0m
+[0;31mE (11067) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11073) receiving_node: CSI data received: len=384[0m
+[0;31mE (11080) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11085) receiving_node: CSI data received: len=384[0m
+[0;31mE (11092) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11097) receiving_node: CSI data received: len=384[0m
+[0;31mE (11105) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11110) receiving_node: CSI data received: len=384[0m
+[0;31mE (11117) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11122) receiving_node: CSI data received: len=384[0m
+[0;31mE (11129) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11135) receiving_node: CSI data received: len=384[0m
+[0;31mE (11142) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11147) receiving_node: CSI data received: len=384[0m
+[0;31mE (11154) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11159) receiving_node: CSI data received: len=384[0m
+[0;31mE (11167) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11172) receiving_node: CSI data received: len=384[0m
+[0;31mE (11179) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11184) receiving_node: CSI data received: len=384[0m
+[0;31mE (11191) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11197) receiving_node: CSI data received: len=384[0m
+[0;31mE (11204) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11209) receiving_node: CSI data received: len=384[0m
+[0;31mE (11216) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11221) receiving_node: CSI data received: len=384[0m
+[0;31mE (11228) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11234) receiving_node: CSI data received: len=384[0m
+[0;31mE (11241) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11247) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11255) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11263) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11271) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11280) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11288) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11296) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11305) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11313) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11321) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11330) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11338) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11346) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11355) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11363) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11371) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11380) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11388) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11396) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11405) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11413) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11421) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11430) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11438) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11446) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11455) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11463) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11471) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11480) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11488) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11496) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11505) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11513) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11521) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11530) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11538) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11546) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11555) receiving_node: CSI data received: len=384[0m
+[0;31mE (11562) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11567) receiving_node: CSI data received: len=384[0m
+[0;31mE (11574) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11579) receiving_node: CSI data received: len=384[0m
+[0;31mE (11587) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11592) receiving_node: CSI data received: len=384[0m
+[0;31mE (11599) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11604) receiving_node: CSI data received: len=384[0m
+[0;31mE (11611) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11617) receiving_node: CSI data received: len=384[0m
+[0;31mE (11624) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11629) receiving_node: CSI data received: len=384[0m
+[0;31mE (11636) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11641) receiving_node: CSI data received: len=384[0m
+[0;31mE (11649) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11654) receiving_node: CSI data received: len=384[0m
+[0;31mE (11661) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11666) receiving_node: CSI data received: len=384[0m
+[0;31mE (11674) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11679) receiving_node: CSI data received: len=384[0m
+[0;31mE (11686) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11691) receiving_node: CSI data received: len=384[0m
+[0;31mE (11698) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11704) receiving_node: CSI data received: len=384[0m
+[0;31mE (11711) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11716) receiving_node: CSI data received: len=384[0m
+[0;31mE (11723) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11728) receiving_node: CSI data received: len=384[0m
+[0;31mE (11735) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11741) receiving_node: CSI data received: len=384[0m
+[0;31mE (11748) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11753) receiving_node: CSI data received: len=384[0m
+[0;31mE (11760) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11766) receiving_node: CSI data received: len=384[0m
+[0;31mE (11773) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11778) receiving_node: CSI data received: len=384[0m
+[0;31mE (11785) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11790) receiving_node: CSI data received: len=384[0m
+[0;31mE (11798) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11803) receiving_node: CSI data received: len=384[0m
+[0;31mE (11810) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11815) receiving_node: CSI data received: len=384[0m
+[0;31mE (11822) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11828) receiving_node: CSI data received: len=384[0m
+[0;31mE (11835) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11840) receiving_node: CSI data received: len=384[0m
+[0;31mE (11847) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11852) receiving_node: CSI data received: len=384[0m
+[0;31mE (11859) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11865) receiving_node: CSI data received: len=384[0m
+[0;31mE (11872) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11877) receiving_node: CSI data received: len=384[0m
+[0;31mE (11884) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11890) receiving_node: CSI data received: len=384[0m
+[0;31mE (11897) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11902) receiving_node: CSI data received: len=384[0m
+[0;31mE (11909) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11915) receiving_node: CSI data received: len=384[0m
+[0;31mE (11922) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11927) receiving_node: CSI data received: len=384[0m
+[0;31mE (11934) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11939) receiving_node: CSI data received: len=384[0m
+[0;31mE (11946) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11952) receiving_node: CSI data received: len=384[0m
+[0;31mE (11959) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11964) receiving_node: CSI data received: len=384[0m
+[0;31mE (11971) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (11977) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11985) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11993) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12002) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12010) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12018) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12027) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12035) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12043) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12052) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12060) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12068) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12077) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12085) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12093) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12102) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12110) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12118) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12127) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12135) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12143) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12152) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12160) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12168) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12177) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12185) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12193) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12202) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12210) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12218) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12227) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12235) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12243) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12252) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12260) receiving_node: CSI data received: len=384[0m
+[0;31mE (12267) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12272) receiving_node: CSI data received: len=384[0m
+[0;31mE (12280) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12285) receiving_node: CSI data received: len=384[0m
+[0;31mE (12292) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12297) receiving_node: CSI data received: len=384[0m
+[0;31mE (12304) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12310) receiving_node: CSI data received: len=384[0m
+[0;31mE (12317) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12322) receiving_node: CSI data received: len=384[0m
+[0;31mE (12329) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12334) receiving_node: CSI data received: len=384[0m
+[0;31mE (12342) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12347) receiving_node: CSI data received: len=384[0m
+[0;31mE (12354) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12359) receiving_node: CSI data received: len=384[0m
+[0;31mE (12366) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12372) receiving_node: CSI data received: len=384[0m
+[0;31mE (12379) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12384) receiving_node: CSI data received: len=384[0m
+[0;31mE (12391) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12396) receiving_node: CSI data received: len=384[0m
+[0;31mE (12404) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12409) receiving_node: CSI data received: len=384[0m
+[0;31mE (12416) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12421) receiving_node: CSI data received: len=384[0m
+[0;31mE (12428) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12434) receiving_node: CSI data received: len=384[0m
+[0;31mE (12441) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12446) receiving_node: CSI data received: len=384[0m
+[0;31mE (12453) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12459) receiving_node: CSI data received: len=384[0m
+[0;31mE (12465) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12471) receiving_node: CSI data received: len=384[0m
+[0;31mE (12478) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12483) receiving_node: CSI data received: len=384[0m
+[0;31mE (12491) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12496) receiving_node: CSI data received: len=384[0m
+[0;31mE (12503) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12508) receiving_node: CSI data received: len=384[0m
+[0;31mE (12515) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12521) receiving_node: CSI data received: len=384[0m
+[0;31mE (12528) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12533) receiving_node: CSI data received: len=384[0m
+[0;31mE (12540) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12545) receiving_node: CSI data received: len=384[0m
+[0;31mE (12553) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12558) receiving_node: CSI data received: len=384[0m
+[0;31mE (12565) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12570) receiving_node: CSI data received: len=384[0m
+[0;31mE (12577) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12583) receiving_node: CSI data received: len=384[0m
+[0;31mE (12590) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12595) receiving_node: CSI data received: len=384[0m
+[0;31mE (12602) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12607) receiving_node: CSI data received: len=384[0m
+[0;31mE (12615) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12620) receiving_node: CSI data received: len=384[0m
+[0;31mE (12627) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12632) receiving_node: CSI data received: len=384[0m
+[0;31mE (12639) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12645) receiving_node: CSI data received: len=384[0m
+[0;31mE (12652) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12657) receiving_node: CSI data received: len=384[0m
+[0;31mE (12664) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12670) receiving_node: CSI data received: len=384[0m
+[0;31mE (12677) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12682) receiving_node: CSI data received: len=384[0m
+[0;31mE (12689) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12694) receiving_node: CSI data received: len=384[0m
+[0;31mE (12701) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (12707) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12715) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12723) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12732) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12740) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12748) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12757) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12765) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12773) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12782) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12790) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12798) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12807) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12815) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12823) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12832) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12840) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12848) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12857) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12865) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12873) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12882) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12890) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12898) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12907) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12915) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12923) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12932) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12940) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12948) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12957) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12965) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12973) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12982) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12990) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12998) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13007) receiving_node: CSI data received: len=384[0m
+[0;31mE (13014) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13019) receiving_node: CSI data received: len=256[0m
+[0;31mE (13026) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13032) receiving_node: CSI data received: len=384[0m
+[0;31mE (13039) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13044) receiving_node: CSI data received: len=384[0m
+[0;31mE (13051) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13056) receiving_node: CSI data received: len=384[0m
+[0;31mE (13063) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13069) receiving_node: CSI data received: len=384[0m
+[0;31mE (13076) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13081) receiving_node: CSI data received: len=384[0m
+[0;31mE (13088) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13094) receiving_node: CSI data received: len=384[0m
+[0;31mE (13101) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13106) receiving_node: CSI data received: len=384[0m
+[0;31mE (13113) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13118) receiving_node: CSI data received: len=384[0m
+[0;31mE (13125) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13131) receiving_node: CSI data received: len=384[0m
+[0;31mE (13138) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13143) receiving_node: CSI data received: len=384[0m
+[0;31mE (13150) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13156) receiving_node: CSI data received: len=384[0m
+[0;31mE (13163) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13168) receiving_node: CSI data received: len=384[0m
+[0;31mE (13175) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13180) receiving_node: CSI data received: len=384[0m
+[0;31mE (13188) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13193) receiving_node: CSI data received: len=384[0m
+[0;31mE (13200) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13205) receiving_node: CSI data received: len=384[0m
+[0;31mE (13212) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13218) receiving_node: CSI data received: len=384[0m
+[0;31mE (13225) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13230) receiving_node: CSI data received: len=384[0m
+[0;31mE (13237) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13243) receiving_node: CSI data received: len=384[0m
+[0;31mE (13250) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13255) receiving_node: CSI data received: len=384[0m
+[0;31mE (13262) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13267) receiving_node: CSI data received: len=384[0m
+[0;31mE (13275) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13280) receiving_node: CSI data received: len=384[0m
+[0;31mE (13287) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13292) receiving_node: CSI data received: len=384[0m
+[0;31mE (13299) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13305) receiving_node: CSI data received: len=384[0m
+[0;31mE (13312) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13317) receiving_node: CSI data received: len=384[0m
+[0;31mE (13324) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13329) receiving_node: CSI data received: len=384[0m
+[0;31mE (13337) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13342) receiving_node: CSI data received: len=384[0m
+[0;31mE (13349) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13354) receiving_node: CSI data received: len=384[0m
+[0;31mE (13361) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13367) receiving_node: CSI data received: len=384[0m
+[0;31mE (13374) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13379) receiving_node: CSI data received: len=384[0m
+[0;31mE (13387) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13392) receiving_node: CSI data received: len=384[0m
+[0;31mE (13399) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13404) receiving_node: CSI data received: len=384[0m
+[0;31mE (13411) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13416) receiving_node: CSI data received: len=384[0m
+[0;31mE (13424) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13429) receiving_node: CSI data received: len=384[0m
+[0;31mE (13436) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13441) receiving_node: CSI data received: len=384[0m
+[0;31mE (13448) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13454) receiving_node: CSI data received: len=384[0m
+[0;31mE (13461) receiving_node: Error occurred during sending: errno 12[0m
+[0;32mI (13467) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13483) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13499) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13508) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13524) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13533) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13541) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13549) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13558) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13566) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13574) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13583) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13591) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13599) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13608) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13616) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13624) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13633) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13641) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13649) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13658) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13666) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13674) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13683) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13691) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13699) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13708) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13716) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13724) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13733) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13741) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13749) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13758) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13766) receiving_node: CSI data received: len=384[0m
+[0;32mI (13774) receiving_node: Data sent: 1:11635913:0,0,0,0,0,0,0,0,0,0,0,0,-6,-11,-6,-11,-5,-11,-5,-11,-5,-11,-5,-10,-5,-10,-6,-10,-5,-10,-6,-10,-6,-9,-6,-9,-6,-9,-6,-9,-6,-9,-6,-8,-6,-8,-7,-8,-7,-8,-7,-8,-7,-8,-7,-8,-7,-7,-7,-7,-7,-7,-7,-7,0,0,-8,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-7,-6,-7,-6,-7,-6,-7,-6,-7,-6,-8,-5,-8,-5,-7,-5,-7,-5,-7,-4,-7,-4,-8,-4,-8,-3,-8,-3,-8,-2,-8,-2,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-68,5,-79,1,-58,4,-57,-1,-77,5,-61,-2,-64,-1,-60,3,-72,0,-51,2,-56,-1,-64,-7,-63,-4,-57,-6,-53,-2,-53,-3,-57,-8,-50,-11[0m
+[0;32mI (13820) receiving_node: CSI data received: len=384[0m
+[0;31mE (13836) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (13836) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (13836) task_wdt: Tasks currently running:[0m
+[0;31mE (13836) task_wdt: CPU 0: udp_client[0m
+[0;31mE (13836) task_wdt: Print CPU 0 (current core) backtrace[0m
+Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x42006c92  RA      : 0x42007d84  SP      : 0x3fcaa810  GP      : 0x3fc92000  
+TP      : 0x3fc8b640  T0      : 0x39342c38  T1      : 0x10000000  T2      : 0x2c34352c  
+S0/FP   : 0x0000007b  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x0000002c  
+A2      : 0x00000004  A3      : 0x60000000  A4      : 0x00000080  A5      : 0x0000007f  
+A6      : 0x420064d6  A7      : 0x0000000a  S2      : 0x0000002c  S3      : 0x00000080  
+S4      : 0x3fc98e48  S5      : 0x3fcaa9b0  S6      : 0x3fcbf7c0  S7      : 0x000001fc  
+S8      : 0x000001fb  S9      : 0x00000005  S10     : 0x0000000d  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x352c3534  T5      : 0x2c392c32  T6      : 0x352c352c  
+MSTATUS : 0x00000000  MTVEC   : 0x352c3534  MCAUSE  : 0x2c392c32  MTVAL   : 0x2c2c352c  
+MHARTID : 0x00000004  
+[0;32mI (13827) receiving_node: Data sent: 1:11648312:0,0,0,0,0,0,0,0,0,0,0,0,11,-3,11,-3,11,-3,11,-3,10,-3,11,-3,10,-3,10,-3,10,-3,9,-4,9,-4,9,-4,9,-4,9,-4,9,-4,8,-4,9,-4,8,-4,8,-5,8,-5,8,-5,8,-5,8,-5,8,-5,8,-5,8,-6,0,0,8,-5,8,-5,8,-5,7,-5,8,-5,8,-5,8,-4,8,-4,8,-4,8,-4,8,-4,8,-4,8,-4,8,-4,7,-3,8,-3,7,-3,7,-2,7,-2,7,-2,7,-2,7,-1,7,-1,7,-1,7,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,26,68,29,65,21,62,24,68,20,59,20,59,25,60,22,57,20,50,19,56,23,59,23,54,22,55,16,53,10,53,11,58,16,61,12,51,7,54,10,50,10,51,3,54,1,54,8,49,5,52,9,45,5,48,3,47,1,50,-2,51[0m
+[0;32mI (13982) receiving_node: CSI data received: len=384[0m
+[0;32mI (13989) receiving_node: Data sent: 1:11660737:0,0,0,0,0,0,0,0,0,0,0,0,-9,-9,-9,-9,-9,-9,-9,-9,-8,-8,-9,-8,-8,-8,-9,-8,-8,-8,-9,-7,-9,-7,-9,-6,-9,-6,-9,-6,-9,-6,-8,-6,-9,-6,-9,-5,-9,-5,-9,-5,-9,-5,-9,-5,-9,-4,-9,-4,-9,-4,-10,-4,0,0,-10,-4,-9,-5,-9,-5,-9,-4,-9,-4,-10,-5,-9,-5,-9,-5,-8,-5,-8,-5,-9,-5,-8,-5,-8,-5,-8,-5,-7,-5,-8,-6,-7,-5,-7,-5,-7,-6,-6,-5,-6,-5,-6,-6,-6,-6,-6,-6,-5,-6,-4,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-17,-63,-11,-76,-9,-67,-15,-65,-17,-78,-11,-70,-19,-66,-7,-60,-21,-66,-14,-54,-15,-59,-13,-59,-10,-63,-21,-57,-16,-55,-15,-53[0m
+[0;32mI (14036) receiving_node: CSI data received: len=384[0m
+[0;32mI (14043) receiving_node: Data sent: 1:11673137:0,0,0,0,0,0,0,0,0,0,0,0,5,10,5,9,5,10,5,9,5,9,5,8,5,9,5,8,6,8,5,9,5,8,6,8,6,7,6,7,6,7,7,6,6,6,7,6,6,6,7,6,7,5,7,5,7,5,7,5,7,5,7,5,0,0,7,5,8,5,7,4,8,5,7,5,7,5,7,5,7,5,7,5,7,6,7,5,7,5,6,5,6,5,7,5,6,5,6,6,5,5,5,5,5,6,5,6,5,6,4,6,3,6,3,6,2,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,34,49,36,61,39,52,39,46,31,55,42,49,29,59,33,41,27,51,36,49,33,45,31,51,21,47,24,51,26,49,25,45,21,41,17,55,24,52,9,50,12,46,11,57,19,53,8,48,13,40,7,48,16,56,9,51,11,47,14,51,12,50,10,46,7,54,8,48,5,57,12,47,6,48,6,48,7,49,6,48[0m
+[0;32mI (14090) receiving_node: CSI data received: len=384[0m
+[0;32mI (14097) receiving_node: Data sent: 1:11685562:0,0,0,0,0,0,0,0,0,0,0,0,5,9,5,10,5,9,5,9,5,9,5,9,5,8,6,8,5,8,5,7,6,7,6,7,6,7,6,7,6,7,6,6,6,7,6,6,6,6,6,6,6,6,6,6,7,5,7,5,7,5,7,5,0,0,7,6,6,6,7,6,6,5,7,6,7,6,7,6,6,6,6,6,6,5,6,6,6,6,5,6,6,6,5,6,5,7,4,6,4,6,4,6,4,6,4,7,3,7,3,6,2,7,2,7,1,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,64,-8,71,-9,64,-11,62,-3,67,0,64,-9,64,-8,63,4,59,-4,61,-2,55,6,59,-6,56,-1,54,1,48,4,47,9,50,10,53,7,51,7,51,2,46,15,45,17,42,13,52,14,44,15,44,18,43,17,47,15,46,21,48,21,48,18,46,20,50,21,47,20,43,20,40,20,44,14,46,12,47,18,48[0m
+[0;32mI (14144) receiving_node: CSI data received: len=384[0m
+[0;32mI (14151) receiving_node: Data sent: 1:11697962:0,0,0,0,0,0,0,0,0,0,0,0,-3,-12,-3,-12,-3,-12,-3,-11,-3,-12,-3,-11,-3,-11,-3,-11,-4,-11,-3,-11,-4,-10,-4,-10,-4,-10,-4,-10,-4,-9,-5,-9,-5,-9,-5,-9,-5,-9,-5,-9,-5,-9,-6,-9,-6,-9,-5,-9,-5,-9,-5,-8,0,0,-5,-9,-6,-9,-5,-8,-6,-9,-5,-8,-5,-9,-5,-9,-5,-9,-5,-9,-5,-9,-4,-9,-4,-9,-4,-9,-4,-8,-4,-9,-3,-8,-3,-9,-3,-8,-3,-8,-3,-8,-2,-8,-2,-8,-1,-8,-1,-8,0,-8,0,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-36,-55,-26,-58,-38,-63,-32,-55,-30,-48,-30,-57,-30,-58,-31,-52,-23,-49,-31,-55,-34,-47,-31,-47,-38,-46,-28,-42,-28,-51[0m
+[0;32mI (14198) receiving_node: CSI data received: len=384[0m
+[0;32mI (14206) receiving_node: Data sent: 1:11710387:0,0,0,0,0,0,0,0,0,0,0,0,3,11,4,11,3,10,3,10,4,10,4,10,4,10,4,10,3,9,4,9,4,9,4,8,5,9,5,8,5,8,5,8,5,8,5,7,5,8,5,8,5,7,6,7,6,7,6,7,6,7,6,7,0,0,6,7,6,7,6,7,6,7,6,7,6,7,6,7,6,7,5,7,5,7,5,7,5,7,5,7,5,7,4,7,4,7,4,7,4,7,3,7,3,7,3,7,2,7,2,7,1,7,1,7,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-15,59,-16,64,-16,54,-17,58,-17,71,-9,59,-16,60,-15,55,-18,64,-12,47,-15,53,-16,55,-17,58,-4,53,-8,48,-9,49,-2,55,-4,56,-2,53,4,57,-2,48,2,49,4,44,-4,49,-1,43,5,51,9,51,9,54,9,52,5,50,9,49,8,50,5,56,4,43,6,55,3,45,5,44,2,48,7[0m
+[0;32mI (14252) receiving_node: CSI data received: len=384[0m
+[0;32mI (14260) receiving_node: Data sent: 1:11722787:0,0,0,0,0,0,0,0,0,0,0,0,-12,3,-12,2,-12,2,-11,2,-12,2,-11,2,-11,3,-11,3,-11,3,-11,3,-10,3,-10,3,-10,3,-10,4,-9,4,-9,4,-9,4,-9,5,-9,4,-9,5,-9,5,-8,5,-9,5,-8,5,-9,5,-8,5,0,0,-9,6,-8,6,-8,5,-9,6,-8,5,-8,5,-8,6,-8,6,-8,5,-9,5,-9,5,-9,5,-8,4,-8,4,-9,4,-8,3,-9,4,-8,3,-8,3,-8,3,-8,3,-8,3,-9,1,-9,1,-9,0,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-63,21,-65,14,-67,10,-60,22,-64,12,-65,16,-61,16,-61,15,-56,20,-59,20,-57,20,-57,23,-52,23,-50,18,-53,16,-55,22,-51,15,-46,14,-47,18,-46,32,-43,27,-46,24,-44,30,-44,30[0m
+[0;32mI (14306) receiving_node: CSI data received: len=384[0m
+[0;32mI (14314) receiving_node: Data sent: 1:11735262:0,0,0,0,0,0,0,0,0,0,0,0,9,-7,10,-7,9,-7,9,-7,8,-6,9,-7,8,-7,8,-7,8,-7,7,-7,7,-7,7,-7,7,-8,7,-8,6,-8,6,-7,7,-8,6,-7,6,-8,6,-8,5,-8,6,-8,5,-8,5,-9,5,-9,5,-9,0,0,5,-9,5,-8,6,-8,5,-8,5,-9,5,-9,5,-8,5,-8,6,-8,5,-8,5,-7,6,-8,6,-7,6,-8,6,-7,6,-7,5,-6,6,-6,6,-6,6,-6,6,-5,7,-5,6,-5,7,-5,7,-4,7,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,5,71,0,72,-1,69,4,75,-2,67,-3,62,3,57,2,60,-1,62,-8,65,2,61,-6,57,-1,51,-10,57,-11,50,-11,56,-8,54,-16,57,-15,54,-12,46,-10,53,-18,53,-18,50,-11,44,-14,55,-11,44,-18,45,-17,49,-23[0m
+[0;32mI (14361) receiving_node: CSI data received: len=384[0m
+[0;32mI (14368) receiving_node: Data sent: 1:11747611:0,0,0,0,0,0,0,0,0,0,0,0,-10,-7,-11,-8,-10,-7,-10,-7,-9,-6,-10,-7,-9,-6,-10,-6,-9,-6,-9,-5,-10,-5,-10,-5,-10,-5,-10,-4,-10,-4,-9,-4,-10,-4,-9,-3,-10,-4,-10,-4,-10,-3,-10,-3,-10,-3,-10,-3,-10,-2,-10,-2,0,0,-10,-3,-10,-3,-11,-3,-10,-2,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-9,-3,-10,-3,-9,-3,-9,-3,-8,-4,-9,-4,-8,-4,-9,-4,-8,-4,-8,-4,-8,-5,-7,-5,-7,-5,-7,-5,-7,-6,-6,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-28,-67,-23,-66,-23,-56,-23,-61,-24,-63,-29,-60,-23,-57,-22,-60,-27,-54,-30,-56,-19,-59,-27,-51,-20[0m
+[0;32mI (14415) receiving_node: CSI data received: len=384[0m
+[0;32mI (14422) receiving_node: Data sent: 1:11760038:0,0,0,0,0,0,0,0,0,0,0,0,3,-11,3,-11,3,-11,3,-11,3,-11,3,-11,2,-11,2,-11,2,-10,2,-11,2,-10,2,-10,1,-10,1,-10,0,-10,0,-10,0,-10,0,-10,0,-10,-1,-10,-1,-10,-1,-10,-1,-10,-1,-10,-1,-10,-2,-10,0,0,-2,-10,-2,-10,-2,-10,-2,-10,-2,-10,-2,-10,-2,-10,-2,-10,-2,-10,-1,-10,-2,-10,-1,-10,-1,-10,-1,-9,-1,-9,-1,-9,0,-9,0,-9,0,-9,0,-9,1,-8,1,-9,1,-8,2,-8,2,-8,3,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,-69,-1,-63,-7,-81,-9,-72,-4,-54,-12,-71,-1,-56,-7,-65,-11,-51,-6,-67,-8,-64,-8,-55,-9,-55,-8,-50,-17,-61,-16,-57,-15[0m
+[0;32mI (14469) receiving_node: CSI data received: len=384[0m
+[0;32mI (14476) receiving_node: Data sent: 1:11772436:0,0,0,0,0,0,0,0,0,0,0,0,10,5,9,5,10,5,9,5,10,5,9,5,9,4,9,4,9,4,9,4,9,3,9,3,9,3,9,3,9,2,9,2,9,2,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,0,9,1,0,0,10,0,9,1,9,0,9,0,9,1,10,0,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,8,2,8,2,8,2,8,2,8,2,7,3,7,3,7,3,7,3,6,4,6,4,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,63,30,68,32,51,30,51,30,63,28,46,36,63,28,50,32,57,30,44,29,50,29,51,30,54,31,51,23,41,34,46,28,42,35,42,33,39,38,43,26,30,40,38,32,32,35,35,33,32,38,33,47,31,37,32,39,34,40,29,46,32,41,36,43,31,44,25,46,35,37,28,35,34,39,33[0m
+[0;32mI (14523) receiving_node: CSI data received: len=384[0m
+[0;32mI (14530) receiving_node: Data sent: 1:11784861:0,0,0,0,0,0,0,0,0,0,0,0,-10,7,-9,6,-10,7,-9,6,-10,7,-9,6,-9,7,-9,7,-8,7,-9,7,-8,6,-8,6,-8,6,-8,7,-7,7,-7,7,-6,7,-7,8,-6,7,-6,8,-6,8,-6,8,-6,8,-6,8,-6,7,-6,8,0,0,-6,8,-6,8,-5,7,-6,8,-5,7,-5,8,-6,8,-6,8,-6,7,-7,8,-6,7,-6,7,-6,7,-6,6,-6,7,-6,6,-7,6,-6,6,-7,6,-6,6,-7,5,-7,5,-7,4,-7,3,-7,3,-8,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-46,53,-58,43,-43,44,-43,51,-47,46,-48,39,-44,50,-40,42,-50,48,-43,43,-37,38,-41,41,-37,45,-38,42,-38,41,-39,42,-34,45,-34,45,-30,44,-28,45,-28,47,-29,42,-28,45,-22,44,-25,41,-20[0m
+[0;32mI (14577) receiving_node: CSI data received: len=384[0m
+[0;32mI (14584) receiving_node: Data sent: 1:11797261:0,0,0,0,0,0,0,0,0,0,0,0,11,-4,11,-3,11,-3,11,-3,10,-3,11,-4,10,-3,10,-4,10,-3,9,-4,9,-4,9,-4,9,-5,9,-5,9,-5,8,-5,9,-5,8,-5,8,-5,8,-5,8,-6,8,-6,8,-6,8,-6,8,-6,8,-7,0,0,8,-6,8,-6,8,-6,7,-6,8,-6,8,-6,8,-6,8,-6,8,-5,8,-6,8,-6,8,-6,8,-5,8,-5,8,-4,8,-4,7,-4,8,-4,8,-3,8,-3,8,-3,8,-2,7,-2,8,-2,8,-1,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,29,66,34,54,25,62,24,68,26,60,20,63,33,50,24,57,25,50,17,51,15,58,21,54,24,54,15,51,17,54,11,51,13,53,14,50,8,52,12,51,7,51,3,48,3,56,6,52,3,56,3,57,1,55,-2,56,-2,50,0,59[0m
+[0;32mI (14631) receiving_node: CSI data received: len=384[0m
+[0;32mI (14638) receiving_node: Data sent: 1:11809686:0,0,0,0,0,0,0,0,0,0,0,0,4,-11,4,-11,5,-11,4,-11,4,-10,4,-10,4,-10,3,-10,3,-10,3,-10,3,-10,3,-10,2,-10,2,-10,2,-10,1,-10,1,-10,1,-10,1,-10,1,-10,0,-10,0,-10,0,-11,0,-10,0,-10,0,-10,0,0,0,-10,0,-10,0,-10,0,-11,0,-10,0,-10,0,-10,1,-10,1,-10,1,-10,1,-10,1,-10,1,-9,1,-9,1,-9,2,-9,2,-9,2,-9,2,-8,2,-8,3,-8,3,-8,3,-8,4,-7,4,-7,4,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,-58,17,-63,16,-71,16,-65,15,-57,9,-62,13,-57,15,-67,12,-57,15,-61,14,-61,9,-61,10,-53,7,-52,5,-61,3,-58,3,-55,0,-54,2,-53,-4,-55,-2,-60,-3,-48[0m
+[0;32mI (14685) receiving_node: CSI data received: len=384[0m
+[0;32mI (14693) receiving_node: Data sent: 1:11822086:0,0,0,0,0,0,0,0,0,0,0,0,-12,2,-12,2,-12,2,-12,2,-11,2,-11,2,-11,2,-11,3,-11,2,-10,2,-10,3,-10,3,-10,3,-10,3,-10,3,-10,4,-10,4,-9,4,-9,4,-9,5,-9,5,-9,5,-9,5,-9,5,-9,5,-9,5,0,0,-9,5,-9,5,-9,5,-9,5,-9,5,-9,5,-9,5,-9,5,-9,4,-9,4,-9,4,-9,4,-9,4,-9,4,-9,3,-9,3,-9,3,-9,2,-9,3,-9,2,-9,2,-9,1,-9,1,-9,0,-9,0,-8,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-71,-9,-68,-13,-53,-10,-58,-14,-71,-10,-61,-13,-71,-14,-61,-8,-66,-9,-55,-3,-63,-7,-59,-15,-54,-4,-58,1,-59,-4,-55,-1,-57,1,-56,2,-52,2,-58,4,-49,5,-55,9,-46,7,-51[0m
+[0;32mI (14739) receiving_node: CSI data received: len=384[0m
+[0;32mI (14747) receiving_node: Data sent: 1:11834511:0,0,0,0,0,0,0,0,0,0,0,0,7,8,7,8,7,8,8,8,7,7,8,7,7,7,8,7,7,7,7,6,7,5,7,6,8,5,7,5,8,5,7,5,8,5,7,4,8,5,8,4,8,4,8,4,7,3,8,4,9,3,9,3,0,0,9,3,8,4,8,4,8,3,8,4,9,4,8,4,8,3,8,5,8,4,8,4,8,4,8,3,8,4,6,4,7,5,6,4,6,4,6,5,6,5,6,5,5,6,5,5,5,5,4,6,4,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-12,70,-12,73,-7,63,-15,61,-9,71,-6,61,-10,64,-9,63,-3,63,-6,60,-9,59,-7,59,-5,58,0,54,4,49,1,50,3,55,9,54,6,53,3,55,0,47,15,54,13,50,-1,53,7,50,3,54,14,51,13,47,14,46,18,53,17,52,16,49,14,56,11,46,16,53,10,47,5,49,3,47,9,44,11,54,10[0m
+[0;32mI (14793) receiving_node: CSI data received: len=384[0m
+[0;32mI (14801) receiving_node: Data sent: 1:11846910:0,0,0,0,0,0,0,0,0,0,0,0,-7,-11,-7,-10,-6,-10,-6,-10,-7,-9,-6,-10,-7,-9,-7,-9,-6,-9,-7,-8,-7,-8,-7,-8,-7,-8,-7,-8,-7,-7,-7,-7,-8,-8,-7,-7,-8,-7,-8,-6,-8,-6,-8,-6,-8,-6,-8,-6,-8,-6,-8,-6,0,0,-8,-6,-8,-6,-8,-7,-8,-6,-8,-6,-8,-6,-8,-7,-8,-7,-8,-7,-8,-6,-7,-7,-8,-7,-7,-7,-7,-7,-6,-7,-7,-8,-6,-7,-6,-7,-6,-7,-6,-7,-5,-7,-5,-7,-4,-7,-4,-7,-3,-8,-3,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-30,-56,-28,-63,-29,-64,-28,-61,-31,-57,-25,-60,-28,-60,-29,-57,-30,-49,-30,-51,-26,-59,-30,-52,-25,-52,-29,-45,-27,-53,-24[0m
+[0;32mI (14847) receiving_node: CSI data received: len=384[0m
+[0;32mI (14855) receiving_node: Data sent: 1:11859310:0,0,0,0,0,0,0,0,0,0,0,0,-10,-8,-10,-8,-10,-7,-9,-7,-9,-7,-10,-7,-9,-7,-10,-6,-9,-7,-9,-6,-9,-5,-10,-5,-9,-5,-10,-5,-10,-5,-9,-5,-10,-5,-10,-4,-10,-4,-10,-4,-10,-3,-10,-4,-10,-3,-10,-3,-10,-3,-10,-3,0,0,-10,-3,-10,-4,-10,-3,-10,-3,-10,-3,-10,-3,-10,-4,-10,-3,-10,-4,-10,-3,-9,-3,-9,-4,-9,-4,-9,-4,-8,-4,-9,-5,-8,-4,-8,-5,-8,-5,-7,-5,-8,-5,-7,-6,-7,-5,-6,-6,-6,-6,-6,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-13,-66,-15,-68,-8,-67,-8,-62,-11,-74,-8,-66,-9,-68,-8,-55,-14,-67,-18,-52,-11,-61,-15,-58,-10,-66,-17[0m
+[0;32mI (14902) receiving_node: CSI data received: len=384[0m
+[0;32mI (14909) receiving_node: Data sent: 1:11871735:0,0,0,0,0,0,0,0,0,0,0,0,-12,1,-12,1,-11,1,-12,1,-12,1,-12,2,-11,2,-11,2,-11,1,-10,2,-10,2,-10,3,-10,3,-10,3,-10,3,-10,3,-10,3,-9,3,-10,4,-10,4,-9,4,-10,4,-8,5,-9,5,-9,5,-9,5,0,0,-9,5,-9,4,-10,5,-9,4,-10,4,-9,4,-9,4,-9,4,-9,4,-9,4,-9,4,-9,4,-9,4,-10,4,-9,2,-10,2,-9,2,-9,2,-9,2,-9,1,-9,1,-9,0,-9,1,-9,0,-9,-1,-9,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-57,-39,-55,-45,-52,-39,-59,-38,-57,-40,-53,-34,-53,-38,-48,-35,-54,-28,-56,-34,-45,-34,-51,-31,-47,-35,-50,-27,-50,-24,-49,-24,-50,-26,-53,-16,-52,-25,-47[0m
+[0;32mI (14956) receiving_node: CSI data received: len=384[0m
+[0;32mI (14963) receiving_node: Data sent: 1:11884135:0,0,0,0,0,0,0,0,0,0,0,0,8,7,8,7,8,7,8,7,8,6,8,6,8,6,8,6,8,5,8,6,8,5,8,5,8,5,8,5,8,4,8,4,8,3,8,4,8,3,8,3,8,3,9,3,9,3,9,3,8,3,8,3,0,0,9,3,9,2,9,2,9,3,9,2,8,3,9,3,9,3,8,3,8,3,8,3,8,3,8,3,7,4,7,3,7,3,7,4,7,4,6,4,6,4,6,4,6,4,5,5,5,5,5,5,4,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,12,59,11,68,8,67,14,51,8,61,15,54,13,70,12,52,10,66,18,60,6,55,11,57,2,51,5,55,2,59,-2,47,8,51,1,52,0,49,-9,63,-4,47,-3,55,-1,51,-8,54,-2,53,-5,45,-9,56,-8,57,-12,55,-10,53,-13,54,-7,45,-6,61,-13,53,-11,60,-12,52,-8,55,-9,56,-5,52[0m
+[0;32mI (15010) receiving_node: CSI data received: len=384[0m
+[0;32mI (15017) receiving_node: Data sent: 1:11896560:0,0,0,0,0,0,0,0,0,0,0,0,-10,-8,-10,-8,-10,-8,-10,-7,-10,-7,-10,-7,-10,-7,-10,-6,-10,-6,-9,-6,-9,-6,-10,-6,-9,-6,-9,-5,-10,-5,-10,-4,-10,-4,-10,-4,-10,-4,-10,-4,-9,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,0,0,-10,-3,-10,-3,-10,-2,-11,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-9,-4,-9,-4,-9,-4,-9,-4,-9,-4,-9,-4,-8,-4,-8,-4,-8,-4,-8,-5,-7,-5,-7,-6,-7,-6,-6,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-63,-13,-61,-23,-67,-29,-62,-18,-63,-19,-64,-21,-56,-18,-62,-18,-56,-18,-66,-22,-59,-17,-62,-21[0m
+[0;32mI (15064) receiving_node: CSI data received: len=384[0m
+[0;32mI (15071) receiving_node: Data sent: 1:11908960:0,0,0,0,0,0,0,0,0,0,0,0,1,-12,1,-11,2,-12,1,-11,1,-12,1,-11,1,-11,1,-11,1,-11,1,-11,0,-11,0,-11,0,-11,0,-10,-1,-10,-1,-11,-1,-10,-2,-11,-1,-10,-2,-10,-2,-10,-2,-10,-2,-11,-2,-10,-2,-10,-2,-10,0,0,-2,-10,-3,-11,-3,-10,-3,-11,-3,-10,-2,-10,-2,-10,-2,-11,-2,-10,-2,-11,-2,-10,-2,-10,-1,-10,-1,-9,-1,-10,-1,-9,0,-10,0,-9,0,-9,0,-9,1,-9,1,-9,1,-9,2,-8,2,-8,3,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,-63,-13,-64,-13,-67,-16,-59,-7,-54,-9,-66,-12,-59,-13,-66,-12,-61,-17,-64,-18,-61,-12,-59,-23,-55,-13,-53,-15[0m
+[0;32mI (15118) receiving_node: CSI data received: len=384[0m
+[0;32mI (15125) receiving_node: Data sent: 1:11921385:0,0,0,0,0,0,0,0,0,0,0,0,-1,11,-1,11,0,11,0,11,0,11,0,11,0,11,1,10,0,10,1,10,1,10,1,9,2,9,2,9,2,9,2,9,2,9,3,9,2,9,3,9,3,9,3,9,4,9,3,9,3,9,4,9,0,0,4,9,4,9,3,9,4,9,3,9,4,9,3,9,3,9,3,9,3,9,3,9,3,9,2,9,2,8,2,9,1,8,1,9,1,8,1,8,0,8,0,8,0,8,0,8,-1,8,-2,8,-2,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-31,54,-39,61,-32,53,-31,60,-34,63,-30,57,-30,56,-25,45,-22,64,-17,53,-28,53,-24,52,-23,57,-21,53,-13,51,-17,52,-23,55,-18,57,-15,48,-16,53,-12,47,-5,58,-8,49,-12,51,-14,49,-8,54,-4,57,-5,52,-7,51,-8,50,-9,55,-2,57,3[0m
+[0;32mI (15172) receiving_node: CSI data received: len=384[0m
+[0;32mI (15179) receiving_node: Data sent: 1:11933785:0,0,0,0,0,0,0,0,0,0,0,0,9,7,8,7,9,7,8,7,8,6,8,6,8,5,8,6,9,5,8,6,8,5,8,5,8,5,8,5,8,4,9,3,8,3,9,3,8,3,9,3,9,3,9,2,9,3,9,3,9,3,9,2,0,0,9,2,9,2,9,2,10,2,9,2,9,2,9,2,9,3,9,2,9,3,8,3,8,3,8,3,8,3,8,3,8,3,8,4,7,3,7,3,7,4,7,4,7,4,6,5,5,5,5,5,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,12,57,15,64,21,62,19,52,12,65,24,49,16,60,17,55,12,65,18,58,3,61,9,59,10,53,9,57,13,52,10,58,7,48,8,56,6,48,-1,60,3,47,4,61,-3,52,-10,54,-4,55,-10,55,-5,57,-4,57,-1,54,-8,53,-1,57,-5,49,-9,55,-3,45,-6,58,-7,52,-9,49,-4,54,-6,53,-8[0m
+[0;32mI (15226) receiving_node: CSI data received: len=384[0m
+[0;32mI (15233) receiving_node: Data sent: 1:11946259:0,0,0,0,0,0,0,0,0,0,0,0,-10,-7,-10,-7,-10,-7,-10,-7,-9,-6,-10,-7,-9,-6,-10,-6,-9,-6,-9,-5,-10,-5,-10,-5,-10,-5,-10,-5,-10,-4,-9,-4,-10,-4,-9,-4,-10,-4,-10,-4,-10,-3,-10,-4,-10,-3,-10,-3,-10,-3,-10,-3,0,0,-11,-3,-10,-3,-11,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-4,-10,-3,-10,-4,-10,-4,-10,-4,-9,-4,-8,-4,-9,-5,-8,-4,-8,-5,-8,-5,-7,-5,-8,-5,-7,-6,-7,-6,-6,-6,-6,-6,-6,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-30,-54,-25,-63,-26,-64,-27,-61,-26,-65,-30,-58,-23,-62,-25,-56,-22,-58,-28,-51,-22,-56,-29,-49[0m
+[0;32mI (15280) receiving_node: CSI data received: len=384[0m
+[0;32mI (15287) receiving_node: Data sent: 1:11958609:0,0,0,0,0,0,0,0,0,0,0,0,2,11,3,12,3,11,3,11,3,10,3,11,3,10,3,10,3,10,3,10,4,9,3,9,4,9,4,9,4,9,4,9,4,9,5,8,5,9,5,8,5,8,5,8,6,8,5,8,6,8,6,8,0,0,6,8,5,8,6,9,5,8,5,8,5,8,5,8,5,8,5,8,5,8,5,8,4,8,4,8,4,9,3,8,3,9,3,8,3,8,3,8,2,8,2,8,1,8,1,8,0,8,0,8,-1,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-31,56,-30,64,-27,53,-26,51,-31,67,-17,51,-31,59,-23,53,-22,59,-23,52,-27,52,-20,55,-23,56,-19,52,-16,53,-16,50,-18,53,-6,52,-13,48,-11,52,-4,46,-4,57,-7,48,-9,54,-9,53,-4,55,-9,57,-3,52,-7,50,1,54,1,56,1,50,-4,58,1,50,2,55[0m
+[0;32mI (15334) receiving_node: CSI data received: len=384[0m
+[0;32mI (15341) receiving_node: Data sent: 1:11971034:0,0,0,0,0,0,0,0,0,0,0,0,8,-9,8,-8,8,-9,8,-8,8,-8,7,-8,7,-8,7,-8,6,-8,7,-9,6,-8,6,-8,6,-8,6,-8,5,-8,5,-9,5,-8,5,-9,4,-9,4,-9,4,-9,4,-9,4,-10,4,-9,4,-9,4,-9,0,0,4,-10,4,-10,4,-9,4,-10,4,-9,4,-10,4,-9,4,-9,4,-9,4,-9,5,-9,4,-9,5,-8,5,-8,5,-8,5,-8,5,-8,5,-7,5,-7,6,-7,6,-6,6,-6,6,-6,6,-5,7,-5,6,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,-57,37,-52,42,-57,33,-61,34,-53,37,-48,38,-51,34,-56,34,-46,37,-55,27,-53,30,-52,26,-50,30,-48,31,-50,27,-53,25,-47,23,-49,22,-52,14,-48,20,-55,20,-47,16,-56,11,-57,11,-52,8[0m
+[0;32mI (15388) receiving_node: CSI data received: len=384[0m

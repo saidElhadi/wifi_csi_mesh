@@ -1,0 +1,93 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403848b2: rv_utils_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/riscv/include/riscv/rv_utils.h:52
+ (inlined by) esp_cpu_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:143
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpdxog30yw"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpdxog30yw': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpvnrq9369"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpvnrq9369': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpo4ot17h7"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpo4ot17h7': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpoectq42d"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpoectq42d': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpdpgw2e__"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmpdpgw2e__': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33mStack dump detected[0m
+[0;33m0x420820fe: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1709 (discriminator 1)
+0x42081ff4: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1702 (discriminator 1)
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\Arch-Spin\\arch_recive\\build\\arch_recive.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmprdlcfmvd"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmprdlcfmvd': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 30971b9d45eefe391da876e587884aedd4ddb8870950039d446d0ae7f252063a[0m
+[0m

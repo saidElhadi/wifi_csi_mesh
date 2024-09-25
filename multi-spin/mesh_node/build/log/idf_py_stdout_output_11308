@@ -1,0 +1,515 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403848b2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 25 2024 14:00:53[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1fcc0h (130240) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002fce8 vaddr=3fc91800 size=00330h (   816) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=90adch (592604) map[0m
+[0;32mI (212) esp_image: segment 3: paddr=000c0b04 vaddr=3fc91b30 size=02780h ( 10112) load[0m
+[0;32mI (214) esp_image: segment 4: paddr=000c328c vaddr=40380000 size=117c0h ( 71616) load[0m
+[0;32mI (237) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (237) boot: Disabling RNG early entropy source...[0m
+[0;32mI (248) cpu_start: Unicore app[0m
+[0;32mI (257) cpu_start: Pro cpu start user code[0m
+[0;32mI (257) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (257) cpu_start: Application information:[0m
+[0;32mI (260) cpu_start: Project name:     mesh_node[0m
+[0;32mI (265) cpu_start: App version:      1[0m
+[0;32mI (270) cpu_start: Compile time:     Sep 25 2024 14:00:26[0m
+[0;32mI (276) cpu_start: ELF file SHA256:  aef18193b...[0m
+[0;32mI (281) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (286) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (291) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (296) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (301) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (308) heap_init: At 3FC983D0 len 00027C30 (159 KiB): RAM[0m
+[0;32mI (314) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (321) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (328) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (335) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (343) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (356) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (363) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (374) main_task: Calling app_main()[0m
+[0;32mI (387) pp: pp rom version: 9387209[0m
+[0;32mI (387) net80211: net80211 rom version: 9387209[0m
+I (389) wifi:wifi driver task: 3fca0ee0, prio:23, stack:6656, core=0
+I (398) wifi:wifi firmware version: 3e0076f
+I (399) wifi:wifi certification version: v7.0
+I (401) wifi:config NVS flash: enabled
+I (405) wifi:config nano formating: disabled
+I (409) wifi:Init data frame dynamic rx buffer num: 32
+I (414) wifi:Init static rx mgmt buffer num: 5
+I (418) wifi:Init management short buffer num: 32
+I (422) wifi:Init dynamic tx buffer num: 128
+I (426) wifi:Init static tx FG buffer num: 2
+I (430) wifi:Init static rx buffer size: 2212
+I (434) wifi:Init static rx buffer num: 10
+I (438) wifi:Init dynamic rx buffer num: 32
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (446) wifi_init: tcpip mbox: 32[0m
+[0;32mI (450) wifi_init: udp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp mbox: 6[0m
+[0;32mI (457) wifi_init: tcp tx win: 5760[0m
+[0;32mI (461) wifi_init: tcp rx win: 5760[0m
+[0;32mI (465) wifi_init: tcp mss: 1440[0m
+[0;32mI (469) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (474) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (480) phy_init: phy_version 1170,f4aea9b,Apr 30 2024,10:49:24[0m
+I (524) wifi:mode : sta (1a:00:00:00:00:00)
+I (525) wifi:enable tsf
+[0;32mI (528) node: Connecting to Wi-Fi...[0m
+[0;32mI (528) node: Assigned MAC address: 1a:00:00:00:00:00[0m
+I (530) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2935) node: Disconnected from Wi-Fi, retrying...[0m
+[0;31mE (3705) node: Unexpected ESP-NOW data length[0m
+[0;31mE (3725) node: Unexpected ESP-NOW data length[0m
+[0;32mI (5344) node: Disconnected from Wi-Fi, retrying...[0m
+I (5353) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (5354) wifi:state: init -> auth (b0)
+I (5357) wifi:state: auth -> assoc (0)
+I (5362) wifi:state: assoc -> run (10)
+I (5383) wifi:connected with your_ssid, aid = 4, channel 11, 40D, bssid = 64:e8:33:89:f9:11
+I (5384) wifi:security: WPA2-PSK, phy: bgn, rssi: -33
+I (5386) wifi:pm start, type: 1
+
+I (5388) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (5396) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (5413) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (5413) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (5828) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (5844) node: CSI data length too large: 384[0m
+[0;32mI (6407) esp_netif_handlers: sta ip: 192.168.4.5, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (6408) node: Got IP Address: 192.168.4.5[0m
+[0;32mI (6410) node: UDP socket created successfully[0m
+[0;32mI (6415) node: Node 0 is broadcasting...[0m
+E (6419) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (6426) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (6433) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (6440) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (8388) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (8398) node: CSI data length too large: 384[0m
+[0;32mI (10446) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (10969) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (10978) node: CSI data length too large: 384[0m
+[0;32mI (12446) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (13508) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (13518) node: CSI data length too large: 384[0m
+[0;32mI (14446) node: Node 0 is broadcasting...[0m
+E (14446) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (14447) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (14453) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (14460) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (16068) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (16078) node: CSI data length too large: 384[0m
+[0;32mI (18466) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (18648) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (18659) node: CSI data length too large: 384[0m
+[0;32mI (20466) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (21188) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (21198) node: CSI data length too large: 384[0m
+[0;32mI (22466) node: Node 0 is broadcasting...[0m
+E (22466) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (22466) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (22473) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (22480) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (23748) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (23758) node: CSI data length too large: 384[0m
+[0;32mI (26319) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (26328) node: CSI data length too large: 384[0m
+[0;32mI (26486) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (28486) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (28868) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (28882) node: CSI data length too large: 384[0m
+[0;32mI (30486) node: Node 0 is broadcasting...[0m
+E (30486) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (30486) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (30493) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (30500) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (31428) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (31438) node: CSI data length too large: 384[0m
+[0;32mI (34003) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (34008) node: CSI data length too large: 384[0m
+[0;32mI (34507) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (36507) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (36548) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (36561) node: CSI data length too large: 384[0m
+[0;32mI (38507) node: Node 0 is broadcasting...[0m
+E (38507) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (38508) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (38514) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (38521) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (39109) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (39119) node: CSI data length too large: 384[0m
+[0;32mI (41680) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (41689) node: CSI data length too large: 384[0m
+[0;32mI (42527) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (44249) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (44260) node: CSI data length too large: 384[0m
+[0;32mI (44527) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (46527) node: Node 0 is broadcasting...[0m
+E (46527) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (46527) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (46534) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (46541) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (46789) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (46799) node: CSI data length too large: 384[0m
+[0;32mI (49359) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (49369) node: CSI data length too large: 384[0m
+[0;32mI (50548) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (51930) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (51940) node: CSI data length too large: 384[0m
+[0;32mI (52548) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (54469) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (54479) node: CSI data length too large: 384[0m
+[0;32mI (54548) node: Node 0 is broadcasting...[0m
+E (54548) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (54549) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (54555) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (54562) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (57039) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (57049) node: CSI data length too large: 384[0m
+[0;32mI (58568) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (59609) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (59620) node: CSI data length too large: 384[0m
+[0;32mI (60568) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (62149) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (62168) node: CSI data length too large: 384[0m
+[0;32mI (62568) node: Node 0 is broadcasting...[0m
+E (62568) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (62568) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (62575) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (62582) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (64719) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (64740) node: CSI data length too large: 384[0m
+[0;32mI (66588) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (67289) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (67300) node: CSI data length too large: 384[0m
+[0;32mI (68588) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (69830) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (69841) node: CSI data length too large: 384[0m
+[0;32mI (70588) node: Node 0 is broadcasting...[0m
+E (70588) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (70588) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (70595) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (70602) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (72389) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (72400) node: CSI data length too large: 384[0m
+[0;32mI (74608) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (74970) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (74980) node: CSI data length too large: 384[0m
+[0;32mI (76608) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (77510) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (77522) node: CSI data length too large: 384[0m
+[0;32mI (78608) node: Node 0 is broadcasting...[0m
+E (78608) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (78608) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (78615) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (78622) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (80070) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (80082) node: CSI data length too large: 384[0m
+[0;32mI (82629) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (82650) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (82660) node: CSI data length too large: 384[0m
+[0;32mI (84629) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (85190) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (85202) node: CSI data length too large: 384[0m
+[0;32mI (86629) node: Node 0 is broadcasting...[0m
+E (86629) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (86629) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (86636) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (86643) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (87752) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (87762) node: CSI data length too large: 384[0m
+[0;32mI (90321) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (90330) node: CSI data length too large: 384[0m
+[0;32mI (90649) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (92649) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (92870) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (92882) node: CSI data length too large: 384[0m
+[0;32mI (94649) node: Node 0 is broadcasting...[0m
+E (94649) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (94649) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (94656) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (94663) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (95430) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (95442) node: CSI data length too large: 384[0m
+[0;32mI (98001) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (98010) node: CSI data length too large: 384[0m
+[0;32mI (98669) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (100570) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (100581) node: CSI data length too large: 384[0m
+[0;32mI (100669) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (102669) node: Node 0 is broadcasting...[0m
+E (102669) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (102669) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (102676) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (102683) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (103110) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (103122) node: CSI data length too large: 384[0m
+[0;32mI (105682) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (105690) node: CSI data length too large: 384[0m
+[0;32mI (106690) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (108251) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (108260) node: CSI data length too large: 384[0m
+[0;32mI (108690) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (110690) node: Node 0 is broadcasting...[0m
+E (110690) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (110690) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (110697) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (110704) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (110791) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (110812) node: CSI data length too large: 384[0m
+[0;32mI (113362) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (113371) node: CSI data length too large: 384[0m
+[0;32mI (114711) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (115933) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (115941) node: CSI data length too large: 384[0m
+[0;32mI (116711) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (118471) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (118482) node: CSI data length too large: 384[0m
+[0;32mI (118711) node: Node 0 is broadcasting...[0m
+E (118711) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (118711) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (118718) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (118725) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (121041) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (121053) node: CSI data length too large: 384[0m
+[0;32mI (122732) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (123612) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (123621) node: CSI data length too large: 384[0m
+[0;32mI (124732) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (126151) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (126162) node: CSI data length too large: 384[0m
+[0;32mI (126732) node: Node 0 is broadcasting...[0m
+E (126732) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (126732) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (126739) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (126746) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (128711) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (128722) node: CSI data length too large: 384[0m
+[0;32mI (130753) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (131291) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (131301) node: CSI data length too large: 384[0m
+[0;32mI (132753) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (133831) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (133842) node: CSI data length too large: 384[0m
+[0;32mI (134753) node: Node 0 is broadcasting...[0m
+E (134753) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (134753) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (134760) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (134767) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (136393) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (136401) node: CSI data length too large: 384[0m
+[0;32mI (138774) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (138971) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (138982) node: CSI data length too large: 384[0m
+[0;32mI (140774) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (141511) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (141522) node: CSI data length too large: 384[0m
+[0;32mI (142774) node: Node 0 is broadcasting...[0m
+E (142774) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (142774) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (142781) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (142788) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (144072) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (144082) node: CSI data length too large: 384[0m
+[0;32mI (146642) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (146652) node: CSI data length too large: 384[0m
+[0;32mI (146795) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (148795) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (149193) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (149212) node: CSI data length too large: 384[0m
+[0;32mI (150795) node: Node 0 is broadcasting...[0m
+E (150795) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (150795) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (150802) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (150809) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (151752) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (151762) node: CSI data length too large: 384[0m
+[0;32mI (154322) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (154332) node: CSI data length too large: 384[0m
+[0;32mI (154816) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (156816) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (156872) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (156885) node: CSI data length too large: 384[0m
+[0;32mI (158816) node: Node 0 is broadcasting...[0m
+E (158816) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (158816) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (158823) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (158830) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (159432) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (159446) node: CSI data length too large: 384[0m
+[0;32mI (162002) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (162015) node: CSI data length too large: 384[0m
+[0;32mI (162837) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (164573) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (164582) node: CSI data length too large: 384[0m
+[0;32mI (164837) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (166837) node: Node 0 is broadcasting...[0m
+E (166837) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (166838) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (166844) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (166851) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (167112) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (167123) node: CSI data length too large: 384[0m
+[0;32mI (169682) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (169693) node: CSI data length too large: 384[0m
+[0;32mI (170858) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (172858) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (174792) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (174802) node: CSI data length too large: 384[0m
+[0;32mI (174858) node: Node 0 is broadcasting...[0m
+E (174858) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (174858) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (174865) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (174872) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (177365) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (177373) node: CSI data length too large: 384[0m
+[0;32mI (178879) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (179933) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (179943) node: CSI data length too large: 384[0m
+[0;32mI (180879) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (182474) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (182483) node: CSI data length too large: 384[0m
+[0;32mI (182879) node: Node 0 is broadcasting...[0m
+E (182879) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (182879) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (182886) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (182893) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (185043) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (185053) node: CSI data length too large: 384[0m
+[0;32mI (186900) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (187613) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (187623) node: CSI data length too large: 384[0m
+[0;32mI (188900) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (190157) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (190164) node: CSI data length too large: 384[0m
+[0;32mI (190900) node: Node 0 is broadcasting...[0m
+E (190900) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (190900) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (190907) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (190914) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (192713) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (192735) node: CSI data length too large: 384[0m
+[0;32mI (194921) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (195298) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (195303) node: CSI data length too large: 384[0m
+[0;32mI (196921) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (197833) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (197844) node: CSI data length too large: 384[0m
+[0;32mI (198921) node: Node 0 is broadcasting...[0m
+E (198921) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (198921) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (198928) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (198935) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (200393) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (200406) node: CSI data length too large: 384[0m
+[0;32mI (202942) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (202973) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (202983) node: CSI data length too large: 384[0m
+[0;32mI (204942) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (205513) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (205523) node: CSI data length too large: 384[0m
+[0;32mI (206942) node: Node 0 is broadcasting...[0m
+E (206942) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (206942) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (206949) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (206956) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (208073) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (208084) node: CSI data length too large: 384[0m
+[0;32mI (210643) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (210654) node: CSI data length too large: 384[0m
+[0;32mI (210963) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (212963) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (213193) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (213214) node: CSI data length too large: 384[0m
+[0;32mI (214963) node: Node 0 is broadcasting...[0m
+E (214963) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (214963) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (214970) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (214977) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (215754) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (215767) node: CSI data length too large: 384[0m
+[0;32mI (218327) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (218334) node: CSI data length too large: 384[0m
+[0;32mI (218984) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (220894) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (220904) node: CSI data length too large: 384[0m
+[0;32mI (220984) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (222984) node: Node 0 is broadcasting...[0m
+E (222984) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (222984) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (222991) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (222998) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (223434) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (223454) node: CSI data length too large: 384[0m
+[0;32mI (227005) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (228574) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (228588) node: CSI data length too large: 384[0m
+[0;32mI (229005) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (231005) node: Node 0 is broadcasting...[0m
+E (231005) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (231005) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (231012) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (231019) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (231114) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (231134) node: CSI data length too large: 384[0m
+[0;32mI (233684) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (233694) node: CSI data length too large: 384[0m
+[0;32mI (235026) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (236254) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (236265) node: CSI data length too large: 384[0m
+[0;32mI (237026) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (239026) node: Node 0 is broadcasting...[0m
+E (239026) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (239026) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (239033) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (239040) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (241365) node: Node 1 broadcasting. Enabling CSI...[0m
+[0;31mE (241374) node: CSI data length too large: 384[0m
+[0;32mI (243047) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (243936) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (243944) node: CSI data length too large: 384[0m
+[0;32mI (245047) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (247047) node: Node 0 is broadcasting...[0m
+E (247047) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (247047) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (247054) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (247061) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (249034) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (249044) node: CSI data length too large: 384[0m
+[0;32mI (251068) node: Node 0 waiting, current broadcaster is Node 1[0m
+[0;32mI (251615) node: Node 2 broadcasting. Enabling CSI...[0m
+[0;31mE (251625) node: CSI data length too large: 384[0m
+[0;32mI (253068) node: Node 0 waiting, current broadcaster is Node 2[0m
+[0;32mI (254155) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (254165) node: CSI data length too large: 384[0m
+[0;32mI (255068) node: Node 0 is broadcasting...[0m
+E (255068) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (255068) node: Error sending data to Node 1: ESP_ERR_ESPNOW_CHAN[0m
+E (255075) ESPNOW: Peer channel is not equal to the home channel, send fail!
+[0;31mE (255082) node: Error sending data to Node 2: ESP_ERR_ESPNOW_CHAN[0m
+[0;32mI (256718) node: Node 0 broadcasting. Enabling CSI...[0m
+[0;31mE (256726) node: CSI data length too large: 384[0m

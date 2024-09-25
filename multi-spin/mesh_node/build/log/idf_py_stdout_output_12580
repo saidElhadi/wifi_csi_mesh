@@ -1,0 +1,604 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403848b2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 25 2024 14:00:53[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1ffb8h (131000) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002ffe0 vaddr=3fc91800 size=00038h (    56) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=90fb0h (593840) map[0m
+[0;32mI (212) esp_image: segment 3: paddr=000c0fd8 vaddr=3fc91838 size=02a78h ( 10872) load[0m
+[0;32mI (215) esp_image: segment 4: paddr=000c3a58 vaddr=40380000 size=117c0h ( 71616) load[0m
+[0;32mI (237) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (237) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Unicore app[0m
+[0;32mI (257) cpu_start: Pro cpu start user code[0m
+[0;32mI (257) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (257) cpu_start: Application information:[0m
+[0;32mI (260) cpu_start: Project name:     mesh_node[0m
+[0;32mI (265) cpu_start: App version:      1[0m
+[0;32mI (270) cpu_start: Compile time:     Sep 25 2024 14:00:26[0m
+[0;32mI (276) cpu_start: ELF file SHA256:  bda4adaad...[0m
+[0;32mI (281) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (287) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (291) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (296) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (301) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (308) heap_init: At 3FC983C0 len 00027C40 (159 KiB): RAM[0m
+[0;32mI (314) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (321) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (328) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (335) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (343) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (357) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (363) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (374) main_task: Calling app_main()[0m
+[0;32mI (387) pp: pp rom version: 9387209[0m
+[0;32mI (387) net80211: net80211 rom version: 9387209[0m
+I (389) wifi:wifi driver task: 3fca0ed0, prio:23, stack:6656, core=0
+I (398) wifi:wifi firmware version: 3e0076f
+I (399) wifi:wifi certification version: v7.0
+I (401) wifi:config NVS flash: enabled
+I (405) wifi:config nano formating: disabled
+I (409) wifi:Init data frame dynamic rx buffer num: 32
+I (414) wifi:Init static rx mgmt buffer num: 5
+I (418) wifi:Init management short buffer num: 32
+I (422) wifi:Init dynamic tx buffer num: 128
+I (426) wifi:Init static tx FG buffer num: 2
+I (430) wifi:Init static rx buffer size: 2212
+I (434) wifi:Init static rx buffer num: 10
+I (438) wifi:Init dynamic rx buffer num: 32
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (446) wifi_init: tcpip mbox: 32[0m
+[0;32mI (450) wifi_init: udp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp mbox: 6[0m
+[0;32mI (457) wifi_init: tcp tx win: 5760[0m
+[0;32mI (461) wifi_init: tcp rx win: 5760[0m
+[0;32mI (465) wifi_init: tcp mss: 1440[0m
+[0;32mI (469) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (474) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (480) phy_init: phy_version 1170,f4aea9b,Apr 30 2024,10:49:24[0m
+I (518) wifi:mode : sta (1a:00:00:00:00:00)
+I (518) wifi:enable tsf
+[0;32mI (521) node: Connecting to Wi-Fi...[0m
+[0;32mI (522) node: Assigned MAC address: 1a:00:00:00:00:00[0m
+I (524) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2929) node: Disconnected from Wi-Fi, retrying...[0m
+[0;32mI (5337) node: Disconnected from Wi-Fi, retrying...[0m
+[0;32mI (7746) node: Disconnected from Wi-Fi, retrying...[0m
+I (7759) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (7760) wifi:state: init -> auth (b0)
+I (7765) wifi:state: auth -> assoc (0)
+I (7775) wifi:state: assoc -> run (10)
+I (7794) wifi:connected with your_ssid, aid = 1, channel 11, 40D, bssid = 64:e8:33:89:f9:11
+I (7794) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (7797) wifi:pm start, type: 1
+
+I (7799) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7807) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (7815) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (7823) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (8830) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (8831) node: Got IP Address: 192.168.4.2[0m
+[0;32mI (8833) node: UDP socket created successfully[0m
+[0;32mI (8838) node: Node 0 is broadcasting...[0m
+[0;32mI (8843) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (8848) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (8954) node: Node 0 broadcasting data...[0m
+[0;32mI (10954) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (10955) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (10955) node: Node 0 passed token to Node 1[0m
+[0;32mI (11122) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (11123) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (13226) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (13226) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (13298) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (13299) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (15403) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (15404) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (15407) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (15415) node: Node 0 is now the broadcaster[0m
+[0;32mI (15560) node: Node 0 is broadcasting...[0m
+[0;32mI (15560) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (15561) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (15665) node: Node 0 broadcasting data...[0m
+[0;32mI (17665) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (17666) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (17666) node: Node 0 passed token to Node 1[0m
+[0;32mI (17834) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (17835) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (19939) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (19939) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (20010) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (20010) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (22114) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (22115) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (22124) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (22126) node: Node 0 is now the broadcaster[0m
+[0;32mI (22271) node: Node 0 is broadcasting...[0m
+[0;32mI (22271) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (22272) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (22376) node: Node 0 broadcasting data...[0m
+[0;32mI (24376) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (24377) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (24377) node: Node 0 passed token to Node 1[0m
+[0;32mI (24547) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (24548) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (26648) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (26649) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (26721) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (26721) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (28825) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (28826) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (28829) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (28837) node: Node 0 is now the broadcaster[0m
+[0;32mI (28982) node: Node 0 is broadcasting...[0m
+[0;32mI (28982) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (28982) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (29087) node: Node 0 broadcasting data...[0m
+[0;32mI (31087) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (31088) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (31088) node: Node 0 passed token to Node 1[0m
+[0;32mI (31256) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (31257) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (33361) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (33362) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (33437) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (33437) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (35537) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (35537) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (35541) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (35548) node: Node 0 is now the broadcaster[0m
+[0;32mI (35693) node: Node 0 is broadcasting...[0m
+[0;32mI (35693) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (35694) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (35798) node: Node 0 broadcasting data...[0m
+[0;32mI (37798) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (37799) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (37799) node: Node 0 passed token to Node 1[0m
+[0;32mI (37966) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (37966) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (40073) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (40073) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (40143) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (40143) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (42248) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (42249) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (42252) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (42260) node: Node 0 is now the broadcaster[0m
+[0;32mI (42404) node: Node 0 is broadcasting...[0m
+[0;32mI (42404) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (42405) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (42509) node: Node 0 broadcasting data...[0m
+[0;32mI (44509) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (44510) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (44510) node: Node 0 passed token to Node 1[0m
+[0;32mI (44681) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (44681) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (46792) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (46792) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (46855) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (46855) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (48959) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (48960) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (48969) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (48971) node: Node 0 is now the broadcaster[0m
+[0;32mI (49115) node: Node 0 is broadcasting...[0m
+[0;32mI (49115) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (49116) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (49220) node: Node 0 broadcasting data...[0m
+[0;32mI (51220) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (51221) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (51221) node: Node 0 passed token to Node 1[0m
+[0;32mI (51388) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (51389) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (53494) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (53494) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (53568) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (53569) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (55670) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (55671) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (55674) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (55682) node: Node 0 is now the broadcaster[0m
+[0;32mI (55826) node: Node 0 is broadcasting...[0m
+[0;32mI (55826) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (55827) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (55931) node: Node 0 broadcasting data...[0m
+[0;32mI (57931) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (57932) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (57932) node: Node 0 passed token to Node 1[0m
+[0;32mI (58099) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (58100) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (60204) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (60205) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (60277) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (60277) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (62382) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (62382) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (62389) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (62394) node: Node 0 is now the broadcaster[0m
+[0;32mI (62537) node: Node 0 is broadcasting...[0m
+[0;32mI (62537) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (62538) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (62642) node: Node 0 broadcasting data...[0m
+[0;32mI (64642) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (64643) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (64643) node: Node 0 passed token to Node 1[0m
+[0;32mI (64811) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (64811) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (66916) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (66916) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (66988) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (66988) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (69094) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (69094) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (69098) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (69106) node: Node 0 is now the broadcaster[0m
+[0;32mI (69248) node: Node 0 is broadcasting...[0m
+[0;32mI (69248) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (69249) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (69353) node: Node 0 broadcasting data...[0m
+[0;32mI (71353) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (71354) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (71354) node: Node 0 passed token to Node 1[0m
+[0;32mI (71522) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (71523) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (73627) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (73627) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (73700) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (73700) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (75810) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (75811) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (75814) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (75822) node: Node 0 is now the broadcaster[0m
+[0;32mI (75959) node: Node 0 is broadcasting...[0m
+[0;32mI (75959) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (75960) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (76064) node: Node 0 broadcasting data...[0m
+[0;32mI (78064) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (78065) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (78065) node: Node 0 passed token to Node 1[0m
+[0;32mI (78236) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (78236) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (80338) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (80339) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (80411) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (80412) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (82515) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (82516) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (82519) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (82527) node: Node 0 is now the broadcaster[0m
+[0;32mI (82670) node: Node 0 is broadcasting...[0m
+[0;32mI (82670) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (82671) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (82775) node: Node 0 broadcasting data...[0m
+[0;32mI (84775) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (84776) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (84776) node: Node 0 passed token to Node 1[0m
+[0;32mI (84947) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (84947) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (87051) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (87052) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (87122) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (87122) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (89232) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (89233) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (89237) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (89244) node: Node 0 is now the broadcaster[0m
+[0;32mI (89381) node: Node 0 is broadcasting...[0m
+[0;32mI (89381) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (89381) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (89486) node: Node 0 broadcasting data...[0m
+[0;32mI (91486) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (91487) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (91487) node: Node 0 passed token to Node 1[0m
+[0;32mI (91659) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (91660) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (93760) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (93761) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (93833) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (93833) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (95937) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (95938) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (95941) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (95949) node: Node 0 is now the broadcaster[0m
+[0;32mI (96092) node: Node 0 is broadcasting...[0m
+[0;32mI (96092) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (96093) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (96197) node: Node 0 broadcasting data...[0m
+[0;32mI (98197) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (98198) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (98198) node: Node 0 passed token to Node 1[0m
+[0;32mI (98368) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (98368) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (100472) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (100472) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (100543) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (100544) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (102648) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (102649) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (102653) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (102660) node: Node 0 is now the broadcaster[0m
+[0;32mI (102803) node: Node 0 is broadcasting...[0m
+[0;32mI (102803) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (102804) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (102908) node: Node 0 broadcasting data...[0m
+[0;32mI (104908) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (104909) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (104909) node: Node 0 passed token to Node 1[0m
+[0;32mI (105080) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (105081) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (107184) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (107185) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (107255) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (107255) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (109360) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (109360) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (109364) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (109372) node: Node 0 is now the broadcaster[0m
+[0;32mI (109514) node: Node 0 is broadcasting...[0m
+[0;32mI (109514) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (109515) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (109619) node: Node 0 broadcasting data...[0m
+[0;32mI (111619) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (111620) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (111620) node: Node 0 passed token to Node 1[0m
+[0;32mI (111792) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (111793) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (113903) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (113903) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (113966) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (113966) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (116071) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (116071) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (116075) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (116083) node: Node 0 is now the broadcaster[0m
+[0;32mI (116225) node: Node 0 is broadcasting...[0m
+[0;32mI (116225) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (116226) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (116330) node: Node 0 broadcasting data...[0m
+[0;32mI (118330) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (118331) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (118331) node: Node 0 passed token to Node 1[0m
+[0;32mI (118504) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (118504) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (120605) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (120606) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (120677) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (120677) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (122783) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (122783) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (122787) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (122795) node: Node 0 is now the broadcaster[0m
+[0;32mI (122936) node: Node 0 is broadcasting...[0m
+[0;32mI (122936) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (122937) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (123041) node: Node 0 broadcasting data...[0m
+[0;32mI (125041) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (125042) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (125042) node: Node 0 passed token to Node 1[0m
+[0;32mI (125211) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (125212) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (127318) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (127318) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (127388) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (127389) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (129493) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (129494) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (129497) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (129505) node: Node 0 is now the broadcaster[0m
+[0;32mI (129647) node: Node 0 is broadcasting...[0m
+[0;32mI (129647) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (129648) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (129752) node: Node 0 broadcasting data...[0m
+[0;32mI (131752) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (131753) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (131753) node: Node 0 passed token to Node 1[0m
+[0;32mI (131925) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (131926) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (134028) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (134029) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (134100) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (134100) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (136205) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (136206) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (136209) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (136217) node: Node 0 is now the broadcaster[0m
+[0;32mI (136358) node: Node 0 is broadcasting...[0m
+[0;32mI (136358) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (136359) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (136463) node: Node 0 broadcasting data...[0m
+[0;32mI (138463) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (138464) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (138464) node: Node 0 passed token to Node 1[0m
+[0;32mI (138638) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (138638) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (140739) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (140739) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (140813) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (140813) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (142916) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (142916) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (142921) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (142928) node: Node 0 is now the broadcaster[0m
+[0;32mI (143069) node: Node 0 is broadcasting...[0m
+[0;32mI (143069) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (143070) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (143174) node: Node 0 broadcasting data...[0m
+[0;32mI (145174) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (145175) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (145175) node: Node 0 passed token to Node 1[0m
+[0;32mI (145345) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (145346) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (147450) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (147451) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (147522) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (147522) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (149629) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (149630) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (149634) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (149641) node: Node 0 is now the broadcaster[0m
+[0;32mI (149780) node: Node 0 is broadcasting...[0m
+[0;32mI (149780) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (149780) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (149885) node: Node 0 broadcasting data...[0m
+[0;32mI (151885) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (151885) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (151886) node: Node 0 passed token to Node 1[0m
+[0;32mI (152056) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (152057) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (154161) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (154162) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (154233) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (154233) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (156338) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (156339) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (156342) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (156350) node: Node 0 is now the broadcaster[0m
+[0;32mI (156491) node: Node 0 is broadcasting...[0m
+[0;32mI (156491) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (156492) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (156596) node: Node 0 broadcasting data...[0m
+[0;32mI (158596) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (158597) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (158597) node: Node 0 passed token to Node 1[0m
+[0;32mI (158768) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (158768) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (160872) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (160873) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (160944) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (160945) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (163055) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (163055) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (163059) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (163067) node: Node 0 is now the broadcaster[0m
+[0;32mI (163202) node: Node 0 is broadcasting...[0m
+[0;32mI (163202) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (163203) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (163307) node: Node 0 broadcasting data...[0m
+[0;32mI (165307) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (165308) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (165308) node: Node 0 passed token to Node 1[0m
+[0;32mI (165479) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (165479) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (167584) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (167585) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (167663) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (167663) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (169760) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (169761) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (169764) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (169772) node: Node 0 is now the broadcaster[0m
+[0;32mI (169913) node: Node 0 is broadcasting...[0m
+[0;32mI (169913) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (169913) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (170018) node: Node 0 broadcasting data...[0m
+[0;32mI (172018) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (172019) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (172019) node: Node 0 passed token to Node 1[0m
+[0;32mI (172194) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (172194) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (174296) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (174297) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (174366) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (174367) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (176471) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (176472) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (176476) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (176483) node: Node 0 is now the broadcaster[0m
+[0;32mI (176624) node: Node 0 is broadcasting...[0m
+[0;32mI (176624) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (176625) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (176729) node: Node 0 broadcasting data...[0m
+[0;32mI (178729) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (178730) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (178730) node: Node 0 passed token to Node 1[0m
+[0;32mI (178901) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (178902) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (181006) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (181007) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (181078) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (181079) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (183182) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (183183) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (183187) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (183195) node: Node 0 is now the broadcaster[0m
+[0;32mI (183335) node: Node 0 is broadcasting...[0m
+[0;32mI (183335) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (183336) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (183440) node: Node 0 broadcasting data...[0m
+[0;32mI (185440) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (185441) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (185441) node: Node 0 passed token to Node 1[0m
+[0;32mI (185613) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (185613) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (187717) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (187718) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (187791) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (187792) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (189894) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (189894) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (189898) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (189906) node: Node 0 is now the broadcaster[0m
+[0;32mI (190046) node: Node 0 is broadcasting...[0m
+[0;32mI (190046) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (190047) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (190151) node: Node 0 broadcasting data...[0m
+[0;32mI (192151) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (192152) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (192152) node: Node 0 passed token to Node 1[0m
+[0;32mI (192323) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (192324) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (194432) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (194432) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (194500) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (194500) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (196605) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (196605) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (196609) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (196617) node: Node 0 is now the broadcaster[0m
+[0;32mI (196757) node: Node 0 is broadcasting...[0m
+[0;32mI (196757) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (196758) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (196862) node: Node 0 broadcasting data...[0m
+[0;32mI (198862) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (198863) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (198863) node: Node 0 passed token to Node 1[0m
+[0;32mI (199036) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (199037) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m
+[0;32mI (201147) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 1[0m
+[0;32mI (201148) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (201212) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 4[0m
+[0;31mE (201212) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:02: 4[0m
+[0;32mI (203316) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (203317) node: Node 0 received disable CSI command from Node 255[0m
+[0;32mI (203320) node: Received ESP-NOW message from 1a:00:00:00:00:02 with length 1[0m
+[0;32mI (203328) node: Node 0 is now the broadcaster[0m
+[0;32mI (203468) node: Node 0 is broadcasting...[0m
+[0;32mI (203468) node: Node 0 informed Node 1 to enable CSI[0m
+[0;32mI (203469) node: Node 0 informed Node 2 to enable CSI[0m
+[0;32mI (203573) node: Node 0 broadcasting data...[0m
+[0;32mI (205573) node: Node 0 informed Node 1 to disable CSI[0m
+[0;32mI (205574) node: Node 0 informed Node 2 to disable CSI[0m
+[0;32mI (205574) node: Node 0 passed token to Node 1[0m
+[0;32mI (205747) node: Received ESP-NOW message from 1a:00:00:00:00:01 with length 4[0m
+[0;31mE (205747) node: Unexpected ESP-NOW data length from 1a:00:00:00:00:01: 4[0m

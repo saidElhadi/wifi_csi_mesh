@@ -1,0 +1,20 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM6 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403848b2: rv_utils_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/riscv/include/riscv/rv_utils.h:52
+ (inlined by) esp_cpu_wait_for_intr at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:143
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40385c44: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Sayid\\workspace\\Thesis\\multi-spin\\mesh_node\\build\\mesh_node.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmph14z92xg"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Sayid\\AppData\\Local\\Temp\\tmph14z92xg': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0m

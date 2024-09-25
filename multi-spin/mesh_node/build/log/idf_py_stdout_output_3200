@@ -1,0 +1,106 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\multi-spin\mesh_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+In file included from C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:7:
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c: In function 'wifi_event_handler':
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:58: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                          ^~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:9: note: in expansion of macro 'ESP_LOGI'
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+In file included from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip_addr.h:43,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/sockets.h:46,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/lwip/sockets.h:8,
+                 from C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:15:
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:58: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                          ^~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:9: note: in expansion of macro 'ESP_LOGI'
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:58: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                          ^~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:9: note: in expansion of macro 'ESP_LOGI'
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:58: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                          ^~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:9: note: in expansion of macro 'ESP_LOGI'
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:58: warning: passing argument 1 of 'ip4addr_ntoa' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |                                                          ^~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          esp_ip4_addr_t * {aka struct esp_ip4_addr *}
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:440:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  440 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/main/app_main.c:70:9: note: in expansion of macro 'ESP_LOGI'
+   70 |         ESP_LOGI(TAG, "Got IP Address: %s", ip4addr_ntoa(&event->ip_info.ip));
+      |         ^~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/ip4_addr.h:207:38: note: expected 'const ip4_addr_t *' {aka 'const struct ip4_addr *'} but argument is of type 'esp_ip4_addr_t *' {aka 'struct esp_ip4_addr *'}
+  207 | char *ip4addr_ntoa(const ip4_addr_t *addr);
+      |                    ~~~~~~~~~~~~~~~~~~^~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable mesh_node.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/mesh_node.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\multi-spin\mesh_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/partition_table/partition-table.bin C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/mesh_node.bin"
+mesh_node.bin binary size 0xc5590 bytes. Smallest app partition is 0x100000 bytes. 0x3aa70 bytes (23%) free.

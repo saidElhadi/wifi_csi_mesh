@@ -1,0 +1,31 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\Arch-Spin\arch_recive\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+In file included from C:/Espressif/frameworks/esp-idf-v5.2.2/components/nvs_flash/include/nvs.h:13,
+                 from C:/Espressif/frameworks/esp-idf-v5.2.2/components/nvs_flash/include/nvs_flash.h:13,
+                 from C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:8:
+C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c: In function 'wifi_csi_init':
+C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:172:52: warning: passing argument 1 of 'esp_wifi_set_promiscuous_rx_cb' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |     ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(&wifi_csi_rx_cb));
+      |                                                    ^~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    void (*)(void *, wifi_csi_info_t *)
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/main/app_main.c:11:
+C:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/include/esp_wifi.h:789:64: note: expected 'wifi_promiscuous_cb_t' {aka 'void (*)(void *, wifi_promiscuous_pkt_type_t)'} but argument is of type 'void (*)(void *, wifi_csi_info_t *)'
+  789 | esp_err_t esp_wifi_set_promiscuous_rx_cb(wifi_promiscuous_cb_t cb);
+      |                                          ~~~~~~~~~~~~~~~~~~~~~~^~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable arch_recive.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/build/arch_recive.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\Arch-Spin\arch_recive\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/build/partition_table/partition-table.bin C:/Users/Sayid/workspace/Thesis/Arch-Spin/arch_recive/build/arch_recive.bin"
+arch_recive.bin binary size 0xc3600 bytes. Smallest app partition is 0x100000 bytes. 0x3ca00 bytes (24%) free.

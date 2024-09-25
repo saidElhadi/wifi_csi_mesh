@@ -1,0 +1,2 @@
+ninja: error: remove(esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\transport_socks_proxy.c.obj.d): The process cannot access the file because it is being used by another process.
+

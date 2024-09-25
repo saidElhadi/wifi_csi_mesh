@@ -1,0 +1,66 @@
+[1/5] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\multi-spin\mesh_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/partition_table/partition-table.bin C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/mesh_node.bin"
+mesh_node.bin binary size 0xc4c30 bytes. Smallest app partition is 0x100000 bytes. 0x3b3d0 bytes (23%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Sayid\workspace\Thesis\multi-spin\mesh_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Sayid/workspace/Thesis/multi-spin/mesh_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32c3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Sayid/workspaceesptool.py --chip esp32c3 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 mesh_node.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM5
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 64:e8:33:89:7f:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000d4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20848 bytes to 12751...
+Writing at 0x00000000... (100 %)
+Wrote 20848 bytes (12751 compressed) at 0x00000000 in 0.3 seconds (effective 504.5 kbit/s)...
+Hash of data verified.
+Compressed 805936 bytes to 472706...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001ca26... (6 %)
+Writing at 0x00024555... (10 %)
+Writing at 0x0002928b... (13 %)
+Writing at 0x00031b73... (17 %)
+Writing at 0x0003898a... (20 %)
+Writing at 0x00040022... (24 %)
+Writing at 0x00046b82... (27 %)
+Writing at 0x0004de3a... (31 %)
+Writing at 0x00054e90... (34 %)
+Writing at 0x0005ba55... (37 %)
+Writing at 0x00061c98... (41 %)
+Writing at 0x000682da... (44 %)
+Writing at 0x0006f284... (48 %)
+Writing at 0x000750a2... (51 %)
+Writing at 0x0007b295... (55 %)
+Writing at 0x000811af... (58 %)
+Writing at 0x0008754b... (62 %)
+Writing at 0x0008d9c9... (65 %)
+Writing at 0x0009393d... (68 %)
+Writing at 0x0009a16c... (72 %)
+Writing at 0x0009fffc... (75 %)
+Writing at 0x000a67b1... (79 %)
+Writing at 0x000ac73b... (82 %)
+Writing at 0x000b256c... (86 %)
+Writing at 0x000ba605... (89 %)
+Writing at 0x000c1979... (93 %)
+Writing at 0x000c88c6... (96 %)
+Writing at 0x000cfa0b... (100 %)
+Wrote 805936 bytes (472706 compressed) at 0x00010000 in 5.9 seconds (effective 1094.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 528.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+/Thesis/multi-spin/mesh_node/build -P C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

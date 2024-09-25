@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Sayid/workspace/Research/csi_node/main
+# Install script for directory: C:/Users/Sayid/workspace/Thesis/mesh_code/wifi_mesh/csi_node/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,1377 @@
+[0;32mI (3800) receiving_node: ESP-NOW packet received from 1a:ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42006c8a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 16:48:34[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1f8c8h (129224) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002f8f0 vaddr=3fc91800 size=00728h (  1832) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8f9d4h (588244) map[0m
+[0;32mI (211) esp_image: segment 3: paddr=000bf9fc vaddr=3fc91f28 size=02380h (  9088) load[0m
+[0;32mI (213) esp_image: segment 4: paddr=000c1d84 vaddr=40380000 size=117c0h ( 71616) load[0m
+[0;32mI (236) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (236) boot: Disabling RNG early entropy source...[0m
+[0;32mI (247) cpu_start: Unicore app[0m
+[0;32mI (256) cpu_start: Pro cpu start user code[0m
+[0;32mI (256) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (256) cpu_start: Application information:[0m
+[0;32mI (259) cpu_start: Project name:     arch_recive[0m
+[0;32mI (265) cpu_start: App version:      1[0m
+[0;32mI (269) cpu_start: Compile time:     Sep 23 2024 16:48:14[0m
+[0;32mI (275) cpu_start: ELF file SHA256:  30971b9d4...[0m
+[0;32mI (280) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (286) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (290) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (295) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (300) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (307) heap_init: At 3FC9EBB0 len 00021450 (133 KiB): RAM[0m
+[0;32mI (313) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (320) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (327) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (335) spi_flash: detected chip: generic[0m
+[0;32mI (338) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (356) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (362) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (374) main_task: Calling app_main()[0m
+[0;32mI (387) pp: pp rom version: 9387209[0m
+[0;32mI (387) net80211: net80211 rom version: 9387209[0m
+I (389) wifi:wifi driver task: 3fca7674, prio:23, stack:6656, core=0
+I (398) wifi:wifi firmware version: 3e0076f
+I (399) wifi:wifi certification version: v7.0
+I (401) wifi:config NVS flash: enabled
+I (405) wifi:config nano formating: disabled
+I (409) wifi:Init data frame dynamic rx buffer num: 32
+I (414) wifi:Init static rx mgmt buffer num: 5
+I (418) wifi:Init management short buffer num: 32
+I (422) wifi:Init dynamic tx buffer num: 128
+I (426) wifi:Init static tx FG buffer num: 2
+I (430) wifi:Init static rx buffer size: 2212
+I (434) wifi:Init static rx buffer num: 10
+I (438) wifi:Init dynamic rx buffer num: 32
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (446) wifi_init: tcpip mbox: 32[0m
+[0;32mI (450) wifi_init: udp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp mbox: 6[0m
+[0;32mI (457) wifi_init: tcp tx win: 5760[0m
+[0;32mI (461) wifi_init: tcp rx win: 5760[0m
+[0;32mI (465) wifi_init: tcp mss: 1440[0m
+[0;32mI (469) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (474) wifi_init: WiFi RX IRAM OP enabled[0m
+I (479) wifi:Set ps type: 0, coexist: 0
+
+[0;32mI (484) phy_init: phy_version 1170,f4aea9b,Apr 30 2024,10:49:24[0m
+I (524) wifi:mode : sta (64:e8:33:89:b1:48)
+I (525) wifi:enable tsf
+[0;32mI (528) receiving_node: Wi-Fi initialization completed.[0m
+I (533) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (534) wifi:state: init -> auth (b0)
+I (537) wifi:state: auth -> assoc (0)
+I (550) wifi:state: assoc -> run (10)
+I (571) wifi:connected with your_ssid, aid = 1, channel 11, 40D, bssid = 64:e8:33:89:f9:11
+I (572) wifi:security: WPA2-PSK, phy: bgn, rssi: -35
+I (575) wifi:pm start, type: 0
+
+I (576) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (584) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (615) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (615) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (1595) receiving_node: Operating on channel: 11[0m
+I (1598) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1602) receiving_node: Socket created[0m
+[0;32mI (1606) receiving_node: UDP client task started[0m
+[0;32mI (1609) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1620) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1628) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1636) receiving_node: Waiting for data from queue[0m
+[0;32mI (1640) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1650) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1658) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1666) receiving_node: Received data from queue[0m
+[0;32mI (1669) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1680) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1688) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1698) receiving_node: Data sent: 1:1606984:0,0,0,0,0,0,0,0,0,0,0,0,6,5,6,5,7,5,6,4,7,5,7,4,7,4,7,4,7,4,8,4,7,3,7,3,8,2,8,2,7,2,9,1,7,1,10,1,8,0,9,-1,9,0,10,-1,9,-1,10,-2,11,-3,10,-3,0,0,11,-2,12,-3,10,-2,12,-3,11,-4,12,-2,12,-3,12,-2,13,-3,14,-1,12,-2,13,-2,12,-1,12,-1,13,-1,12,-2,14,-1,12,-1,12,-1,12,0,12,0,12,0,12,1,12,1,11,2,10,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,9,48,1,50,4,49,10,39,3,50,5,46,2,53,-6,43,-6,51,-5,45,-8,48,-6,51,-12,41,-9,44,-9,47,-17,44,-13,45,-11,46,-12,40,-21,48,-19,47,-28,49,-31,44,-28,51,-33,40,-33,48,-34,52,-31,43,-44,40,-47,46,-37,52,-40,45,-54,46,-46,55,-36,57,-45,49,-50,51,-46,60,-55,60,-49,60,-53,63,-45,61,-40,61,-42,63,-45,69,-41,65,-42,56,-36,62,-37,64,-36,61,-34,63,-33,60,-25,64,-29,66,-26,63,-22,58,-14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-24,38,-28,33,-30,37,-29,33,-38,28,-39,32,-31,28,-39,23,-36,25,-38,24,-38,21,-35,21,-36,17,-34,14,-40,19,-38,17,-34,19,-38,17,-39,22,-30,16,-33,11,-35,18,-34,17,-34,17,-26,17,-29,15,-28,14,-29,17,-29,14,-28,19,-25,19,-27,19,-21,22,-20,21,-25,21,-22,18,-15,23,-17,26,-14,23,-13,23,-10,27,-12,24,-13,34,-10,29,-11,34,-7,30,-5,29,-7,35,-10,38,-8,39,-6,36,-3,40,-8,38,-1,48,-3,44,-4,49,-12,50,0,0[0m
+[0;32mI (1715) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1808) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1820) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1825) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1833) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1842) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1850) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1858) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1866) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1874) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1883) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1891) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1899) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1907) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1916) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1924) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1932) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1940) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1952) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1957) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1965) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1973) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1982) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1990) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (1998) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2006) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2015) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2023) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2031) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2039) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2048) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2056) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2067) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2072) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2081) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2089) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2097) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2105) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2114) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2122) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2130) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2138) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2147) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2155) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2163) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2174) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2180) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2188) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2205) receiving_node: Waiting for data from queue[0m
+[0;32mI (2209) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2218) receiving_node: Received data from queue[0m
+[0;32mI (2220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2232) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2240) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2248) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2257) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2266) receiving_node: Data sent: 1:1712192:0,0,0,0,0,0,0,0,0,0,0,0,5,6,6,6,6,6,6,6,5,6,6,5,6,6,6,5,6,5,6,4,7,4,6,4,7,3,8,3,8,3,7,3,8,3,8,3,9,3,9,2,9,1,9,1,9,0,11,0,10,0,11,0,0,0,11,0,12,0,13,1,12,0,13,0,13,1,13,0,13,0,13,1,13,1,13,1,13,1,13,1,14,2,13,2,13,3,12,2,12,3,12,3,11,3,12,3,12,4,10,4,11,4,11,4,10,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,50,11,49,11,49,6,45,11,52,14,48,10,48,16,45,16,45,18,37,14,43,11,42,17,44,23,45,26,44,26,36,30,41,31,42,27,37,29,39,30,33,43,34,32,29,40,36,39,35,44,39,47,31,49,30,50,30,55,29,58,36,60,35,58,34,62,37,70,37,58,31,62,35,69,46,60,42,61,44,65,49,61,41,64,44,64,45,60,45,57,49,55,47,61,49,50,47,44,49,50,53,47,52,46,55,44,54,41,53,36,57,35,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-49,-16,-37,-17,-40,-22,-36,-22,-36,-28,-33,-25,-32,-28,-32,-32,-34,-29,-32,-26,-29,-26,-29,-32,-32,-29,-30,-29,-30,-29,-28,-33,-22,-32,-29,-31,-27,-29,-19,-32,-21,-25,-20,-31,-29,-28,-24,-22,-27,-20,-25,-25,-27,-23,-20,-15,-24,-24,-24,-18,-23,-23,-19,-20,-27,-18,-21,-18,-27,-15,-26,-18,-31,-15,-26,-10,-30,-11,-31,-7,-27,-8,-26,-8,-24,-3,-35,1,-30,-1,-34,-3,-38,2,-34,-2,-38,2,-39,4,-44,3,-42,9,-46,5,-49,4,-44,8,-45,9,-45,9,0,0[0m
+[0;32mI (2267) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2377) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2383) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2391) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2399) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2407) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2415) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2424) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2432) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2440) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2448) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2457) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2465) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2473) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2481) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2490) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2498) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2506) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2514) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2526) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2531) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2539) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2547) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2556) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2564) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2572) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2580) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2589) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2597) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2605) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2613) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2622) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2630) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2641) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2646) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2655) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2663) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2671) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2679) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2688) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2696) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2704) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2712) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2721) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2729) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2737) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2748) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2754) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2762) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2770) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2778) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2787) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2796) receiving_node: Waiting for data from queue[0m
+[0;32mI (2799) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2809) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2817) receiving_node: Received data from queue[0m
+[0;32mI (2823) receiving_node: Data sent: 1:1817331:0,0,0,0,0,0,0,0,0,0,0,0,-4,7,-4,8,-4,8,-4,8,-3,8,-3,8,-3,8,-2,8,-2,8,-2,8,-1,8,-1,8,-1,8,-1,8,0,9,0,8,0,8,1,9,1,9,2,9,2,9,2,9,3,10,3,10,4,10,4,9,0,0,3,11,4,10,4,12,5,11,4,12,4,12,4,12,4,12,4,12,4,13,4,13,3,13,3,13,3,13,3,12,3,12,2,12,2,12,2,12,2,12,1,12,1,12,0,12,0,12,-1,11,-2,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-16,47,-15,40,-17,53,-19,53,-13,46,-16,52,-15,46,-15,51,-13,42,-10,50,-11,48,-9,44,-3,43,3,44,0,46,3,45,3,47,10,46,11,47,9,49,14,49,14,45,13,49,16,48,22,44,24,47,28,49,28,53,31,50,35,51,38,52,43,55,31,56,41,62,38,57,43,66,43,64,42,66,38,66,38,62,37,62,38,71,30,67,33,65,35,62,33,63,31,67,28,62,32,67,26,70,27,60,24,67,20,60,22,64,25,67,14,63,7,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-21,-42,-16,-44,-11,-41,-12,-48,-11,-40,-11,-43,-8,-44,-7,-42,-4,-37,-4,-39,1,-38,-2,-41,-3,-40,-3,-42,-2,-39,-2,-40,3,-40,-5,-37,-2,-38,1,-41,-6,-42,-5,-36,-6,-34,-8,-38,-6,-33,-6,-30,-4,-31,-10,-30,-4,-33,-9,-30,-13,-34,-8,-34,-13,-29,-11,-30,-17,-28,-14,-29,-14,-25,-14,-27,-19,-23,-16,-24,-18,-20,-19,-18,-27,-24,-21,-20,-29,-17,-28,-22,-28,-20,-34,-18,-32,-19,-30,-12,-35,-17,-40,-21,-44,-15,-44,-18,-42,-14,-49,-16,-49,-21,0,0[0m
+[0;32mI (2827) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2937) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2942) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2950) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2959) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2967) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2975) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2983) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (2992) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3000) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3008) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3017) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3025) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3033) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3041) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3049) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3058) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3066) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3077) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3082) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3091) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3099) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3107) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3115) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3124) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3132) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3140) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3148) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3157) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3165) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3173) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3181) receiving_node: No free buffer available[0m
+[0;32mI (3188) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3195) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3203) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3212) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3228) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3236) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3244) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3253) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3261) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3269) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3277) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3286) receiving_node: Waiting for data from queue[0m
+[0;32mI (3290) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3300) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3308) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3316) receiving_node: Received data from queue[0m
+[0;32mI (3317) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3331) receiving_node: Data sent: 1:1949134:0,0,0,0,0,0,0,0,0,0,0,0,8,-1,8,-1,8,-1,8,-1,8,-1,8,-2,8,-2,8,-2,8,-3,8,-3,8,-3,7,-3,7,-4,7,-4,7,-5,7,-5,7,-5,7,-6,7,-6,7,-6,7,-7,7,-7,7,-8,7,-8,7,-8,7,-9,0,0,7,-9,7,-10,8,-10,8,-10,8,-10,8,-10,8,-11,8,-10,9,-10,9,-10,9,-10,9,-10,9,-9,9,-10,10,-10,10,-9,9,-9,10,-9,10,-9,9,-8,10,-8,10,-7,10,-7,10,-6,11,-6,10,-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,-10,47,-7,54,-9,51,-9,48,-10,41,-21,46,-16,45,-10,42,-16,50,-20,40,-18,44,-21,41,-14,36,-25,43,-24,36,-27,35,-25,33,-25,35,-33,28,-30,38,-36,28,-33,32,-41,33,-43,28,-46,32,-46,26,-50,27,-54,28,-59,29,-52,26,-56,28,-66,34,-59,26,-71,25,-61,30,-73,31,-71,31,-69,32,-69,31,-72,31,-67,36,-72,36,-67,39,-63,34,-69,35,-59,40,-68,38,-52,38,-64,39,-58,38,-63,43,-53,44,-51,40,-55,44,-57,45,-50,49,-44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-24,29,-28,33,-29,28,-36,32,-31,27,-40,28,-33,25,-38,30,-36,22,-33,22,-36,23,-33,19,-33,23,-34,21,-36,18,-34,15,-38,14,-34,20,-36,17,-29,25,-32,20,-28,15,-28,20,-28,23,-22,16,-26,19,-28,22,-27,23,-22,13,-27,20,-22,17,-20,23,-22,24,-20,23,-20,24,-18,20,-14,25,-14,27,-15,24,-11,28,-7,25,-6,32,-5,28,-4,28,0,28,3,45,2,33,4,33,0,35,2,32,-2,35,3,43,10,42,4,44,4,43,6,47,10,49,0,0[0m
+[0;32mI (3341) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3443) receiving_node: No free buffer available[0m
+[0;32mI (3449) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3457) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3465) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3482) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3490) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3498) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3506) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3515) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3523) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3531) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3539) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3547) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3556) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3564) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3572) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3581) receiving_node: No free buffer available[0m
+[0;32mI (3586) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3594) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3602) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3611) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3619) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3627) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3635) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3644) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3652) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3660) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3668) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3677) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3685) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3693) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3701) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3710) receiving_node: No free buffer available[0m
+[0;32mI (3715) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3723) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3731) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3740) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3748) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3756) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3764) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3773) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3781) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3789) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3797) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3806) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3814) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3822) receiving_node: No free buffer available[0m
+[0;32mI (3827) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3836) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3844) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3852) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3860) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3869) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3877) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3885) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3894) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3902) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3910) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3918) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (3927) receiving_node: No free buffer available[0m
+[0;32mI (3932) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3940) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3949) receiving_node: Waiting for data from queue[0m
+[0;32mI (3951) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3962) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3970) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3979) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3987) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (3995) receiving_node: Received data from queue[0m
+[0;32mI (3997) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4009) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4018) receiving_node: Data sent: 1:2064550:0,0,0,0,0,0,0,0,0,0,0,0,-3,-9,-3,-9,-3,-9,-3,-8,-3,-9,-4,-8,-4,-8,-4,-8,-5,-8,-5,-8,-5,-8,-5,-8,-5,-8,-6,-8,-6,-7,-7,-7,-7,-6,-8,-6,-7,-6,-8,-6,-8,-6,-9,-6,-9,-6,-10,-6,-10,-6,-10,-6,0,0,-11,-5,-12,-6,-11,-5,-12,-6,-12,-5,-12,-6,-13,-6,-13,-6,-13,-6,-13,-7,-12,-7,-12,-7,-12,-7,-12,-7,-13,-7,-12,-7,-12,-8,-11,-7,-11,-7,-11,-7,-10,-8,-11,-8,-10,-9,-9,-9,-9,-9,-8,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-23,-48,-9,-50,-18,-47,-17,-46,-15,-47,-16,-46,-20,-49,-17,-46,-15,-49,-23,-48,-23,-41,-25,-44,-28,-40,-27,-42,-22,-39,-26,-45,-30,-41,-29,-39,-36,-39,-32,-31,-40,-36,-34,-36,-42,-37,-45,-25,-46,-24,-52,-28,-49,-25,-49,-30,-53,-35,-55,-27,-65,-24,-65,-34,-60,-30,-66,-31,-65,-35,-63,-34,-69,-28,-72,-28,-69,-28,-67,-34,-71,-36,-64,-39,-62,-41,-61,-38,-64,-42,-66,-36,-65,-37,-59,-41,-63,-41,-60,-39,-64,-43,-59,-40,-58,-42,-45,-42,-51,-48,-45,-54,-41,-52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,18,38,19,37,20,36,25,32,26,31,26,29,21,28,27,36,27,25,27,26,31,29,29,22,36,22,37,29,34,26,26,26,28,24,32,21,32,25,24,23,26,26,22,23,25,19,27,21,29,23,23,19,23,23,19,19,18,20,21,21,20,20,20,21,17,27,15,21,9,27,9,26,8,24,6,18,10,27,6,26,4,27,3,29,7,29,-2,30,3,27,1,34,-4,36,-9,35,-8,35,-5,41,-11,42,-8,39,-11,41,-13,47,-11,45,-11,42,-15,0,0[0m
+[0;32mI (4033) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4138) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4146) receiving_node: No free buffer available[0m
+[0;32mI (4152) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4159) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4168) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4176) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4184) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4192) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4201) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4209) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4217) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4226) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4234) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4242) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4250) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4258) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4267) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4275) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4283) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4291) receiving_node: No free buffer available[0m
+[0;32mI (4297) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4305) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4313) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4322) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4330) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4338) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4346) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4355) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4363) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4371) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4379) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4388) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4396) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4404) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4412) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4421) receiving_node: No free buffer available[0m
+[0;32mI (4426) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4434) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4442) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4451) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4459) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4467) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4475) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4484) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4492) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4500) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4508) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4517) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4525) receiving_node: No free buffer available[0m
+[0;32mI (4530) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4538) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4547) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4555) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4563) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4571) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4580) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4588) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4597) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4605) receiving_node: Waiting for data from queue[0m
+[0;32mI (4610) receiving_node: Received data from queue[0m
+[0;32mI (4616) receiving_node: Data sent: 1:2171754:0,0,0,0,0,0,0,0,0,0,0,0,-9,-3,-9,-3,-9,-3,-9,-3,-9,-2,-8,-2,-9,-1,-9,-1,-9,-1,-10,-1,-9,-1,-9,0,-9,0,-9,1,-10,0,-9,0,-9,2,-10,2,-9,2,-10,3,-10,3,-10,4,-10,4,-10,4,-11,4,-11,4,0,0,-11,5,-11,6,-11,5,-12,6,-12,6,-11,6,-13,6,-12,6,-13,6,-13,6,-13,5,-13,5,-13,6,-13,5,-13,5,-12,5,-13,4,-12,4,-12,4,-12,3,-13,3,-12,3,-13,2,-12,1,-13,1,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-50,-10,-46,-17,-45,-17,-43,-11,-46,-11,-49,-14,-51,-12,-41,-8,-44,-14,-47,-8,-45,-1,-43,-6,-49,4,-52,1,-46,-1,-47,3,-47,4,-45,5,-49,8,-49,15,-45,11,-48,16,-42,19,-46,19,-49,22,-45,27,-50,27,-50,21,-52,29,-55,30,-54,33,-53,37,-58,41,-59,38,-59,42,-53,37,-54,39,-58,45,-60,40,-61,43,-65,45,-60,39,-62,32,-64,36,-63,36,-63,34,-64,38,-65,33,-58,30,-60,32,-60,34,-62,27,-63,30,-64,24,-61,15,-67,14,-63,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,-19,40,-19,38,-18,40,-15,41,-11,38,-7,40,-9,44,-9,39,-7,42,-2,39,-2,39,0,37,2,39,2,38,0,41,-4,33,0,37,-1,39,-2,38,-6,34,-5,36,0,34,0,34,-3,29,-2,31,-2,34,-3,34,-5,31,-7,28,-8,31,-9,24,-8,25,-14,25,-9,25,-10,27,-11,25,-11,22,-14,20,-17,22,-15,22,-22,20,-20,18,-24,16,-26,17,-23,19,-29,14,-25,17,-35,13,-33,17,-40,11,-33,13,-41,16,-41,15,-42,13,-42,23,-45,14,-48,0,0[0m
+[0;32mI (4617) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4734) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4739) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4747) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4755) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4764) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4772) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4780) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4789) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4797) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4805) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4813) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4821) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4830) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4838) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4846) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4854) receiving_node: No free buffer available[0m
+[0;32mI (4860) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4868) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4876) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4885) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4893) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4901) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4909) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4918) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4926) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4934) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4942) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4951) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4959) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4967) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4975) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (4983) receiving_node: No free buffer available[0m
+[0;32mI (4989) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (4997) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5005) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5014) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5022) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5030) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5038) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5047) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5055) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5063) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5071) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5080) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5088) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5096) receiving_node: No free buffer available[0m
+[0;32mI (5101) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5110) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5118) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5126) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5134) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5143) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5151) receiving_node: Waiting for data from queue[0m
+[0;32mI (5156) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5165) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5173) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5181) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5190) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5201) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5206) receiving_node: Received data from queue[0m
+[0;32mI (5208) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5228) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5237) receiving_node: Data sent: 1:2374789:0,0,0,0,0,0,0,0,0,0,0,0,-9,-3,-10,-2,-9,-2,-10,-2,-9,-2,-9,-1,-9,-2,-9,-1,-9,-1,-9,0,-9,0,-9,0,-9,1,-9,1,-9,1,-9,1,-9,1,-9,2,-10,2,-10,3,-10,3,-10,3,-10,4,-11,4,-10,5,-11,5,0,0,-11,6,-12,6,-12,6,-11,6,-12,6,-13,6,-13,5,-13,6,-12,5,-13,6,-13,7,-13,5,-13,5,-14,5,-13,4,-14,3,-13,3,-13,3,-14,3,-13,3,-13,3,-13,1,-13,2,-12,1,-13,1,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-43,-31,-51,-34,-37,-28,-37,-20,-45,-30,-38,-24,-42,-27,-46,-28,-45,-25,-39,-17,-46,-29,-40,-19,-45,-21,-49,-14,-45,-14,-42,-11,-52,-12,-49,-7,-44,-5,-53,-10,-50,-5,-56,-2,-46,-3,-59,-4,-51,0,-59,3,-56,9,-56,5,-60,7,-60,8,-64,8,-65,12,-71,12,-63,11,-76,16,-66,6,-74,16,-79,15,-77,7,-81,7,-83,6,-72,8,-75,6,-81,8,-76,6,-80,2,-67,1,-81,1,-64,-3,-70,-5,-72,-5,-67,-10,-74,-9,-66,-11,-66,-14,-68,-18,-61,-16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,-18,42,-15,46,-11,46,-10,42,-10,37,-9,44,2,41,-7,45,-1,45,-3,39,-1,40,0,43,1,42,-2,41,3,46,2,35,1,36,3,38,3,38,3,33,-1,40,3,41,4,32,2,32,1,32,1,34,0,33,1,35,-3,25,-1,35,-5,30,-3,33,-4,36,-9,24,-2,31,-6,30,-6,28,-10,25,-18,25,-17,26,-14,25,-16,22,-18,26,-25,25,-19,22,-18,25,-20,20,-25,23,-32,28,-32,25,-32,26,-34,25,-31,25,-40,32,-36,24,-39,27,-36,0,0[0m
+[0;32mI (5238) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5351) receiving_node: No free buffer available[0m
+[0;32mI (5356) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5364) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5372) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5381) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5389) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5397) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5405) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5414) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5422) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5430) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5439) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5447) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5455) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5463) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5471) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5479) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5488) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5496) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5504) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5513) receiving_node: No free buffer available[0m
+[0;32mI (5518) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5526) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5534) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5543) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5551) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5559) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5567) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5576) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5584) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5592) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5600) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5609) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5617) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5625) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5633) receiving_node: No free buffer available[0m
+[0;32mI (5639) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5647) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5655) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5663) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5672) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5680) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5688) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5696) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5705) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5713) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5721) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5729) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5738) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5746) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5754) receiving_node: No free buffer available[0m
+[0;32mI (5759) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5768) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5776) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5784) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5793) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5801) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5809) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5817) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5825) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5834) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5842) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5850) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (5858) receiving_node: No free buffer available[0m
+[0;32mI (5864) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5872) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5880) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5889) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5897) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5905) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5913) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5922) receiving_node: Waiting for data from queue[0m
+[0;32mI (5927) receiving_node: Received data from queue[0m
+[0;32mI (5929) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5941) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5949) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5957) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (5967) receiving_node: Data sent: 1:2523203:0,0,0,0,0,0,0,0,0,0,0,0,-1,8,0,8,0,8,1,9,1,8,1,8,1,8,2,8,2,8,1,8,2,7,2,8,3,7,3,7,4,8,4,7,4,7,5,7,5,7,6,6,6,7,7,7,7,6,7,7,7,7,8,7,0,0,9,8,9,7,10,7,9,7,9,8,10,9,10,8,10,8,10,8,10,9,10,9,10,9,9,9,9,9,10,9,9,9,8,10,8,10,8,9,8,9,7,10,6,10,6,9,6,10,6,10,5,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,42,21,37,27,47,24,44,24,43,26,44,27,41,27,44,24,35,27,45,27,38,28,37,35,35,29,32,31,36,40,32,36,21,38,26,39,25,42,26,43,27,44,25,49,25,51,17,54,17,50,22,51,17,59,16,62,12,59,13,62,14,63,14,64,16,70,17,68,14,78,18,73,21,72,23,74,19,68,18,76,18,76,20,72,21,72,23,70,26,66,26,71,29,65,24,72,27,68,35,63,29,66,31,57,32,57,33,63,32,55,40,50,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-43,-5,-40,-13,-42,-13,-42,-21,-38,-16,-43,-22,-40,-19,-40,-20,-31,-19,-36,-26,-37,-25,-35,-23,-32,-28,-31,-22,-34,-25,-30,-23,-36,-23,-32,-15,-32,-28,-26,-26,-30,-21,-29,-24,-28,-18,-32,-18,-28,-24,-30,-20,-26,-17,-31,-17,-28,-13,-30,-16,-25,-17,-32,-15,-31,-16,-29,-12,-29,-6,-21,-12,-32,-5,-34,-8,-31,-2,-26,-3,-30,2,-33,1,-31,5,-29,6,-34,5,-37,4,-35,4,-37,10,-36,19,-35,15,-39,19,-38,13,-38,20,-44,18,-43,16,-42,20,-47,17,0,0[0m
+[0;32mI (5971) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6074) receiving_node: No free buffer available[0m
+[0;32mI (6080) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6088) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6096) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6104) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6112) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6121) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6129) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6137) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6145) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6154) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6162) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6170) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6178) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6187) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6195) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6203) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6211) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6228) receiving_node: No free buffer available[0m
+[0;32mI (6233) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6241) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6250) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6258) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6266) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6274) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6283) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6291) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6299) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6307) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6316) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6324) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6332) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6340) receiving_node: No free buffer available[0m
+[0;32mI (6346) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6354) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6362) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6371) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6379) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6387) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6395) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6404) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6412) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6420) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6428) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6437) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6445) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6453) receiving_node: No free buffer available[0m
+[0;32mI (6458) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6467) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6475) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6483) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6500) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6508) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6524) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6533) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6541) receiving_node: Waiting for data from queue[0m
+[0;32mI (6546) receiving_node: Received data from queue[0m
+[0;32mI (6553) receiving_node: Data sent: 1:2638621:0,0,0,0,0,0,0,0,0,0,0,0,7,5,7,5,7,5,7,4,7,4,7,4,7,4,8,3,7,3,8,3,8,2,8,2,8,2,8,1,8,1,9,0,9,0,9,0,9,0,10,-1,10,-1,10,-1,10,-2,11,-2,10,-2,11,-3,0,0,12,-3,12,-3,12,-3,13,-4,13,-3,13,-3,13,-3,13,-3,13,-3,14,-3,13,-3,14,-3,14,-2,13,-2,13,-2,13,-1,13,-1,12,-1,12,-1,13,-1,13,0,13,0,12,0,12,1,12,2,11,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,40,3[0;31mE (6592) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (6592) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (6592) task_wdt: Tasks currently running:[0m
+[0;31mE (6592) task_wdt: CPU 0: udp_client[0m
+[0;31mE (6592) task_wdt: Print CPU 0 (current core) backtrace[0m
+Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x42006c92  RA      : 0x42007d84  SP      : 0x3fcb2890  GP      : 0x3fc92000  
+TP      : 0x3fc93658  T0      : 0x2c35322c  T1      : 0x60000000  T2      : 0x32332d2c  
+S0/FP   : 0x00000053  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x00000033  
+A2      : 0x00000004  A3      : 0x60000000  A4      : 0x00000080  A5      : 0x0000007f  
+A6      : 0x420064d6  A7      : 0x0000000a  S2      : 0x00000033  S3      : 0x00000080  
+S4      : 0x3fc99738  S5      : 0x3fcb29f0  S6      : 0x3fc99738  S7      : 0x0000031c  
+S8      : 0x0000031b  S9      : 0x00000004  S10     : 0x0000000d  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x322c3433  T5      : 0x2d2c3632  T6      : 0x2c32332d  
+MSTATUS : 0x00000470  MTVEC   : 0x00000000  MCAUSE  : 0x3fc9f404  MTVAL   : 0x33007d44  
+MHARTID : 0x00000080  
+1,44,29,32,25,41,34,37,24,37,32,40,29,26,38,38,30,23,31,32,34,33,30,29,42,29,37,28,38,28,38,23,45,22,37,23,51,20,39,12,51,21,39,15,54,11,50,17,59,11,60,12,57,10,61,10,62,9,68,3,66,13,70,9,60,1,74,5,65,7,70,3,72,9,75,12,77,11,84,11,70,9,77,12,76,17,73,14,74,12,64,11,77,24,67,20,63,22,66,18,63,29,67,22,65,27,55,25,63,30,55,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-46,-1,-44,-7,-50,-6,-39,-10,-46,-14,-39,-15,-41,-16,-36,-23,-41,-17,-44,-19,-37,-18,-35,-18,-33,-16,-39,-14,-39,-18,-39,-21,-31,-21,-38,-19,-32,-18,-36,-20,-34,-18,-34,-15,-37,-19,-33,-12,-30,-16,-31,-13,-36,-17,-26,-15,-32,-10,-24,-7,-35,-8,-29,-12,-28,-6,-29,-10,-24,-9,-30,-7,-33,-7,-27,-3,-28,1,-30,6,-23,-3,-33,5,-26,7,-31,5,-27,10,-28,14,-36,12,-33,12,-34,16,-35,18,-33,12,-38,21,-35,24,-32,23,-35,27,-29,23,-42,28,0,0[0m
+[0;32mI (6556) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6770) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6779) receiving_node: No free buffer available[0m
+[0;32mI (6784) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6792) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6801) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6809) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6817) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6825) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6834) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6842) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6850) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6859) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6867) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6875) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6883) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6891) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6900) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6908) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (6916) receiving_node: No free buffer available[0m
+[0;32mI (6921) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6930) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6938) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6946) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6954) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6963) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6971) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6979) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6987) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (6996) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7004) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7012) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7020) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7029) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7037) receiving_node: No free buffer available[0m
+[0;32mI (7042) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7050) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7059) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7067) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7076) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7083) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7092) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7100) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7108) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7116) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7125) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7133) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7141) receiving_node: No free buffer available[0m
+[0;32mI (7146) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7155) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7163) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7171) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7180) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7188) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7196) receiving_node: Waiting for data from queue[0m
+[0;32mI (7197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7210) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7218) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7226) receiving_node: Received data from queue[0m
+[0;32mI (7227) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7240) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7251) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7257) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7266) receiving_node: Data sent: 1:2745831:0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,-10,0,-11,0,-10,0,-10,0,-9,-1,-10,-2,-10,-1,-10,-1,-10,-1,-9,-2,-9,-2,-10,-3,-9,-3,-9,-4,-9,-4,-9,-5,-9,-4,-9,-6,-9,-6,-9,-7,-9,-7,-10,-6,-10,-7,-9,-8,-9,0,0,-8,-10,-9,-11,-9,-10,-10,-11,-9,-10,-9,-11,-10,-11,-9,-11,-9,-11,-9,-12,-8,-12,-9,-12,-8,-12,-8,-12,-8,-12,-7,-12,-8,-12,-7,-11,-7,-11,-7,-11,-6,-12,-6,-12,-6,-12,-5,-12,-4,-13,-3,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,-48,13,-57,6,-51,7,-54,11,-52,10,-48,1,-56,5,-50,5,-51,-3,-50,-5,-43,0,-51,-10,-51,-5,-52,-10,-55,-5,-51,-13,-45,-10,-51,-13,-50,-20,-49,-19,-43,-22,-50,-23,-46,-26,-48,-27,-49,-37,-44,-29,-52,-33,-52,-36,-54,-35,-51,-43,-53,-41,-54,-46,-54,-44,-53,-50,-55,-44,-50,-48,-57,-52,-61,-47,-62,-52,-57,-48,-70,-44,-67,-40,-62,-39,-66,-40,-62,-42,-67,-41,-64,-34,-73,-29,-60,-39,-59,-30,-63,-34,-60,-26,-61,-30,-71,-22,-65,-16,-65,-18,-63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,32,25,32,24,39,23,36,21,37,20,35,21,37,13,37,21,38,17,41,15,37,15,34,12,36,11,40,13,36,14,35,15,34,11,38,10,33,12,34,13,34,20,34,10,33,10,34,10,32,14,31,14,29,16,27,16,27,14,27,16,31,12,25,16,23,18,27,17,24,19,22,20,23,18,22,24,21,20,15,23,17,28,16,25,15,33,14,30,6,26,11,29,13,39,12,31,6,39,11,37,14,44,11,43,9,44,4,47,5,46,11,42,5,0,0[0m
+[0;32mI (7268) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7384) receiving_node: No free buffer available[0m
+[0;32mI (7390) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7398) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7406) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7414) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7422) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7431) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7439) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7447) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7455) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7464) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7472) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7480) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7488) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7497) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7505) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7513) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7521) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7530) receiving_node: No free buffer available[0m
+[0;32mI (7535) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7543) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7551) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7560) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7568) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7576) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7585) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7593) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7601) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7609) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7617) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7626) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7634) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7642) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7650) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7659) receiving_node: No free buffer available[0m
+[0;32mI (7664) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7672) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7680) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7689) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7697) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7705) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7713) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7722) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7730) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7738) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7746) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7755) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (7763) receiving_node: No free buffer available[0m
+[0;32mI (7768) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7777) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7785) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7793) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7801) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7810) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7818) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7826) receiving_node: Waiting for data from queue[0m
+[0;32mI (7829) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7840) receiving_node: Received data from queue[0m
+[0;32mI (7841) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7854) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7862) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7873) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7878) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7888) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (7888) receiving_node: Data sent: 1:2934474:0,0,0,0,0,0,0,0,0,0,0,0,-9,-3,-10,-3,-10,-2,-9,-2,-10,-2,-9,-2,-10,-1,-10,-1,-9,-1,-10,-1,-10,0,-10,0,-9,0,-10,0,-9,1,-9,2,-10,2,-10,3,-10,3,-10,4,-10,4,-10,5,-10,5,-10,5,-11,5,-10,5,0,0,-11,6,-11,7,-11,7,-12,7,-12,7,-12,7,-12,8,-13,7,-12,7,-14,7,-13,7,-13,6,-13,6,-13,6,-13,6,-13,6,-13,5,-13,5,-12,5,-13,5,-13,4,-13,4,-13,3,-13,2,-13,2,-13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-47,15,-38,5,-57,8,-46,17,-45,6,-53,12,-43,13,-51,14,-43,12,-52,14,-44,19,-45,20,-41,19,-34,18,-42,24,-43,28,-35,29,-37,27,-42,33,-36,31,-41,42,-36,31,-45,46,-33,44,-31,43,-34,41,-30,43,-31,50,-31,60,-30,54,-30,51,-32,62,-28,54,-37,65,-31,52,-38,68,-37,62,-34,66,-39,65,-42,57,-35,62,-42,67,-41,64,-39,60,-40,66,-44,51,-54,59,-43,49,-56,57,-48,56,-44,54,-49,50,-45,49,-44,46,-47,48,-49,42,-55,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,-39,23,-36,22,-38,27,-39,29,-31,32,-39,31,-30,30,-36,29,-28,28,-24,32,-29,25,-28,34,-28,33,-21,32,-23,27,-23,31,-27,27,-22,36,-27,32,-22,33,-26,25,-22,18,-27,25,-24,22,-22,26,-27,22,-22,24,-26,18,-22,22,-30,17,-24,21,-25,13,-28,18,-25,17,-21,13,-24,13,-23,8,-28,8,-26,8,-24,3,-32,1,-28,6,-36,2,-25,4,-37,1,-37,-3,-34,-5,-36,-2,-35,-7,-33,-7,-41,-5,-37,-9,-45,-13,-47,-3,-45,-11,-47,-6,-42,0,0[0m
+[0;32mI (7898) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8013) receiving_node: No free buffer available[0m
+[0;32mI (8019) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8026) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8035) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8043) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8051) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8059) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8068) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8076) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8084) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8092) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8101) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8109) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8117) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8125) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8134) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8142) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8150) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8158) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8167) receiving_node: No free buffer available[0m
+[0;32mI (8172) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8180) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8189) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8205) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8213) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8222) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8230) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8238) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8246) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8254) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8263) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8271) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8279) receiving_node: No free buffer available[0m
+[0;32mI (8285) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8293) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8301) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8309) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8318) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8326) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8334) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8342) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8351) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8359) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8367) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8375) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8384) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8392) receiving_node: No free buffer available[0m
+[0;32mI (8397) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8405) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8414) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8422) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8430) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8438) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8447) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8455) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8463) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8471) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8480) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8488) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8496) receiving_node: No free buffer available[0m
+[0;32mI (8501) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8510) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8518) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8526) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8535) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8543) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8551) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8559) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8568) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8576) receiving_node: Waiting for data from queue[0m
+[0;32mI (8577) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8590) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8598) receiving_node: Received data from queue[0m
+[0;32mI (8601) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8612) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8620) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8628) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8637) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8645) receiving_node: Data sent: 1:3074623:0,0,0,0,0,0,0,0,0,0,0,0,8,0,8,-1,8,0,9,-1,8,-1,8,-1,8,-1,8,-2,8,-1,8,-2,8,-3,8,-3,8,-3,7,-4,8,-4,7,-4,8,-4,7,-4,8,-5,8,-6,7,-6,7,-6,7,-7,8,-8,8,-8,8,-8,0,0,8,-9,9,-9,9,-9,9,-9,9,-9,10,-9,10,-9,10,-9,10,-9,9,-9,10,-9,11,-9,10,-9,10,-8,10,-7,11,-7,9,-7,10,-7,11,-7,10,-7,10,-7,11,-5,10,-6,10,-5,11,-5,10,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,25,48,20,42,18,44,23,47,19,42,18,49,20,40,20,45,19,49,11,45,13,47,10,48,14,52,9,47,-2,45,7,52,0,52,-2,52,1,55,0,50,1,50,-7,47,-11,54,-6,50,-15,61,-16,52,-17,53,-24,53,-24,62,-25,65,-28,66,-23,65,-28,64,-24,71,-26,63,-24,73,-25,70,-26,72,-23,76,-26,73,-21,72,-25,73,-21,73,-20,72,-20,70,-17,66,-16,73,-17,65,-11,71,-6,70,-8,72,-7,68,-3,75,-1,68,-1,66,5,65,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-38,23,-45,16,-44,18,-42,9,-43,15,-36,11,-43,6,-39,13,-43,7,-44,7,-42,4,-44,4,-40,7,-40,2,-38,3,-42,-4,-40,0,-36,0,-38,3,-42,1,-35,0,-35,-3,-39,4,-32,7,-33,6,-34,-3,-34,10,-32,8,-34,8,-28,7,-36,6,-27,8,-32,3,-31,10,-27,10,-26,12,-29,10,-30,13,-26,18,-26,13,-24,20,-24,16,-23,22,-24,25,-21,21,-24,25,-20,29,-24,26,-17,33,-19,31,-20,38,-23,36,-24,38,-21,34,-21,46,-21,37,-22,45,0,0[0m
+[0;32mI (8659) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8755) receiving_node: No free buffer available[0m
+[0;32mI (8760) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8768) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8777) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8785) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8793) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8801) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8810) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8818) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8826) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8835) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8843) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8851) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8859) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8867) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8876) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8884) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8892) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (8900) receiving_node: No free buffer available[0m
+[0;32mI (8906) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8914) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8922) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8930) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8939) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8947) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8955) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8964) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8972) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8980) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8988) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (8996) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9005) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9013) receiving_node: No free buffer available[0m
+[0;32mI (9018) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9026) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9035) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9043) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9051) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9059) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9068) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9076) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9084) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9093) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9101) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9109) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9117) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9125) receiving_node: No free buffer available[0m
+[0;32mI (9131) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9139) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9147) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9156) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9164) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9172) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9180) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9189) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9205) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9213) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9222) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9230) receiving_node: No free buffer available[0m
+[0;32mI (9235) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9243) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9252) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9260) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9268) receiving_node: Waiting for data from queue[0m
+[0;32mI (9273) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9282) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9290) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9299) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9307) receiving_node: Received data from queue[0m
+[0;32mI (9307) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9320) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9329) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9340) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9346) receiving_node: Data sent: 1:3287258:0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,8,1,9,1,8,1,9,2,8,2,9,2,9,3,8,2,8,3,8,3,8,3,8,4,7,3,7,5,7,5,6,6,7,6,7,6,7,6,7,7,7,8,7,8,8,8,7,8,7,0,0,9,8,10,7,9,7,11,8,10,7,10,8,10,8,10,9,10,8,11,10,10,9,10,9,10,9,9,8,10,9,9,9,9,10,8,9,8,9,8,9,7,10,8,10,7,10,6,10,6,11,4,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,41,24,40,27,42,31,39,25,36,25,39,31,38,31,37,29,38,34,34,30,29,32,33,34,31,36,29,36,32,35,26,39,27,40,29,40,22,41,20,44,16,47,17,49,20,50,10,47,13,54,9,55,12,57,11,60,9,59,10,59,6,63,4,66,7,70,4,72,5,74,5,76,8,68,5,73,10,72,6,78,12,73,13,73,11,73,14,70,14,74,13,73,15,67,17,68,19,64,18,61,16,64,16,64,21,63,25,57,30,54,30,55,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-44,0,-42,-10,-41,-10,-40,-14,-40,-19,-38,-16,-40,-16,-36,-21,-41,-18,-35,-15,-33,-23,-35,-22,-34,-25,-36,-17,-28,-21,-36,-24,-34,-21,-29,-22,-31,-19,-29,-19,-34,-19,-33,-20,-32,-18,-30,-23,-29,-19,-32,-15,-28,-17,-32,-14,-28,-12,-28,-10,-30,-14,-28,-11,-27,-9,-25,-13,-31,-5,-26,0,-30,-3,-28,-3,-27,2,-31,2,-29,3,-30,2,-33,3,-29,5,-28,10,-34,3,-33,12,-32,15,-34,17,-31,21,-37,17,-34,20,-36,24,-37,26,-33,23,-41,25,-41,26,0,0[0m
+[0;32mI (9348) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9453) receiving_node: No free buffer available[0m
+[0;32mI (9458) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9466) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9483) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9500) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9507) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9524) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9532) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9540) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9549) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9557) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9565) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9573) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9582) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9590) receiving_node: No free buffer available[0m
+[0;32mI (9595) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9603) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9612) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9620) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9628) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9637) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9645) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9653) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9661) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9670) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9678) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9686) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9694) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9702) receiving_node: No free buffer available[0m
+[0;32mI (9708) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9716) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9724) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9733) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9741) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9749) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9757) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9766) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9774) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9782) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9790) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9799) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9807) receiving_node: Waiting for data from queue[0m
+[0;32mI (9811) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9821) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9829) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9837) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9845) receiving_node: Received data from queue[0m
+[0;32mI (9847) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9859) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9867) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (9877) receiving_node: Data sent: 1:4030159:0,0,0,0,0,0,0,0,0,0,0,0,-3,-10,-3,-10,-3,-10,-3,-9,-3,-9,-4,-9,-4,-8,-4,-8,-4,-8,-5,-7,-5,-8,-6,-8,-5,-8,-6,-7,-6,-8,-6,-7,-7,-7,-7,-7,-8,-7,-8,-7,-9,-6,-9,-7,-9,-5,-10,-6,-11,-6,-10,-6,0,0,-12,-6,-11,-5,-13,-6,-12,-5,-13,-6,-12,-7,-13,-7,-13,-7,-13,-7,-13,-7,-13,-7,-13,-7,-13,-7,-13,-7,-11,-8,-12,-9,-11,-7,-12,-8,-10,-8,-11,-8,-11,-8,-10,-9,-10,-8,-10,-9,-9,-9,-8,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,-47,24,-50,20,-43,16,-44,19,-58,18,-44,15,-55,11,-43,12,-51,6,-51,9,-45,9,-51,9,-48,7,-51,1,-44,2,-51,-2,-50,-5,-51,-10,-48,-4,-48,-8,-47,-19,-56,-12,-44,-19,-53,-14,-50,-25,-55,-24,-59,-19,-48,-27,-54,-26,-57,-35,-60,-32,-58,-38,-67,-38,-56,-44,-71,-33,-59,-37,-65,-36,-74,-35,-61,-36,-73,-37,-72,-34,-65,-33,-70,-36,-72,-31,-67,-34,-72,-26,-63,-30,-77,-26,-62,-24,-67,-23,-73,-18,-71,-20,-71,-19,-73,-17,-66,-13,-69,-6,-65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,43,10,40,8,44,4,41,7,44,4,40,-3,40,1,42,0,43,-2,44,-3,43,-1,39,0,42,-1,45,2,40,-4,44,-1,33,-2,41,-2,32,-4,39,-1,38,-1,40,-4,36,-3,34,-4,33,7,34,3,31,0,30,7,36,3,28,7,34,3,26,3,27,6,29,3,27,7,27,7,28,15,26,15,27,14,25,14,26,20,24,20,19,25,26,21,18,24,15,27,25,28,24,30,22,31,22,36,21,42,17,38,16,38,22,40,13,40,24,47,21,0,0[0m
+[0;32mI (9878) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (9993) receiving_node: No free buffer available[0m
+[0;32mI (9998) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10006) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10015) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10023) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10031) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10040) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10048) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10056) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10065) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10073) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10082) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10090) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10098) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10106) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10115) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10123) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10131) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10140) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10148) receiving_node: No free buffer available[0m
+[0;32mI (10153) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10162) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10170) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10178) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10187) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10195) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10203) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10212) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10228) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10237) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10245) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10253) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10262) receiving_node: No free buffer available[0m
+[0;32mI (10267) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10275) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10284) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10292) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10300) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10309) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10317) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10325) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10334) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10342) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10350) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10359) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10367) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10375) receiving_node: No free buffer available[0m
+[0;32mI (10381) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10389) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10398) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10406) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10414) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10423) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10431) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10439) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10448) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10456) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10464) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10473) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10481) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10489) receiving_node: No free buffer available[0m
+[0;32mI (10495) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10503) receiving_node: Waiting for data from queue[0m
+[0;32mI (10509) receiving_node: Received data from queue[0m
+[0;32mI (10515) receiving_node: Data sent: 1:4731224:0,0,0,0,0,0,0,0,0,0,0,0,-3,8,-3,8,-3,8,-2,8,-3,8,-3,8,-2,8,-3,9,-2,8,-2,8,-2,8,-1,9,-1,8,-1,9,0,8,1,9,1,8,1,9,1,9,1,10,2,8,3,10,3,10,3,10,4,10,4,9,0,0,4,11,5,11,4,11,4,12,5,12,4,12,5,13,4,13,4,13,4,13,4,13,4,13,3,13,2,13,3,13,2,12,2,14,2,13,2,12,1,12,0,12,1,12,0,13,-1,12,-1,12,-2,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,50,14,40,21,50,21,41,11,35,20,50,20,39,20,43,22,40,22,45,27,41,23,39,29,41,26,37,34,37,25,40,32,35,27,35,33,35,36,23,42,26,35,30,45,33,44,27,45,28,45,21,47,21,56,32,59,25,54,28,56,20,60,28,56,25,69,24,61,24,73,27,65,30,62,29,66,33,65,25,62,31,67,33,64,34,61,33,64,41,59,38,64,41,53,39,61,44,53,41,60,37,51,44,44,43,48,42,41,49,44,47,42,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-40,-5,-42,-9,-39,-13,-45,-13,-33,-17,-45,-19,-38,-13,-36,-18,-39,-20,-35,-20,-36,-25,-32,-24,-30,-21,-32,-18,-37,-24,-28,-19,-38,-23,-27,-23,-34,-28,-26,-16,-32,-19,-30,-17,-27,-19,-30,-22,-26,-17,-26,-16,-24,-17,-34,-19,-28,-17,-28,-16,-21,-12,-30,-18,-28,-11,-30,-11,-30,-10,-26,-8,-26,-7,-30,-5,-33,0,-24,-9,-28,1,-26,-1,-33,2,-29,3,-35,5,-30,3,-32,9,-33,11,-33,10,-34,12,-38,8,-34,13,-38,11,-47,16,-41,13,-51,21,-47,9,0,0[0m
+[0;32mI (10522) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10629) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10634) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10642) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10650) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10659) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10667) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10675) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10684) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10692) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10700) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10710) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10717) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10725) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10734) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10742) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10750) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10759) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10767) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10775) receiving_node: No free buffer available[0m
+[0;32mI (10781) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10789) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10797) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10806) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10814) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10822) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10831) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10839) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10848) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10856) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10864) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10872) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10881) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10889) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10897) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (10906) receiving_node: No free buffer available[0m
+[0;32mI (10911) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10920) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10928) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10936) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10945) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10953) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10961) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10970) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10978) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10986) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (10995) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11003) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11011) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11020) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11028) receiving_node: No free buffer available[0m
+[0;32mI (11033) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11042) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11050) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11058) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11067) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11075) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11083) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11092) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11100) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11108) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11117) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11125) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11133) receiving_node: No free buffer available[0m
+[0;32mI (11139) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11147) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11156) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11164) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11172) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11181) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11189) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11206) receiving_node: Waiting for data from queue[0m
+[0;32mI (11207) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11220) receiving_node: Received data from queue[0m
+[0;32mI (11220) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11233) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11245) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11251) receiving_node: Data sent: 1:5198255:0,0,0,0,0,0,0,0,0,0,0,0,2,8,3,8,3,8,2,8,3,8,3,7,3,8,4,7,4,7,4,7,4,7,5,6,5,7,5,7,6,6,6,6,6,6,7,5,7,5,7,5,8,5,8,5,9,5,9,5,10,5,10,5,0,0,11,5,11,5,11,5,11,5,11,5,12,5,12,6,12,6,12,6,12,6,12,6,12,7,12,7,12,7,11,7,11,8,10,7,10,7,10,7,10,8,10,8,9,8,9,8,8,8,8,9,7,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,48,-4,53,-2,45,1,50,2,60,3,42,-1,55,2,48,1,53,9,41,7,46,-1,50,6,51,11,47,7,46,15,46,9,48,18,48,13,40,20,50,19,40,31,51,25,42,28,42,29,40,34,40,39,51,40,46,40,43,45,46,49,47,41,47,54,48,41,43,53,57,49,47,47,52,50,55,51,53,50,60,51,59,47,55,47,61,50,61,43,53,48,60,40,54,49,68,39,53,39,61,33,63,32,57,32,59,28,64,23,60,25,64,21,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-35,-30,-34,-27,-33,-39,-26,-35,-28,-38,-23,-31,-22,-36,-22,-39,-23,-39,-22,-35,-14,-37,-17,-35,-18,-41,-17,-39,-17,-36,-14,-39,-13,-32,-16,-38,-14,-32,-17,-30,-17,-32,-15,-33,-21,-33,-11,-29,-15,-31,-17,-31,-19,-31,-16,-33,-18,-31,-15,-25,-21,-30,-14,-18,-16,-23,-18,-24,-19,-22,-20,-22,-19,-22,-24,-24,-22,-18,-27,-18,-22,-16,-26,-17,-28,-14,-29,-15,-27,-7,-35,-11,-31,-11,-38,-8,-34,-9,-42,-5,-41,-7,-43,-6,-39,-5,-44,-1,-43,-6,-41,-6,-47,-9,0,0[0m
+[0;32mI (11252) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11360) receiving_node: No free buffer available[0m
+[0;32mI (11366) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11374) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11382) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11391) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11399) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11407) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11416) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11424) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11432) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11441) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11449) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11457) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11466) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11482) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11499) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11507) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11524) receiving_node: No free buffer available[0m
+[0;32mI (11529) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11538) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11546) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11554) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11563) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11571) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11579) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;31mE (11592) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (11592) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (11592) task_wdt: Tasks currently running:[0m
+[0;31mE (11592) task_wdt: CPU 0: wifi[0m
+[0;31mE (11592) task_wdt: Print CPU 0 (current core) backtrace[0m
+Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x42006c88  RA      : 0x42007d84  SP      : 0x3fca6eb0  GP      : 0x3fc92000  
+TP      : 0x3fc87e98  T0      : 0x4038e782  T1      : 0x10000000  T2      : 0x101e4bdd  
+S0/FP   : 0x00000036  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x00000065  
+A2      : 0x00000004  A3      : 0x60000000  A4      : 0x00000001  A5      : 0x607f8000  
+A6      : 0x420064d6  A7      : 0x0000000a  S2      : 0x00000065  S3      : 0x0000005f  
+S4      : 0x3fc9f648  S5      : 0x3fca7050  S6      : 0x3c0948f9  S7      : 0x00000000  
+S8      : 0x00000005  S9      : 0x00000005  S10     : 0x0000000a  S11     : 0x00000009  
+T3      : 0x00000000  T4      : 0xbfffffff  T5      : 0x80000000  T6      : 0xce2b0000  
+MSTATUS : 0xa0000000  MTVEC   : 0x0000000a  MCAUSE  : 0x3fc9f648  MTVAL   : 0x65007d44  
+MHARTID : 0x00000004  
+[0;32mI (11588) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11703) receiving_node: No free buffer available[0m
+[0;32mI (11709) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11717) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11725) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11734) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11742) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11750) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11759) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11767) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11775) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11784) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11792) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11800) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11809) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11817) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11825) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11834) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11842) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11850) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11859) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11867) receiving_node: No free buffer available[0m
+[0;32mI (11873) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11881) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11889) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11898) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11906) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11914) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11923) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11931) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11940) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11948) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11956) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11964) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11973) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (11981) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (11989) receiving_node: No free buffer available[0m
+[0;32mI (11995) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12003) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12011) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12020) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12028) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12037) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12045) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12053) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12061) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12070) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12078) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12086) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12095) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12103) receiving_node: No free buffer available[0m
+[0;32mI (12109) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12117) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12125) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12134) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12142) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12150) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12159) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12167) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12175) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12184) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12192) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12200) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12209) receiving_node: No free buffer available[0m
+[0;32mI (12214) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12222) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12231) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12239) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12247) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12256) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12264) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12272) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12281) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12289) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12297) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12306) receiving_node: Waiting for data from queue[0m
+[0;32mI (12307) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12323) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12328) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12336) receiving_node: Received data from queue[0m
+[0;32mI (12343) receiving_node: Data sent: 1:5968124:0,0,0,0,0,0,0,0,0,0,0,0,4,-9,3,-8,3,-9,3,-8,3,-9,2,-8,2,-9,2,-9,1,-9,1,-10,1,-9,1,-9,0,-9,0,-9,-1,-8,-1,-10,-1,-9,-1,-10,-2,-9,-3,-9,-3,-10,-3,-9,-4,-10,-4,-10,-4,-10,-4,-11,0,0,-5,-11,-6,-11,-5,-11,-6,-12,-6,-11,-6,-12,-6,-13,-6,-13,-7,-13,-5,-14,-5,-13,-5,-13,-5,-12,-4,-12,-5,-13,-4,-13,-4,-13,-4,-13,-4,-12,-4,-13,-3,-13,-3,-12,-3,-13,-2,-12,-1,-12,0,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,-51,-2,-48,-5,-58,-7,-52,-7,-50,-9,-51,-13,-44,-12,-51,-9,-49,-9,-50,-15,-45,-14,-54,-17,-42,-16,-45,-18,-49,-24,-46,-20,-44,-23,-39,-30,-38,-28,-37,-35,-43,-30,-38,-39,-44,-42,-38,-41,-41,-44,-33,-47,-41,-50,-34,-52,-35,-54,-33,-54,-33,-64,-34,-61,-31,-66,-35,-59,-36,-63,-41,-65,-42,-58,-36,-69,-41,-65,-38,-66,-44,-67,-42,-62,-44,-59,-40,-62,-42,-60,-46,-71,-51,-53,-49,-53,-49,-57,-43,-52,-48,-55,-53,-49,-48,-48,-49,-49,-54,-42,-55,-39,-54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,23,37,25,29,31,27,28,28,34,26,37,25,34,24,34,19,31,20,34,19,39,19,34,19,36,20,34,19,36,16,37,17,39,19,38,16,39,16,33,14,34,18,32,19,30,19,31,14,29,16,27,12,25,21,26,21,24,21,26,18,26,18,26,23,22,20,22,19,17,18,17,27,12,25,13,26,12,25,8,29,6,24,12,34,6,25,8,31,3,34,3,34,1,40,1,32,2,38,-4,44,-2,41,-3,46,-3,45,-5,42,-12,47,-1,42,-3,0,0[0m
+[0;32mI (12344) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12461) receiving_node: No free buffer available[0m
+[0;32mI (12467) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12475) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12483) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12500) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12508) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12525) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12533) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12541) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12550) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12558) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12566) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12575) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12583) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12591) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12600) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12608) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12616) receiving_node: No free buffer available[0m
+[0;32mI (12622) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12630) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12639) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12647) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12655) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12664) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12672) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12680) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12689) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12697) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12705) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12714) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12722) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12730) receiving_node: No free buffer available[0m
+[0;32mI (12736) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12744) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12752) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12761) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12769) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12777) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12786) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12794) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12802) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12811) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12819) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12827) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12836) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12844) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12852) receiving_node: No free buffer available[0m
+[0;32mI (12858) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12866) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12874) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12883) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12891) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12899) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12908) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12916) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12924) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12933) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12941) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12949) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12958) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (12966) receiving_node: No free buffer available[0m
+[0;32mI (12971) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12980) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12988) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (12997) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13005) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13013) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13022) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13030) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13038) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13047) receiving_node: Waiting for data from queue[0m
+[0;32mI (13047) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13061) receiving_node: Received data from queue[0m
+[0;32mI (13067) receiving_node: Data sent: 1:6553869:0,0,0,0,0,0,0,0,0,0,0,0,-9,-5,-9,-5,-9,-5,-9,-5,-9,-4,-9,-4,-9,-4,-9,-4,-9,-4,-10,-3,-10,-3,-10,-2,-10,-2,-10,-2,-10,-1,-10,-1,-10,0,-10,0,-11,0,-11,1,-11,1,-11,2,-11,2,-12,2,-12,3,-12,3,0,0,-13,3,-12,3,-13,3,-13,3,-14,3,-13,4,-14,3,-14,3,-14,3,-15,3,-14,3,-14,3,-14,2,-14,2,-14,1,-14,2,-14,1,-14,1,-13,1,-13,0,-13,0,-13,-1,-13,-1,-12,-1,-13,-2,-12,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-43,-24,-40,-27,-49,-30,-43,-22,-42,-27,-41,-21,-43,-22,-49,-19,-41,-18,-48,-25,-45,-18,-44,-16,-44,-16,-45,-16,-46,-10,-48,-9,-42,-10,-46,-5,-48,-4,-48,-5,-54,-3,-47,2,-54,3,-52,7,-50,5,-53,3,-52,10,-54,10,-60,15,-56,18,-53,12,-60,18,-57,15,-61,11,-64,18,-65,16,-68,15,-64,18,-66,17,-64,9,-66,18,-67,21,-64,16,-67,15,-70,9,-63,9,-73,4,-67,5,-68,4,-65,3,-67,0,-66,1,-56,-6,-59,0,-64,-7,-60,-5,-54,-15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,-23,36,-25,31,0,32,-18,32,-15,33,-7,22,-5,41,1,20,-13,9,-1,39,-2,50,6,-6,15,33,-9,36,-4,-10,18,53,1,26,5,-2,10,19,3,41,-10,41,22,51,-4,38,-10,26,-7,46,-4,30,-5,29,-4,35,-5,30,-7,30,-2,30,-7,22,-4,34,-6,23,-2,25,-3,19,-11,22,-14,23,-14,28,-12,23,-16,20,-19,25,-20,20,-13,28,-19,18,-22,22,-25,24,-29,21,-25,18,-28,21,-29,22,-37,23,-34,26,-40,29,-31,26,-35,25,-37,0,0[0m
+[0;32mI (13072) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13183) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (13191) receiving_node: No free buffer available[0m
+[0;32mI (13197) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13205) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13214) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13222) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13230) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13239) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13247) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13255) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13264) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13272) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13280) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13289) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13297) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13305) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13314) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13322) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13330) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (13339) receiving_node: No free buffer available[0m
+[0;32mI (13344) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13352) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13361) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13369) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13377) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13386) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13394) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13402) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13411) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13419) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13427) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13436) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13444) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13452) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13461) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;33mW (13469) receiving_node: No free buffer available[0m
+[0;32mI (13474) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13483) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13491) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13500) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13508) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13516) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13524) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13533) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13541) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
+[0;32mI (13549) receiving_node: ESP-NOW packet received from 1a:ff:ff:ff:ff:ff, length: 1[0m
